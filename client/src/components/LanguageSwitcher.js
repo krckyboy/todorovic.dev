@@ -1,18 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
-import theme from '../theme'
+import preferences from '../preferences'
 
 const Container = styled.div`
 	display: flex;
 
 	div {
 		cursor: pointer;
-		/* color: ${theme.colors.main}; */
+		/* color: ${preferences.colors.main}; */
 		color: white;
 		font-size: 18px;
 		font-weight: 500;
 		padding: 8px 16px;
-		background-color: ${theme.colors.main};
+		background-color: ${preferences.colors.main};
 
 		&:first-child {
 			margin-right: 8px;
