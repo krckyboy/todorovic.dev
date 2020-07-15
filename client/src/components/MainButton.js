@@ -12,6 +12,11 @@ const Button = styled.button`
 	font-weight: 600;
 	font-size: 20px;
 	cursor: pointer;
+	width: 100%;
+
+	@media (min-width: 960px) {
+		width: initial;
+	}
 `
 
 export default ({ children }) => {

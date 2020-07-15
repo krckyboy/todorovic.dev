@@ -6,9 +6,13 @@ const Heading = styled.h2`
 	font-family: Rajdhani;
 	font-style: normal;
 	font-weight: bold;
-    font-size: 48px;
-    color: ${preferences.colors.secondaryMain};
-    margin-bottom: 48px;
+	font-size: 48px;
+	color: ${preferences.colors.secondaryMain};
+	margin-bottom: 48px;
+
+	@media (min-width: 960px) {
+		margin-bottom: 64px;
+	}
 `
 
 const SubHeading = ({ children }) => {

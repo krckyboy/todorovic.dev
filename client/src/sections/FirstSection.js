@@ -63,7 +63,7 @@ const TextContainer = styled.div`
 	}
 
 	button {
-		margin-top: 32px;
+		margin-top: 56px;
 	}
 
 	@media (min-width: 960px) {
