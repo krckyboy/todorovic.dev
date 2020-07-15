@@ -7,25 +7,26 @@ import MainButton from '../components/MainButton'
 
 const Container = styled.div`
 	padding-top: 20px;
-	padding-bottom: 20px;
+	padding-bottom: 88px;
 	max-width: 100%;
 `
 
-const Content = styled.div``
+const Content = styled.div`
+`
 
 const Illustration = styled.img`
 	max-width: 100%;
 	margin-bottom: 32px;
-    
+
 	@media (min-width: 960px) {
-        max-width: 45%;
+		max-width: 45%;
 		order: 2;
 		flex: 0 1 40%;
 		margin-bottom: 0;
 	}
-    
+
 	@media (min-width: 1400px) {
-        max-width: 60%;
+		max-width: 60%;
 		order: 2;
 		flex: 0 1 40%;
 		margin-bottom: 0;
@@ -37,8 +38,8 @@ const TextContainer = styled.div`
 
 	@media (min-width: 960px) {
 		flex: 1 0 30%;
-        min-width: 426px;
-        margin-right: 64px;
+		min-width: 426px;
+		margin-right: 64px;
 	}
 
 	* {
@@ -59,7 +60,6 @@ const TextContainer = styled.div`
 
 	p {
 		color: ${preferences.colors.neutral};
-		line-height: 32px;
 	}
 
 	button {
@@ -74,8 +74,8 @@ const TextContainer = styled.div`
 
 const FlexContainer = styled.div`
 	@media (min-width: 960px) {
-        display: flex;
-        justify-content: space-between;
+		display: flex;
+		justify-content: space-between;
 	}
 `
 
@@ -102,7 +102,7 @@ const FirstSection = () => {
 							<TextContainer>
 								<span>Web Development Company</span>
 								<h1>Creating websites with confidence.</h1>
-								<p>
+								<p className='commonText'>
 									We develop clean and optimized websites which are adapted for
 									phones, tablets, laptops, and desktop computers.
 								</p>
