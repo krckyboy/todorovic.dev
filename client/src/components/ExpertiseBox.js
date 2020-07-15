@@ -4,7 +4,7 @@ import preferences from '../preferences'
 
 const Container = styled.div`
 	background-color: white;
-	padding: 48px 20px;
+	padding: 48px 60px;
 
 	img {
 		margin: 0 auto;
@@ -19,8 +19,11 @@ const Container = styled.div`
 		flex: 1 0 350px;
 		max-width: 33.3333%;
 		min-width: 350px;
-		margin-right: 32px;
 		margin-bottom: 32px;
+
+		:not(:last-child) {
+			margin-right: 32px;
+		}
 	}
 `
 
