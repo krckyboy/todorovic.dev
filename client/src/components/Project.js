@@ -69,7 +69,14 @@ const Project = ({ imgSrc, title, text, websiteUrl }) => {
 			<ProjectTextContainer>
 				<Title>{title}</Title>
 				<Text className='commonText'>{text}</Text>
-				<a href={websiteUrl} className='commonText'>Visit website</a>
+				<a
+					href={websiteUrl}
+					className='commonText'
+					target='_blank'
+					rel='noopener noreferrer'
+				>
+					Visit website
+				</a>
 			</ProjectTextContainer>
 		</Container>
 	)

@@ -13,26 +13,35 @@ const Container = styled.div`
 
 // Styles for positioning control dots
 const Content = styled.div`
-	.carousel.carousel-slider {
-		overflow: initial !important; /* Required for positioning dots */
-	}
+	.carousel {
+		&.carousel-slider {
+			overflow: initial !important; /* Required for positioning dots */
+		}
 
-	.carousel .control-dots .dot {
-		box-shadow: none !important;
-		background: ${preferences.colors.main} !important;
+		.control-dots .dot {
+			box-shadow: none !important;
+			background: ${preferences.colors.main} !important;
 
-		&:focus {
-			outline: none; 
+			&:focus {
+				outline: none;
+			}
+		}
+
+		.control-dots {
+			bottom: -8rem !important; /* Required for positioning */
+
+			.dot {
+				width: 20px;
+				height: 20px;
+			}
+		}
+
+		.slide {
+			background: white;
 		}
 	}
 
-	.carousel .control-dots {
-		bottom: -5rem !important; /* Required for positioning */
-	}
-
-	.carousel .slide {
-		background: white;
-	}
+	margin-bottom: 8rem;
 `
 
 const Expertise = () => {
