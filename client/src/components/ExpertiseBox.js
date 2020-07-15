@@ -4,7 +4,7 @@ import preferences from '../preferences'
 
 const Container = styled.div`
 	background-color: white;
-	padding: 48px 60px;
+	padding: 48px 32px;
 
 	img {
 		margin: 0 auto;
@@ -36,7 +36,8 @@ const Title = styled.h3`
 	line-height: 41px;
 	text-align: center;
 	margin-top: 32px;
-	margin-bottom: 16px;
+    margin-bottom: 16px;
+    letter-spacing: 0.095em;
 `
 
 const Text = styled.p`

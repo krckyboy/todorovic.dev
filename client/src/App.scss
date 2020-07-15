@@ -78,3 +78,16 @@ li {
 	line-height: 32px;
 }
 // < /Typography>
+
+.carousel.carousel-slider {
+	overflow: initial !important;
+}
+
+.carousel .control-dots {
+	bottom: -5rem !important;
+}
+
+.carousel .control-dots .dot {
+	box-shadow: none !important;
+	background: #a6cb76 !important;
+}

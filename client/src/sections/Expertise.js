@@ -23,7 +23,7 @@ const FlexContainer = styled.div`
 
 const Expertise = () => {
 	return (
-		<Container backgroundColor='#fff' className='sidePadding topBottomPadding'>
+		<Container className='sidePadding topBottomPadding'>
 			<Content className='maxWidth'>
 				<SubHeading>OUR EXPERTISE</SubHeading>
 				<FlexContainer>
