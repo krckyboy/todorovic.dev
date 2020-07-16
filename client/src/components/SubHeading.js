@@ -6,7 +6,7 @@ const Heading = styled.h2`
 	font-family: Rajdhani;
 	font-style: normal;
 	font-weight: bold;
-	font-size: 48px;
+	font-size: 40px;
 	color: ${preferences.colors.secondaryMain};
 	margin-bottom: 48px;
 

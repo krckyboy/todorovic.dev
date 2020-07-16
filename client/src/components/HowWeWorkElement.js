@@ -14,8 +14,8 @@ const Container = styled.div`
 const Li = styled.li`
 	&:not(:last-child) {
 		margin-bottom: 32px;
-    }
-    
+	}
+
 	@media (min-width: 960px) {
 		flex: 1 0 40%;
 		max-width: 600px;
@@ -27,11 +27,7 @@ const Li = styled.li`
 	}
 `
 
-const NumberElement = styled.div`
-	background-color: #a378cd;
-	padding: 8px 24px;
-	font-weight: bold;
-	font-size: 36px;
+const NumberElement = styled.img`
 	margin-right: 24px;
 `
 
@@ -47,11 +43,11 @@ const Title = styled.h3`
 	margin-bottom: 8px;
 `
 
-const HowWeWorkElement = ({ number, title, text }) => {
+const HowWeWorkElement = ({ imgSrc, title, text }) => {
 	return (
 		<Li>
 			<Container>
-				<NumberElement>{number}</NumberElement>
+				<NumberElement src={imgSrc} alt={imgSrc} />
 				<TextContainer>
 					<Title>{title}</Title>
 					<p className='commonText'>{text}</p>
