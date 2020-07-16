@@ -43,13 +43,17 @@ const FormEl = styled.form`
 		width: 100%;
 		color: ${preferences.colors.neutral};
 		font-family: Rajdhani;
-		transition: all 0.2s;
+		transition: all 0.1s;
 		max-width: 100%;
 		resize: none;
 		font-size: 18px;
 
 		&:focus {
 			outline-color: ${preferences.colors.main};
+		}
+
+		&:hover {
+			border-color: ${preferences.colors.main};
 		}
 	}
 
@@ -75,9 +79,11 @@ const FlexContainer = styled.div`
 const FormContent = styled.div`
 	flex: 1 1 auto;
 	align-self: stretch;
+	max-width: 720px;
+	
 
 	@media (min-width: 1260px) {
-		max-width: 560px;
+		max-width: 500px;
 	}
 `
 
@@ -86,7 +92,7 @@ const Img = styled.img`
 
 	@media (min-width: 1260px) {
 		align-self: flex-end;
-		height: 612px;
+		height: 100%;
 		width: 70%;
 		max-width: 50%;
 		display: initial;

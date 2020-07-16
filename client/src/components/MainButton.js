@@ -13,6 +13,13 @@ const Button = styled.button`
 	font-size: 20px;
 	cursor: pointer;
 	width: 100%;
+	transition: 0.1s transform, 0.1s box-shadow;
+
+	:hover,
+	:focus {
+		box-shadow: 0px 8px 14px -3px rgba(0,0,0,0.5);
+		transform: translateY(-2px);
+	}
 
 	@media (min-width: 960px) {
 		width: initial;
