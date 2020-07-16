@@ -38,9 +38,13 @@ const TextContainer = styled.div`
 
 const Title = styled.h3`
 	font-weight: bold;
-	font-size: 20px;
+	font-size: 24px;
 	color: ${preferences.colors.secondaryMain};
 	margin-bottom: 8px;
+
+	@media (min-width: 960px) {
+		font-size: 32px;
+	}
 `
 
 const HowWeWorkElement = ({ imgSrc, title, text }) => {

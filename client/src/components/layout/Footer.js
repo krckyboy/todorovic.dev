@@ -8,8 +8,8 @@ const Container = styled.footer`
 	text-align: center;
 	color: #572c80;
 
-	line-height: 20px;
-	font-size: 16px;
+	line-height: 28px;
+	font-size: 18px;
     padding: 1.6rem;
 
 	@media (min-width: 512px) and (min-height: 512px) {

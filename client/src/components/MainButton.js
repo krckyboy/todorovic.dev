@@ -6,13 +6,12 @@ const Button = styled.button`
 	background-color: ${preferences.colors.main};
 	outline: none;
 	border: 2px solid transparent;
-	padding: 20px 64px;
+	padding: 24px 90px;
 	color: white;
 	font-family: 'Rajdhani', sans-serif;
 	font-weight: 600;
 	font-size: 20px;
 	cursor: pointer;
-	width: 100%;
 	transition: 0.1s transform, 0.1s box-shadow;
 
 	:hover,
@@ -23,6 +22,7 @@ const Button = styled.button`
 
 	@media (min-width: 960px) {
 		width: initial;
+		font-size: 24px;
 	}
 `
 

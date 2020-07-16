@@ -79,12 +79,7 @@ const FlexContainer = styled.div`
 const FormContent = styled.div`
 	flex: 1 1 auto;
 	align-self: stretch;
-	max-width: 720px;
-	
-
-	@media (min-width: 1260px) {
-		max-width: 500px;
-	}
+	max-width: 600px;
 `
 
 const Img = styled.img`
@@ -103,9 +98,9 @@ const Form = () => {
 	return (
 		<Container className='sidePadding topBottomPadding'>
 			<Content className='maxWidth'>
+			<SubHeading>REACH OUT TO US</SubHeading>
 				<FlexContainer>
 					<FormContent>
-						<SubHeading>REACH OUT TO US</SubHeading>
 						<Text className='commonText'>
 							You have a project in mind that we can build for you? Great! Send
 							a message to us with details and we’ll get back to you!

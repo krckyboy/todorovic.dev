@@ -9,37 +9,47 @@ const Container = styled.div`
 	padding-top: 20px;
 	padding-bottom: 88px;
 	max-width: 100%;
+	/* min-height: 90vh; */
+
+	@media (min-width: 960px) {
+		padding-bottom: 220px;
+	}
 `
 
-const Content = styled.div`
-`
+const Content = styled.div``
 
-const Illustration = styled.img`
-	max-width: 100%;
+const IllustrationContainer = styled.div`
+	max-width: 450px;
 	margin-bottom: 32px;
 
 	@media (min-width: 960px) {
-		max-width: 45%;
+		max-width: 50%;
 		order: 2;
-		flex: 0 1 40%;
+		/* flex: 1 1 70%; */
 		margin-bottom: 0;
 	}
 
 	@media (min-width: 1400px) {
-		max-width: 60%;
 		order: 2;
-		flex: 0 1 40%;
+		/* flex: 1 1 50%; */
 		margin-bottom: 0;
 	}
 `
 
+const Illustration = styled.img`
+	max-width: 100%;
+`
+
 const TextContainer = styled.div`
 	font-size: 20px;
+	max-width: 500px;
 
 	@media (min-width: 960px) {
 		flex: 1 0 30%;
 		min-width: 426px;
 		margin-right: 64px;
+		order: 1;
+		max-width: 40%;
 	}
 
 	* {
@@ -49,6 +59,10 @@ const TextContainer = styled.div`
 	span {
 		color: ${preferences.colors.main};
 		font-weight: 600;
+
+		@media (min-width: 960px) {
+			font-size: 24px;
+		}
 	}
 
 	h1 {
@@ -56,6 +70,16 @@ const TextContainer = styled.div`
 		font-size: 40px;
 		font-weight: bold;
 		line-height: 61px;
+
+		@media (min-width: 960px) {
+			font-size: 64px;
+			line-height: 80px;
+		}
+
+		@media (min-width: 1200px) {
+			font-size: 70px;
+			line-height: 90px;
+		}
 	}
 
 	p {
@@ -64,11 +88,6 @@ const TextContainer = styled.div`
 
 	button {
 		margin-top: 56px;
-	}
-
-	@media (min-width: 960px) {
-		order: 1;
-		max-width: 30%;
 	}
 `
 
@@ -98,7 +117,9 @@ const FirstSection = () => {
 					<Content className='maxWidth'>
 						<Header />
 						<FlexContainer>
-							<Illustration src='illustration1.svg' alt='Illustration' />
+							<IllustrationContainer>
+								<Illustration src='illustration1.svg' alt='Illustration' />
+							</IllustrationContainer>
 							<TextContainer>
 								<span>Web Development Company</span>
 								<h1>Creating websites with confidence.</h1>

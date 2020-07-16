@@ -52,7 +52,7 @@ fieldset {
 	padding-left: 20px;
 	padding-right: 20px;
 
-	@media (min-width: 900px) {
+	@media (min-width: 960px) {
 		padding-left: 48px;
 		padding-right: 48px;
 	}
@@ -62,9 +62,9 @@ fieldset {
 	padding-top: 88px;
 	padding-bottom: 88px;
 
-	@media (min-width: 900px) {
-		padding-top: 88px;
-		padding-bottom: 88px;
+	@media (min-width: 960px) {
+		padding-top: 140px;
+		padding-bottom: 140px;
 	}
 }
 
@@ -80,5 +80,10 @@ fieldset {
 	font-weight: normal;
 	font-size: 20px;
 	line-height: 32px;
+
+	@media (min-width: 960px) {
+		font-size: 24px;
+		line-height: 40px;
+	}
 }
 // < /Typography>

@@ -8,7 +8,7 @@ const Container = styled.header`
 	align-items: center;
 	margin-bottom: 56px;
 
-	@media (min-width: 900px) {
+	@media (min-width: 960px) {
 		margin-bottom: 128px;
 	}
 `
@@ -16,7 +16,7 @@ const Container = styled.header`
 const Header = () => {
 	return (
 		<Container>
-			<a href='/' rel='noopener noreferrer' target='_blank'>
+			<a href='/'>
 				<img src='logo.svg' alt='Logo' />
 			</a>
 			<LanguageSwitcher />

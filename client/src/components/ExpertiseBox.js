@@ -18,7 +18,7 @@ const Container = styled.div`
 	@media (min-width: 960px) {
 		flex: 1 0 350px;
 		max-width: 33.3333%;
-		min-width: 350px;
+		min-width: 417px;
 		margin-bottom: 32px;
 
 		:not(:last-child) {
