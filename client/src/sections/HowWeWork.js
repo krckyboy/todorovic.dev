@@ -1,12 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
-import preferences from '../preferences'
 import SubHeading from '../components/SubHeading'
 import HowWeWorkElement from '../components/HowWeWorkElement'
 
 const Container = styled.div`
 	max-width: 100%;
 	background-color: #f8f3fd;
+	position: relative;
 `
 
 // Styles for positioning control dots

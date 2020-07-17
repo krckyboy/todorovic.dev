@@ -5,8 +5,7 @@ import preferences from '../preferences'
 const Container = styled.div`
 	background-color: white;
 	padding: 48px 32px;
-	box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.25);
-	
+
 	img {
 		margin: 0 auto;
 		display: block;
@@ -17,12 +16,23 @@ const Container = styled.div`
 	}
 
 	@media (min-width: 960px) {
-		flex: 1 0 350px;
-		max-width: 33.3333%;
-		min-width: 417px;
+		flex: 1;
+		max-width: 100%;
+		min-width: 350px;
 		margin-bottom: 32px;
 
 		:not(:last-child) {
+			margin-right: 32px;
+		}
+		
+		:nth-child(2) {
+			margin-right: 0;
+		}
+	}
+
+	@media (min-width: 1178px) {
+		max-width: 33.3333%;
+		:nth-child(2) {
 			margin-right: 32px;
 		}
 	}
@@ -37,8 +47,8 @@ const Title = styled.h3`
 	line-height: 41px;
 	text-align: center;
 	margin-top: 32px;
-    margin-bottom: 16px;
-    letter-spacing: 0.095em;
+	margin-bottom: 16px;
+	letter-spacing: 0.095em;
 `
 
 const Text = styled.p`

@@ -12,14 +12,6 @@ const Container = styled.div`
 // Styles for positioning control dots
 const Content = styled.div``
 
-const Ul = styled.ul`
-	@media (min-width: 960px) {
-		display: flex;
-		flex-wrap: wrap;
-		align-items: stretch;
-	}
-`
-
 const Text = styled.p`
 	color: ${preferences.colors.neutral};
 	margin-bottom: 32px;
