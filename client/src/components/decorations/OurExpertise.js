@@ -10,7 +10,7 @@ const TopRight = styled.img`
 `
 const BottomLeft = styled.img`
 	top: 60%;
-    left: -10%;
+    left: -5%;
     animation-name: MoveAround;
     animation-iteration-count: infinite;
     animation-duration: 4s;
