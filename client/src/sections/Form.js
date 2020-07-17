@@ -94,11 +94,15 @@ const Img = styled.img`
 	}
 `
 
+const ButtonContainer = styled.div`
+	text-align: center;
+`
+
 const Form = () => {
 	return (
 		<Container className='sidePadding topBottomPadding'>
 			<Content className='maxWidth'>
-			<SubHeading>REACH OUT TO US</SubHeading>
+				<SubHeading>REACH OUT TO US</SubHeading>
 				<FlexContainer>
 					<FormContent>
 						<Text className='commonText'>
@@ -123,7 +127,9 @@ const Form = () => {
 									rows='10'
 								></textarea>
 							</fieldset>
-							<SecondaryButton>SEND</SecondaryButton>
+							<ButtonContainer>
+								<SecondaryButton>SEND</SecondaryButton>
+							</ButtonContainer>
 						</FormEl>
 					</FormContent>
 					<Img src='illustration2.svg' alt='Illustration' />

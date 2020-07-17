@@ -13,17 +13,21 @@ const Container = styled.div`
 
 const Li = styled.li`
 	&:not(:last-child) {
-		margin-bottom: 32px;
+		margin-bottom: 40px;
 	}
 
 	@media (min-width: 960px) {
 		flex: 1 0 40%;
 		max-width: 600px;
-		margin-bottom: 56px !important;
+		margin-bottom: 64px !important;
 
 		&:nth-child(odd) {
 			margin-right: 182px;
 		}
+	}
+
+	@media (min-width: 1600px) {
+		margin-bottom: 80px !important;
 	}
 `
 

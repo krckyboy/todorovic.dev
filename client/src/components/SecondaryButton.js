@@ -10,9 +10,10 @@ const Button = styled.button`
 	color: white;
 	font-family: 'Rajdhani', sans-serif;
 	font-weight: 600;
-	font-size: 18px;
+	font-size: 20px;
 	cursor: pointer;
 	transition: 0.1s transform, 0.1s box-shadow;
+	width: 100%;
 
 	:hover,
 	:focus {

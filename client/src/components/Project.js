@@ -5,7 +5,7 @@ import preferences from '../preferences'
 const Container = styled.div`
 	background-color: white;
 	text-align: left;
-	
+
 	@media (min-width: 960px) {
 		display: flex;
 		justify-content: space-between;
@@ -19,6 +19,7 @@ const Container = styled.div`
 		font-weight: 600;
 		display: inline-block;
 		margin-top: 24px;
+		color: ${preferences.colors.main};
 	}
 `
 
