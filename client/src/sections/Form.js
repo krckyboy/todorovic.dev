@@ -32,6 +32,14 @@ const FormEl = styled.form`
 		display: block;
 		margin-bottom: 8px;
 		font-weight: 600;
+
+		@media (min-width: 960px) {
+			font-size: 20px;
+		}
+
+		@media (min-width: 1600px) {
+			font-size: 22px;
+		}
 	}
 
 	input,

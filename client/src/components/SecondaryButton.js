@@ -24,6 +24,10 @@ const Button = styled.button`
 	@media (min-width: 960px) {
 		font-size: 22px;
 	}
+
+	@media (min-width: 1600px) {
+		font-size: 24px;
+	}
 `
 
 export default ({ children }) => {
