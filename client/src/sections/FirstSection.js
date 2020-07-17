@@ -9,7 +9,7 @@ const Container = styled.div`
 	padding-top: 20px;
 	padding-bottom: 88px;
 	max-width: 100%;
-	/* min-height: 90vh; */
+	/* min-height: 100vh; */
 
 	@media (min-width: 960px) {
 		padding-bottom: 220px;
@@ -23,15 +23,9 @@ const IllustrationContainer = styled.div`
 	margin-bottom: 32px;
 
 	@media (min-width: 960px) {
-		max-width: 50%;
+		max-width: 60%;
 		order: 2;
 		/* flex: 1 1 70%; */
-		margin-bottom: 0;
-	}
-
-	@media (min-width: 1400px) {
-		order: 2;
-		/* flex: 1 1 50%; */
 		margin-bottom: 0;
 	}
 `
@@ -71,6 +65,11 @@ const TextContainer = styled.div`
 		font-weight: bold;
 		line-height: 61px;
 
+		@media (min-width: 560px) {
+			font-size: 56px;
+			line-height: 70px;
+		}
+
 		@media (min-width: 960px) {
 			font-size: 64px;
 			line-height: 80px;
@@ -79,6 +78,11 @@ const TextContainer = styled.div`
 		@media (min-width: 1200px) {
 			font-size: 70px;
 			line-height: 90px;
+		}
+
+		@media (min-width: 1600px) {
+			font-size: 96px;
+			line-height: 110px;
 		}
 	}
 

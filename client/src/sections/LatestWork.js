@@ -28,7 +28,7 @@ const Content = styled.div`
 		}
 
 		.control-dots {
-			bottom: -8rem !important; /* Required for positioning */
+			bottom: -16rem !important; /* Required for positioning */
 
 			.dot {
 				width: 20px;
@@ -41,7 +41,7 @@ const Content = styled.div`
 		}
 	}
 
-	margin-bottom: 8rem;
+	margin-bottom: 16rem;
 `
 
 const Expertise = () => {
@@ -65,13 +65,13 @@ const Expertise = () => {
 					/>
 					<Project
 						imgSrc='projects/krcky.png'
-						title='Krcky.dev'
+						title='krcky.dev'
 						websiteUrl='https://krcky.dev/'
 						text='We develop clean and optimized websites which are adapted for phones, laptops, tablets and desktop. We develop clean and optimized websites which are adapted for phones, laptops, tablets and desktop. We develop clean and optimized websites which are adapted for phones, laptops, tablets and desktop.'
 					/>
 					<Project
 						imgSrc='projects/jelena_caldic_cut.png'
-						title='Jelena Ćaldić'
+						title='jelenacaldic.com'
 						websiteUrl='https://jelenacaldic.com/'
 						text='We develop clean and optimized websites which are adapted for phones, laptops, tablets and desktop. We develop clean and optimized websites which are adapted for phones, laptops, tablets and desktop. We develop clean and optimized websites which are adapted for phones, laptops, tablets and desktop.'
 					/>

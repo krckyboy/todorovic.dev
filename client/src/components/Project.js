@@ -4,7 +4,8 @@ import preferences from '../preferences'
 
 const Container = styled.div`
 	background-color: white;
-
+	text-align: left;
+	
 	@media (min-width: 960px) {
 		display: flex;
 		justify-content: space-between;
@@ -16,8 +17,7 @@ const Container = styled.div`
 
 	a {
 		font-weight: 600;
-		text-align: left;
-		display: block;
+		display: inline-block;
 		margin-top: 24px;
 	}
 `

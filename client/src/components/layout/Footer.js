@@ -6,7 +6,8 @@ const Container = styled.footer`
 	display: flex;
 	justify-content: center;
 	text-align: center;
-	color: #572c80;
+	color: #9e6dcc;
+	font-weight: 600;
 
 	line-height: 28px;
 	font-size: 18px;

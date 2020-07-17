@@ -66,6 +66,11 @@ fieldset {
 		padding-top: 140px;
 		padding-bottom: 140px;
 	}
+
+	@media (min-width: 1600px) {
+		padding-top: 180px;
+		padding-bottom: 180px;
+	}
 }
 
 .maxWidth {
@@ -81,9 +86,37 @@ fieldset {
 	font-size: 20px;
 	line-height: 32px;
 
+	@media (min-width: 560px) {
+		font-size: 22px;
+		line-height: 36px;
+	}
+
 	@media (min-width: 960px) {
 		font-size: 24px;
 		line-height: 40px;
+	}
+
+	@media (min-width: 1600px) {
+		font-size: 28px;
+		line-height: 50px;
+	}
+}
+
+.mediumText {
+	font-family: Rajdhani;
+	font-style: normal;
+	font-weight: bold;
+	font-size: 20px;
+	line-height: 32px;
+
+	@media (min-width: 960px) {
+		font-size: 24px;
+		line-height: 40px;
+	}
+
+	@media (min-width: 1600px) {
+		font-size: 32px;
+		line-height: 56px;
 	}
 }
 // < /Typography>
