@@ -110,7 +110,7 @@ export default {
 			projects: {
 				jelenaCaldic: {
 					text:
-						'Jelena je želela da joj napravimo web sajt sa nekoliko sekcija kako bi mogla da se predstavi u online maniru. U ovom projektu cilj je bio fokusirati se na minimalizam i brzinu, sa onoliko sadržaja koliko je dovoljno da posetioci dobiju sve informacija na najbrži mogući način.',
+						'Jelena je želela da joj napravimo web sajt sa nekoliko sekcija kako bi mogla da se predstavi u online maniru. U ovom projektu cilj je bio fokusirati se na minimalizam i brzinu, sa onoliko sadržaja koliko je dovoljno da posetioci dobiju sve informacije na najbrži mogući način.',
 					heading: 'jelenacaldic.com',
 				},
 				krckyDev: {
@@ -120,7 +120,7 @@ export default {
 				},
 				jovana: {
 					text:
-						'Jovana je želela web sajt gde će prikazati svoje umetničke radove, podeliti nešto o sebi i imati blog. Sve je to podržano sa sistemom za upravljanje sadržajem tako da se sadržaj može vrlo lako menjati.',
+						'Jovana je želela web sajt gde će prikazati svoje umetničke radove, podeliti nešto o sebi i imati blog. Sve je to podržano sa sistemom za upravljanjem sadržaja tako da se sadržaj može vrlo lako promeniti.',
 					heading: 'Jovana slikarka',
 				},
 			},
