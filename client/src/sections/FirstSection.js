@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useSpring, animated } from 'react-spring'
 import styled from 'styled-components'
 import Header from '../components/layout/Header'
 import preferences from '../preferences'
 import MainButton from '../components/MainButton'
+import { languageStore } from './../contexts/LanguageContext'
+import content from '../content'
 
 const Container = styled.div`
 	padding-top: 20px;
@@ -114,6 +116,9 @@ const FirstSection = () => {
 		from: { transform: 'scale(0.1)' },
 		to: { transform: 'scale(1.0)' },
 	})
+
+	const { state: language } = useContext(languageStore)
+	const { firstSection } = content[language]
 	return (
 		<Container backgroundColor='#fff' className='sidePadding'>
 			<animated.div style={fade}>
@@ -125,13 +130,10 @@ const FirstSection = () => {
 								<Illustration src='illustration1.svg' alt='Illustration' />
 							</IllustrationContainer>
 							<TextContainer>
-								<span>Web Development Company</span>
-								<h1>Creating websites with confidence.</h1>
-								<p className='commonText'>
-									We develop clean and optimized websites which are adapted for
-									phones, tablets, laptops, and desktop computers.
-								</p>
-								<MainButton>CONTACT US</MainButton>
+								<span>{firstSection.span}</span>
+								<h1>{firstSection.heading}</h1>
+								<p className='commonText'>{firstSection.paragraph}</p>
+								<MainButton>{firstSection.button}</MainButton>
 							</TextContainer>
 						</FlexContainer>
 					</Content>

@@ -43,7 +43,7 @@ const FormEl = styled.form`
 		width: 100%;
 		color: ${preferences.colors.neutral};
 		font-family: Rajdhani;
-		transition: all 0.1s;
+		transition: all 0.2s;
 		max-width: 100%;
 		resize: none;
 		font-size: 18px;
