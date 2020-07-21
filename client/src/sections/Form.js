@@ -106,7 +106,7 @@ const Form = () => {
 				<FlexContainer>
 					<FormContent>
 						<Text className='commonText'>
-							You have a project in mind that we can build for you? Great! Send
+							You have a website in mind that we can build for you? Great! Send
 							a message to us with details and we’ll get back to you!
 						</Text>
 						<FormEl>
