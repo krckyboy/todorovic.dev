@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
 import SubHeading from '../components/SubHeading'
 import ExpertiseBox from '../components/ExpertiseBox'
 import OurExpertiseDecorations from '../components/decorations/OurExpertise'
+import { languageStore } from './../contexts/LanguageContext'
+import content from '../content'
 
 const Container = styled.div`
 	max-width: 100%;
@@ -30,26 +32,28 @@ const FlexContainer = styled.div`
 `
 
 const Expertise = () => {
+	const { state: language } = useContext(languageStore)
+	const { expertise } = content[language]
 	return (
 		<Container className='sidePadding topBottomPadding'>
 			<Content className='maxWidth'>
 				<OurExpertiseDecorations />
-				<SubHeading>OUR EXPERTISE</SubHeading>
+				<SubHeading>{expertise.heading}</SubHeading>
 				<FlexContainer>
 					<ExpertiseBox
 						imgSrc='bullseye.svg'
-						title='UNIQUE DESIGN'
-						text='Our team will create the design that you’ll be satisfied with.'
+						title={expertise.boxes.first.heading}
+						text={expertise.boxes.first.text}
 					/>
 					<ExpertiseBox
 						imgSrc='devices.svg'
-						title='ADAPTABLE'
-						text='Your website will be responsive, work perfectly on all devices.'
+						title={expertise.boxes.second.heading}
+						text={expertise.boxes.second.text}
 					/>
 					<ExpertiseBox
 						imgSrc='speed.svg'
-						title='BLAZING SPEED'
-						text='We’ll make your website load as fast as possible. '
+						title={expertise.boxes.third.heading}
+						text={expertise.boxes.third.text}
 					/>
 				</FlexContainer>
 			</Content>
