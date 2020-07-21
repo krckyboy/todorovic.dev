@@ -1,8 +1,10 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
 import preferences from '../preferences'
 import SubHeading from '../components/SubHeading'
 import SecondaryButton from '../components/SecondaryButton'
+import { languageStore } from './../contexts/LanguageContext'
+import content from '../content'
 
 const Container = styled.div`
 	max-width: 100%;
@@ -99,27 +101,26 @@ const ButtonContainer = styled.div`
 `
 
 const Form = () => {
+	const { state: language } = useContext(languageStore)
+	const { reachOutToUs } = content[language]
 	return (
 		<Container className='sidePadding topBottomPadding'>
 			<Content className='maxWidth'>
-				<SubHeading>REACH OUT TO US</SubHeading>
+				<SubHeading>{reachOutToUs.heading}</SubHeading>
 				<FlexContainer>
 					<FormContent>
-						<Text className='commonText'>
-							You have a website in mind that we can build for you? Great! Send
-							a message to us with details and we’ll get back to you!
-						</Text>
+						<Text className='commonText'>{reachOutToUs.paragraph}</Text>
 						<FormEl>
 							<fieldset>
-								<label htmlFor='name'>Name</label>
+								<label htmlFor='name'>{reachOutToUs.name}</label>
 								<input type='text' id='name' />
 							</fieldset>
 							<fieldset>
-								<label htmlFor='email'>Email</label>
+								<label htmlFor='email'>{reachOutToUs.email}</label>
 								<input type='email' id='email' />
 							</fieldset>
 							<fieldset>
-								<label htmlFor='message'>Message</label>
+								<label htmlFor='message'>{reachOutToUs.message}</label>
 								<textarea
 									name='message'
 									id='message'
@@ -128,7 +129,7 @@ const Form = () => {
 								></textarea>
 							</fieldset>
 							<ButtonContainer>
-								<SecondaryButton>SEND</SecondaryButton>
+								<SecondaryButton>{reachOutToUs.button}</SecondaryButton>
 							</ButtonContainer>
 						</FormEl>
 					</FormContent>

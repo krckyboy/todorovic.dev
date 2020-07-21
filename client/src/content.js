@@ -69,6 +69,15 @@ export default {
 				},
 			},
 		},
+		reachOutToUs: {
+			heading: 'REACH OUT TO US',
+			paragraph:
+				'You have a website in mind that we can build for you? Great! Send a message to us with details and we’ll get back to you!',
+			name: 'Name',
+			email: 'Email',
+			message: 'Message',
+			button: 'SEND',
+		},
 	},
 	rs: {
 		firstSection: {
@@ -131,8 +140,7 @@ export default {
 				},
 				third: {
 					title: 'Izrada',
-					text:
-						'Nakon urađenog dizajna, možemo krenuti u izradu vašeg sajta.',
+					text: 'Nakon urađenog dizajna, možemo krenuti u izradu vašeg sajta.',
 				},
 				fourth: {
 					title: 'Testiranje',
@@ -140,6 +148,15 @@ export default {
 						'U ovoj fazi se radi na tome da svaki deo web sajta funkcioniše kako bi trebalo, na svim uređajima.',
 				},
 			},
+		},
+		reachOutToUs: {
+			heading: 'STUPIMO U KONTAKT',
+			paragraph:
+				'Imate na umu web sajt koji bismo mogli da napravimo za vas? Super! Pošaljite nam poruku sa detaljima i mi ćemo vas kontaktirati!',
+			name: 'Ime',
+			email: 'Email',
+			message: 'Poruka',
+			button: 'POŠALJI',
 		},
 	},
 }

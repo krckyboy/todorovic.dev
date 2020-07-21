@@ -6,7 +6,7 @@ const Button = styled.button`
 	background-color: ${preferences.colors.main};
 	outline: none;
 	border: 2px solid transparent;
-	padding: 16px 128px;
+	padding: 16px 90px;
 	color: white;
 	font-family: 'Rajdhani', sans-serif;
 	font-weight: 600;
