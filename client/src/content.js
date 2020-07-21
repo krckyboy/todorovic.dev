@@ -106,7 +106,7 @@ export default {
 		},
 		latestWork: {
 			heading: 'POSLEDNJI RADOVI',
-			linkText: 'Posetite web sajt',
+			linkText: 'Poseti web sajt',
 			projects: {
 				jelenaCaldic: {
 					text:
