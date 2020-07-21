@@ -73,6 +73,7 @@ const Text = styled.p`
 
 	@media (min-width: 960px) {
 		max-width: initial;
+		min-width: 650px;
 	}
 `
 

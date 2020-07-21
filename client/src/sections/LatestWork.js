@@ -1,10 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
 import preferences from '../preferences'
 import SubHeading from '../components/SubHeading'
 import { Carousel } from 'react-responsive-carousel'
 import styles from 'react-responsive-carousel/lib/styles/carousel.min.css'
 import Project from '../components/Project'
+import { languageStore } from './../contexts/LanguageContext'
+import content from '../content'
 
 const Container = styled.div`
 	max-width: 100%;
@@ -45,10 +47,12 @@ const Content = styled.div`
 `
 
 const Expertise = () => {
+	const { state: language } = useContext(languageStore)
+	const { latestWork } = content[language]
 	return (
 		<Container backgroundColor='#fff' className='sidePadding topBottomPadding'>
 			<Content className='maxWidth'>
-				<SubHeading>LATEST WORK</SubHeading>
+				<SubHeading>{latestWork.heading}</SubHeading>
 				<Carousel
 					style={styles}
 					showThumbs={false}
@@ -58,34 +62,22 @@ const Expertise = () => {
 					autoPlay={true}
 				>
 					<Project
-						imgSrc='projects/jovana_cut.png'
-						title='Jovana Painter'
-						websiteUrl='https://jovana-painter-static.netlify.app/'
-						text='We develop clean and optimized websites which are adapted for phones, laptops, tablets and desktop. We develop clean and optimized websites which are adapted for phones, laptops, tablets and desktop. We develop clean and optimized websites which are adapted for phones, laptops, tablets and desktop.'
+						imgSrc='projects/jelena_caldic_cut.png'
+						title={latestWork.projects.jelenaCaldic.heading}
+						websiteUrl='https://jelenacaldic.com/'
+						text={latestWork.projects.jelenaCaldic.text}
 					/>
 					<Project
 						imgSrc='projects/krcky.png'
-						title='krcky.dev'
+						title={latestWork.projects.krckyDev.heading}
 						websiteUrl='https://krcky.dev/'
-						text='We develop clean and optimized websites which are adapted for phones, laptops, tablets and desktop. We develop clean and optimized websites which are adapted for phones, laptops, tablets and desktop. We develop clean and optimized websites which are adapted for phones, laptops, tablets and desktop.'
+						text={latestWork.projects.krckyDev.text}
 					/>
 					<Project
-						imgSrc='projects/jelena_caldic_cut.png'
-						title='jelenacaldic.com'
-						websiteUrl='https://jelenacaldic.com/'
-						text='We develop clean and optimized websites which are adapted for phones, laptops, tablets and desktop. We develop clean and optimized websites which are adapted for phones, laptops, tablets and desktop. We develop clean and optimized websites which are adapted for phones, laptops, tablets and desktop.'
-					/>
-					<Project
-						imgSrc='projects/john_photography_cut.png'
-						title={`John's Photography`}
-						websiteUrl='https://krckyboy.github.io/John_Smith_Photography/'
-						text='We develop clean and optimized websites which are adapted for phones, laptops, tablets and desktop. We develop clean and optimized websites which are adapted for phones, laptops, tablets and desktop. We develop clean and optimized websites which are adapted for phones, laptops, tablets and desktop.'
-					/>
-					<Project
-						imgSrc='projects/john_bar_cut.png'
-						title={`John's Bar`}
-						websiteUrl='https://krckyboy.github.io/John-s-Bar/'
-						text='We develop clean and optimized websites which are adapted for phones, laptops, tablets and desktop. We develop clean and optimized websites which are adapted for phones, laptops, tablets and desktop. We develop clean and optimized websites which are adapted for phones, laptops, tablets and desktop.'
+						imgSrc='projects/jovana_cut.png'
+						title={latestWork.projects.jovana.heading}
+						websiteUrl='https://jovana-painter-static.netlify.app/'
+						text={latestWork.projects.jovana.text}
 					/>
 				</Carousel>
 			</Content>
