@@ -1,7 +1,9 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
 import SubHeading from '../components/SubHeading'
 import HowWeWorkElement from '../components/HowWeWorkElement'
+import { languageStore } from './../contexts/LanguageContext'
+import content from '../content'
 
 const Container = styled.div`
 	max-width: 100%;
@@ -21,30 +23,32 @@ const Ul = styled.ul`
 `
 
 const HowWeWork = () => {
+	const { state: language } = useContext(languageStore)
+	const { howWeWork } = content[language]
 	return (
 		<Container className='sidePadding topBottomPadding'>
 			<Content className='maxWidth'>
-				<SubHeading>HOW WE WORK</SubHeading>
+				<SubHeading>{howWeWork.heading}</SubHeading>
 				<Ul>
 					<HowWeWorkElement
 						imgSrc='icons/1.svg'
-						title='Setting up goals'
-						text='First, we discuss with you what you want to accomplish with the website and cover all the details.'
+						title={howWeWork.boxes.first.title}
+						text={howWeWork.boxes.first.text}
 					/>
 					<HowWeWorkElement
 						imgSrc='icons/2.svg'
-						title='Design'
-						text='We challenge ourselves to come up with the design ideas for your website with your approval.'
+						title={howWeWork.boxes.second.title}
+						text={howWeWork.boxes.second.text}
 					/>
 					<HowWeWorkElement
 						imgSrc='icons/3.svg'
-						title='Development'
-						text='Now that we have the design ready, we can start developing your website.'
+						title={howWeWork.boxes.third.title}
+						text={howWeWork.boxes.third.text}
 					/>
 					<HowWeWorkElement
 						imgSrc='icons/4.svg'
-						title='Testing'
-						text='We make sure that every aspect of the website is working as intended, on all devices.'
+						title={howWeWork.boxes.fourth.title}
+						text={howWeWork.boxes.fourth.text}
 					/>
 				</Ul>
 			</Content>

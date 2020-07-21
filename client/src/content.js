@@ -44,6 +44,31 @@ export default {
 				},
 			},
 		},
+		howWeWork: {
+			heading: 'HOW WE WORK',
+			boxes: {
+				first: {
+					title: 'Setting up goals',
+					text:
+						'First, we discuss with you what you want to accomplish with the website and cover all the details.',
+				},
+				second: {
+					title: 'Design',
+					text:
+						'We challenge ourselves to come up with the design ideas for the website.',
+				},
+				third: {
+					title: 'Development',
+					text:
+						'Now that we have the design ready, we can start developing your website.',
+				},
+				fourth: {
+					title: 'Testing',
+					text:
+						'We make sure that every aspect of the website is working as intended, on all devices.',
+				},
+			},
+		},
 	},
 	rs: {
 		firstSection: {
@@ -66,7 +91,7 @@ export default {
 				},
 				third: {
 					heading: 'MUNJEVITA BRZINA',
-					text: `Optimizovaćemo Vam sajt tako da radi najvećom mogućom brzinom.`,
+					text: `Optimizovaćemo vam sajt tako da radi najvećom mogućom brzinom.`,
 				},
 			},
 		},
@@ -88,6 +113,31 @@ export default {
 					text:
 						'Jovana je želela web sajt gde će prikazati svoje umetničke radove, podeliti nešto o sebi i imati blog. Sve je to podržano sa sistemom za upravljanje sadržajem tako da se sadržaj može vrlo lako menjati.',
 					heading: 'Jovana slikarka',
+				},
+			},
+		},
+		howWeWork: {
+			heading: 'PRINCIP RADA',
+			boxes: {
+				first: {
+					title: 'Postavljanje ciljeva',
+					text:
+						'Prvo se dogovaramo sa vama o tome šta želite da postignete sa web sajtom i prolazimo kroz sve detalje.',
+				},
+				second: {
+					title: 'Dizajn',
+					text:
+						'Izazivamo sebe da dođemo do najboljih rešenja koje se tiču dizajna sajta.',
+				},
+				third: {
+					title: 'Izrada',
+					text:
+						'Nakon urađenog dizajna, možemo krenuti u izradu vašeg sajta.',
+				},
+				fourth: {
+					title: 'Testiranje',
+					text:
+						'U ovoj fazi se radi na tome da svaki deo web sajta funkcioniše kako bi trebalo, na svim uređajima.',
 				},
 			},
 		},
