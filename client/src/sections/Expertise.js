@@ -7,11 +7,13 @@ import OurExpertiseDecorations from '../components/decorations/OurExpertise'
 const Container = styled.div`
 	max-width: 100%;
 	background-color: #f8f3fd;
-	position: relative;
 	overflow: hidden;
 `
 
 const Content = styled.div`
+	position: relative;
+	height: 100%;
+	width: 100%;
 	* {
 		z-index: 9;
 		position: relative;
@@ -30,8 +32,8 @@ const FlexContainer = styled.div`
 const Expertise = () => {
 	return (
 		<Container className='sidePadding topBottomPadding'>
-			<OurExpertiseDecorations />
 			<Content className='maxWidth'>
+				<OurExpertiseDecorations />
 				<SubHeading>OUR EXPERTISE</SubHeading>
 				<FlexContainer>
 					<ExpertiseBox

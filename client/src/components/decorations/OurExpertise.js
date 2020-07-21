@@ -2,23 +2,28 @@ import React from 'react'
 import styled from 'styled-components'
 
 const TopRight = styled.img`
-	left: 75%;
-    top: -20%;
-    animation-name: MoveAround;
-    animation-iteration-count: infinite;
-    animation-duration: 3s;
+	left: 80%;
+	top: -400px;
+	animation-name: MoveAround;
+	animation-iteration-count: infinite;
+	animation-duration: 3s;
 `
 const BottomLeft = styled.img`
-	top: 60%;
-    left: -5%;
-    animation-name: MoveAround;
-    animation-iteration-count: infinite;
-    animation-duration: 4s;
+	top: 500px;
+	left: -20%;
+	animation-name: MoveAround;
+	animation-iteration-count: infinite;
+	animation-duration: 4s;
 `
 
 const Container = styled.div`
+	display: none;
 	img {
 		position: absolute;
+	}
+
+	@media (min-width: 960px) {
+		display: block;
 	}
 `
 
