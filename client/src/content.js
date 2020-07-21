@@ -26,6 +26,7 @@ export default {
 		},
 		latestWork: {
 			heading: 'LATEST WORK',
+			linkText: 'Visit website',
 			projects: {
 				jelenaCaldic: {
 					text:
@@ -71,6 +72,7 @@ export default {
 		},
 		latestWork: {
 			heading: 'POSLEDNJI RADOVI',
+			linkText: 'Posetite web sajt',
 			projects: {
 				jelenaCaldic: {
 					text:

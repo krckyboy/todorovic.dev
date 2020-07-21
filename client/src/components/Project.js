@@ -1,6 +1,8 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from 'styled-components'
 import preferences from '../preferences'
+import { languageStore } from './../contexts/LanguageContext'
+import content from '../content'
 
 const Container = styled.div`
 	background-color: white;
@@ -114,6 +116,8 @@ const ImageContainer = styled.div`
 `
 
 const Project = ({ imgSrc, title, text, websiteUrl }) => {
+	const { state: language } = useContext(languageStore)
+	const { latestWork } = content[language]
 	return (
 		<Container>
 			<ImageContainer>
@@ -129,7 +133,7 @@ const Project = ({ imgSrc, title, text, websiteUrl }) => {
 					target='_blank'
 					rel='noopener noreferrer'
 				>
-					Visit website
+					{latestWork.linkText}
 				</a>
 			</ProjectTextContainer>
 		</Container>
