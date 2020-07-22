@@ -62,19 +62,19 @@ const Expertise = () => {
 					autoPlay={true}
 				>
 					<Project
-						imgSrc='projects/jelena_caldic_cut.png'
+						imgSrc='projects/resized/jelenacaldic.png'
 						title={latestWork.projects.jelenaCaldic.heading}
 						websiteUrl='https://jelenacaldic.com/'
 						text={latestWork.projects.jelenaCaldic.text}
 					/>
 					<Project
-						imgSrc='projects/krcky.png'
+						imgSrc='projects/resized/krckydev.png'
 						title={latestWork.projects.krckyDev.heading}
 						websiteUrl='https://krcky.dev/'
 						text={latestWork.projects.krckyDev.text}
 					/>
 					<Project
-						imgSrc='projects/jovana_cut.png'
+						imgSrc='projects/resized/jovana.png'
 						title={latestWork.projects.jovana.heading}
 						websiteUrl='https://jovana-painter-static.netlify.app/'
 						text={latestWork.projects.jovana.text}
