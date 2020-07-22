@@ -110,7 +110,8 @@ const Form = () => {
 				<FlexContainer>
 					<FormContent>
 						<Text className='commonText'>{reachOutToUs.paragraph}</Text>
-						<FormEl>
+						<FormEl name='contact' method='post'>
+							<input type='hidden' name='reachOutToUs' value='contact' />
 							<fieldset>
 								<label htmlFor='name'>{reachOutToUs.name}</label>
 								<input type='text' id='name' />

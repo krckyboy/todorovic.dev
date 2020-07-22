@@ -84,7 +84,7 @@ export default {
 			span: 'Web Development Kompanija',
 			heading: 'Profesionalno kreiranje web sajtova.',
 			paragraph:
-				'Mi pravimo optimizovane web sajtove koji su adaptirani za telefone, tablete, laptopove i desktop računare.',
+				'Mi pravimo optimizovane web sajtove koji su adaptirani za mobilne telefone, tablete, laptopove i desktop računare.',
 			button: 'KONTAKT',
 		},
 		expertise: {
@@ -96,7 +96,7 @@ export default {
 				},
 				second: {
 					heading: 'ADAPTIVNOST',
-					text: `Vaš sajt će se adaptirati uređaju sa kojeg se pristupa.`,
+					text: `Vaš sajt će biti adaptiran uređaju sa kojeg se pristupa.`,
 				},
 				third: {
 					heading: 'MUNJEVITA BRZINA',
@@ -140,12 +140,12 @@ export default {
 				},
 				third: {
 					title: 'Izrada',
-					text: 'Nakon urađenog dizajna, možemo krenuti u izradu vašeg sajta.',
+					text: 'Nakon završenog dizajna, možemo krenuti u izradu vašeg sajta.',
 				},
 				fourth: {
 					title: 'Testiranje',
 					text:
-						'U ovoj fazi se radi na tome da svaki deo web sajta funkcioniše kako bi trebalo, na svim uređajima.',
+						'U ovoj fazi se radi na tome da svaki deo web sajta funkcioniše kako bi trebalo na svim uređajima.',
 				},
 			},
 		},
