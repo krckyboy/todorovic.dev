@@ -111,14 +111,14 @@ const Form = () => {
 					<FormContent>
 						<Text className='commonText'>{reachOutToUs.paragraph}</Text>
 						<FormEl name='contact' method='post'>
-							<input type='hidden' name='contact' value='contact' />
+							<input type='hidden' name='form-name' value='contact' />
 							<fieldset>
 								<label htmlFor='name'>{reachOutToUs.name}</label>
-								<input type='text' id='name' name='name' />
+								<input type='text' id='name' name='name' required />
 							</fieldset>
 							<fieldset>
 								<label htmlFor='email'>{reachOutToUs.email}</label>
-								<input type='email' id='email' name='email' />
+								<input type='email' id='email' name='email' required />
 							</fieldset>
 							<fieldset>
 								<label htmlFor='message'>{reachOutToUs.message}</label>
@@ -127,6 +127,7 @@ const Form = () => {
 									id='message'
 									cols='30'
 									rows='10'
+									required
 								></textarea>
 							</fieldset>
 							<ButtonContainer>
