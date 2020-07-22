@@ -111,7 +111,7 @@ const Form = () => {
 					<FormContent>
 						<Text className='commonText'>{reachOutToUs.paragraph}</Text>
 						<FormEl name='contact' method='post'>
-							<input type='hidden' name='reachOutToUs' value='contact' />
+							<input type='hidden' name='contact' value='contact' />
 							<fieldset>
 								<label htmlFor='name'>{reachOutToUs.name}</label>
 								<input type='text' id='name' name='name' />
@@ -130,7 +130,9 @@ const Form = () => {
 								></textarea>
 							</fieldset>
 							<ButtonContainer>
-								<SecondaryButton>{reachOutToUs.button}</SecondaryButton>
+								<SecondaryButton type='submit'>
+									{reachOutToUs.button}
+								</SecondaryButton>
 							</ButtonContainer>
 						</FormEl>
 					</FormContent>
