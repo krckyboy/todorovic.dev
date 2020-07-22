@@ -114,11 +114,11 @@ const Form = () => {
 							<input type='hidden' name='reachOutToUs' value='contact' />
 							<fieldset>
 								<label htmlFor='name'>{reachOutToUs.name}</label>
-								<input type='text' id='name' />
+								<input type='text' id='name' name='name' />
 							</fieldset>
 							<fieldset>
 								<label htmlFor='email'>{reachOutToUs.email}</label>
-								<input type='email' id='email' />
+								<input type='email' id='email' name='email' />
 							</fieldset>
 							<fieldset>
 								<label htmlFor='message'>{reachOutToUs.message}</label>
