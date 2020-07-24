@@ -35,6 +35,7 @@ export default withRouter((props) => {
 	function setSerbian() {
 		dispatch({ type: 'Switch to Serbian' })
 		// If we have more than one page, this wouldn't work
+		// Maybe just push to the existing path but change param manually 
 		props.history.push('/')
 	}
 

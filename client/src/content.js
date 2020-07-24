@@ -100,7 +100,7 @@ export default {
 				},
 				third: {
 					heading: 'MUNJEVITA BRZINA',
-					text: `Optimizovaćemo vam sajt tako da radi najvećom mogućom brzinom.`,
+					text: `Optimizovaćemo Vam sajt tako da radi najvećom mogućom brzinom.`,
 				},
 			},
 		},
@@ -121,7 +121,7 @@ export default {
 				jovana: {
 					text:
 						'Jovana je želela web sajt gde će prikazati svoje umetničke radove, podeliti nešto o sebi i imati blog. Sve je to podržano sa sistemom za upravljanjem sadržaja tako da se sadržaj može vrlo lako promeniti.',
-					heading: 'Jovana slikarka',
+					heading: 'Jovana',
 				},
 			},
 		},
@@ -131,7 +131,7 @@ export default {
 				first: {
 					title: 'Postavljanje ciljeva',
 					text:
-						'Prvo se dogovaramo sa vama o tome šta želite da postignete sa web sajtom i prolazimo kroz sve detalje.',
+						'Prvo se dogovaramo sa Vama o tome šta želite da postignete sa web sajtom i prolazimo kroz sve detalje.',
 				},
 				second: {
 					title: 'Dizajn',
@@ -140,7 +140,7 @@ export default {
 				},
 				third: {
 					title: 'Izrada',
-					text: 'Nakon završenog dizajna, možemo krenuti u izradu vašeg sajta.',
+					text: 'Nakon završenog dizajna, možemo krenuti u izradu Vašeg sajta.',
 				},
 				fourth: {
 					title: 'Testiranje',
@@ -152,7 +152,7 @@ export default {
 		reachOutToUs: {
 			heading: 'STUPIMO U KONTAKT',
 			paragraph:
-				'Imate na umu web sajt koji bismo mogli da napravimo za vas? Super! Pošaljite nam poruku sa detaljima i mi ćemo vas kontaktirati!',
+				'Imate na umu web sajt koji bismo mogli da napravimo za Vas? Super! Pošaljite nam poruku sa detaljima i mi ćemo Vas kontaktirati!',
 			name: 'Ime',
 			email: 'Email',
 			message: 'Poruka',
