@@ -1,5 +1,6 @@
 import React, { createContext, useReducer } from 'react'
 
+console.log(window.location.pathname)
 const initialState = 'en'
 
 export const languageStore = createContext(initialState)

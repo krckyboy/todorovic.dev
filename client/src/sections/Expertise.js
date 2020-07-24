@@ -41,17 +41,17 @@ const Expertise = () => {
 				<SubHeading>{expertise.heading}</SubHeading>
 				<FlexContainer>
 					<ExpertiseBox
-						imgSrc='bullseye.svg'
+						imgSrc='/bullseye.svg'
 						title={expertise.boxes.first.heading}
 						text={expertise.boxes.first.text}
 					/>
 					<ExpertiseBox
-						imgSrc='devices.svg'
+						imgSrc='/devices.svg'
 						title={expertise.boxes.second.heading}
 						text={expertise.boxes.second.text}
 					/>
 					<ExpertiseBox
-						imgSrc='speed.svg'
+						imgSrc='/speed.svg'
 						title={expertise.boxes.third.heading}
 						text={expertise.boxes.third.text}
 					/>

@@ -137,7 +137,7 @@ const Form = () => {
 							</ButtonContainer>
 						</FormEl>
 					</FormContent>
-					<Img src='illustration2.svg' alt='Illustration' />
+					<Img src='/illustration2.svg' alt='Illustration' />
 				</FlexContainer>
 			</Content>
 		</Container>

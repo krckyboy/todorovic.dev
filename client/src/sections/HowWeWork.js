@@ -31,22 +31,22 @@ const HowWeWork = () => {
 				<SubHeading>{howWeWork.heading}</SubHeading>
 				<Ul>
 					<HowWeWorkElement
-						imgSrc='icons/1.svg'
+						imgSrc='/icons/1.svg'
 						title={howWeWork.boxes.first.title}
 						text={howWeWork.boxes.first.text}
 					/>
 					<HowWeWorkElement
-						imgSrc='icons/2.svg'
+						imgSrc='/icons/2.svg'
 						title={howWeWork.boxes.second.title}
 						text={howWeWork.boxes.second.text}
 					/>
 					<HowWeWorkElement
-						imgSrc='icons/3.svg'
+						imgSrc='/icons/3.svg'
 						title={howWeWork.boxes.third.title}
 						text={howWeWork.boxes.third.text}
 					/>
 					<HowWeWorkElement
-						imgSrc='icons/4.svg'
+						imgSrc='/icons/4.svg'
 						title={howWeWork.boxes.fourth.title}
 						text={howWeWork.boxes.fourth.text}
 					/>

@@ -127,7 +127,7 @@ const FirstSection = () => {
 						<Header />
 						<FlexContainer>
 							<IllustrationContainer>
-								<Illustration src='illustration1.svg' alt='Illustration' />
+								<Illustration src='/illustration1.svg' alt='Illustration' />
 							</IllustrationContainer>
 							<TextContainer>
 								<span>{firstSection.span}</span>

@@ -17,7 +17,7 @@ const Header = () => {
 	return (
 		<Container>
 			<a href='/'>
-				<img src='logo.svg' alt='Logo' />
+				<img src='/logo.svg' alt='Logo' />
 			</a>
 			<LanguageSwitcher />
 		</Container>

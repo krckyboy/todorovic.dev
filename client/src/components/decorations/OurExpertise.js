@@ -30,8 +30,8 @@ const Container = styled.div`
 const OurExpertise = () => {
 	return (
 		<Container>
-			<TopRight src='decorative/ellipseTopRight.svg' alt='Ellipse' />
-			<BottomLeft src='decorative/ellipseBottomLeft.svg' alt='Ellipse' />
+			<TopRight src='/decorative/ellipseTopRight.svg' alt='Ellipse' />
+			<BottomLeft src='/decorative/ellipseBottomLeft.svg' alt='Ellipse' />
 		</Container>
 	)
 }

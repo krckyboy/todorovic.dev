@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import styled from 'styled-components'
 import preferences from '../preferences'
 import { languageStore } from './../contexts/LanguageContext'
+import { withRouter, generatePath } from 'react-router'
 
 const Container = styled.div`
 	display: flex;
@@ -27,16 +28,20 @@ const Container = styled.div`
 	}
 `
 
-export default () => {
+export default withRouter((props) => {
 	const language = useContext(languageStore)
 	const { dispatch, state } = language
 
 	function setSerbian() {
+		console.log(props)
 		dispatch({ type: 'Switch to Serbian' })
+		props.history.push('/')
 	}
 
 	function setEnglish() {
+		console.log(props)
 		dispatch({ type: 'Switch to English' })
+		props.history.push('/')
 	}
 
 	return (
@@ -49,4 +54,4 @@ export default () => {
 			</div>
 		</Container>
 	)
-}
+})
