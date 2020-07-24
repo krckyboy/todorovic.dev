@@ -26,45 +26,6 @@ const Home = () => (
 	</>
 )
 
-// function App() {
-// 	const language = useContext(languageStore)
-// 	return (
-// 		<LanguageProvider>
-// 			<Router onUpdate={() => window.scrollTo(0, 0)} basename={`${language}`}>
-// 				<Switch>
-// 					<Route path='/' exact component={Home} />
-// 					<Redirect to='/' />
-// 				</Switch>
-// 			</Router>
-// 		</LanguageProvider>
-// 	)
-// }
-
-// function App() {
-// 	const language = useContext(languageStore)
-// 	const supportedLanguages = ['en', 'rs']
-
-// 	return (
-// 		<LanguageProvider>
-// 			<Router onUpdate={() => window.scrollTo(0, 0)}>
-// 				<Switch>
-// 					<Route
-// 						path='/:lang/'
-// 						render={(props) =>
-// 							supportedLanguages.includes(props.match.params.lang) ? (
-// 								<Home {...props} />
-// 							) : (
-// 								<Redirect to={`/${language}`} />
-// 							)
-// 						}
-// 					/>
-// 					<Redirect to={`/${language}`} />
-// 				</Switch>
-// 			</Router>
-// 		</LanguageProvider>
-// 	)
-// }
-
 function App() {
 	const { state: language } = useContext(languageStore)
 	const supportedLanguages = ['en', 'rs']
@@ -88,19 +49,6 @@ function App() {
 		</Router>
 	)
 }
-
-// function App() {
-// 	const { state: language } = useContext(languageStore)
-// 	console.log(language)
-// 	return (
-// 		<Router onUpdate={() => window.scrollTo(0, 0)} basename={`${language}`}>
-// 			<Switch>
-// 				<Route path='/' exact component={Home} />
-// 				<Redirect to='/' />
-// 			</Switch>
-// 		</Router>
-// 	)
-// }
 
 function AppWrapper({ children }) {
 	return <LanguageProvider>{children}</LanguageProvider>

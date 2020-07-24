@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import styled from 'styled-components'
 import preferences from '../preferences'
 import { languageStore } from './../contexts/LanguageContext'
-import { withRouter, generatePath } from 'react-router'
+import { withRouter, Redirect } from 'react-router'
 
 const Container = styled.div`
 	display: flex;
@@ -33,14 +33,14 @@ export default withRouter((props) => {
 	const { dispatch, state } = language
 
 	function setSerbian() {
-		console.log(props)
 		dispatch({ type: 'Switch to Serbian' })
+		// If we have more than one page, this wouldn't work
 		props.history.push('/')
 	}
 
 	function setEnglish() {
-		console.log(props)
 		dispatch({ type: 'Switch to English' })
+		// If we have more than one page, this wouldn't work
 		props.history.push('/')
 	}
 

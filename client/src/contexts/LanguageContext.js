@@ -1,7 +1,16 @@
 import React, { createContext, useReducer } from 'react'
 
-console.log(window.location.pathname)
-const initialState = 'en'
+let initialState
+
+// We fetch the language parameter from the url manually to set up the default state for context
+const languageFromUrl = window.location.pathname.split('/')[1]
+const acceptableLanguages = ['en', 'rs']
+
+if (acceptableLanguages.includes(languageFromUrl)) {
+	initialState = languageFromUrl
+} else {
+	initialState = 'en'
+}
 
 export const languageStore = createContext(initialState)
 
