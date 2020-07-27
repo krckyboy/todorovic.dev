@@ -104,7 +104,7 @@ const Form = () => {
 	const { state: language } = useContext(languageStore)
 	const { reachOutToUs } = content[language]
 	return (
-		<Container className='sidePadding topBottomPadding'>
+		<Container className='sidePadding topBottomPadding' id='form'>
 			<Content className='maxWidth'>
 				<SubHeading>{reachOutToUs.heading}</SubHeading>
 				<FlexContainer>

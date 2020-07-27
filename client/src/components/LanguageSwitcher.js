@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import styled from 'styled-components'
 import preferences from '../preferences'
 import { languageStore } from './../contexts/LanguageContext'
-import { withRouter, Redirect } from 'react-router'
+import { withRouter } from 'react-router'
 
 const Container = styled.div`
 	display: flex;
@@ -35,7 +35,7 @@ export default withRouter((props) => {
 	function setSerbian() {
 		dispatch({ type: 'Switch to Serbian' })
 		// If we have more than one page, this wouldn't work
-		// Maybe just push to the existing path but change param manually 
+		// Maybe just push to the existing path but change param manually
 		props.history.push('/')
 	}
 

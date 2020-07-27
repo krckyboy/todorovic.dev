@@ -91,10 +91,6 @@ const TextContainer = styled.div`
 	p {
 		color: ${preferences.colors.neutral};
 	}
-
-	button {
-		margin-top: 56px;
-	}
 `
 
 const FlexContainer = styled.div`
