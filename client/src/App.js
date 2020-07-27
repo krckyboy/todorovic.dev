@@ -29,7 +29,6 @@ const Home = () => (
 function App() {
 	const { state: language } = useContext(languageStore)
 	const supportedLanguages = ['en', 'rs']
-	console.log('Language in context: ', language)
 	return (
 		<Router onUpdate={() => window.scrollTo(0, 0)}>
 			<Switch>
