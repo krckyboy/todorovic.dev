@@ -33,6 +33,7 @@ const Li = styled.li`
 
 const NumberElement = styled.img`
 	margin-right: 24px;
+	height: 64px;
 `
 
 const TextContainer = styled.div`
