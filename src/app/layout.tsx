@@ -1,7 +1,9 @@
 import type { Metadata } from 'next';
 import { Quicksand } from 'next/font/google';
 import React from 'react';
-import Link from 'next/link';
+import 'reset-css';
+import Navigation from '@/components/sideMenu/SideMenu';
+import '@/styles/global.scss';
 
 const quicksand = Quicksand({ subsets: ['latin'] });
 
@@ -20,22 +22,7 @@ const RootLayout = ({
   return (
     <html lang="en">
     <body className={quicksand.className}>
-    <nav>
-      <ul>
-        <li>
-          <Link href={'/'}>Home</Link>
-        </li>
-        <li>
-          <Link href={'/about'}>About</Link>
-        </li>
-        <li>
-          <Link href={'/skills'}>Skills</Link>
-        </li>
-        <li>
-          <Link href={'/blog'}>Blog</Link>
-        </li>
-      </ul>
-    </nav>
+    <Navigation />
     {children}
     </body>
     </html>
