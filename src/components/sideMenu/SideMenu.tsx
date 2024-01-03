@@ -19,7 +19,8 @@ const Navigation: FunctionComponent = () => {
           <Link href={'/blog'}>Blog</Link>
         </li>
       </ul>
-    </nav>);
+    </nav>
+  );
 };
 
 export default Navigation;
