@@ -1,5 +1,5 @@
 .container {
-  position: absolute;
+  position: fixed;
   top: 24px;
   width: 100%;
   justify-content: center;
@@ -8,9 +8,5 @@
   ul {
     display: flex;
     column-gap: 16px;
-
-    li {
-
-    }
   }
 }
