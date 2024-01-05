@@ -10,7 +10,7 @@ interface Props {
 const SingleSocialIcon: FunctionComponent<Props> = (props) => {
   return (
     <li>
-      <a href={props.url}>
+      <a href={props.url} target={'_blank'}>
         <Image src={props.imgSrc} alt={props.imgAlt} width={48} height={48} />
       </a>
     </li>
