@@ -1,11 +1,11 @@
-import type { Metadata } from 'next';
-import { Quicksand } from 'next/font/google';
 import React from 'react';
+import type { Metadata } from 'next';
+import { League_Spartan } from 'next/font/google';
+import Navigation from '@/components/navigation/Navigation';
 import 'reset-css';
-import Navigation from '@/components/sideMenu/SideMenu';
 import '@/styles/global.scss';
 
-const quicksand = Quicksand({ subsets: ['latin'] });
+const leagueSpartan = League_Spartan({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'krcky.dev',
@@ -21,7 +21,7 @@ const RootLayout = ({
                     }: Props) => {
   return (
     <html lang="en">
-    <body className={quicksand.className}>
+    <body className={leagueSpartan.className}>
     <Navigation />
     {children}
     </body>
