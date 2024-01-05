@@ -1,10 +1,11 @@
 @import './vars';
 
 * {
-  font-family: 'Quicksand', sans-serif;
-}
-
-a, a:visited {
+  font-family: 'League Spartan', sans-serif;
   color: $color-text;
   text-decoration: none;
+}
+
+body {
+  background-color: $color-background;
 }
