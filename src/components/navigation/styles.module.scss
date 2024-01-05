@@ -1,0 +1,14 @@
+.container {
+  position: absolute;
+  top: 24px;
+  right: 0;
+  justify-content: flex-end;
+  display: flex;
+  padding-right: 70px;
+  font-size: clamp(1rem, 1vw, 2rem);
+
+  ul {
+    display: flex;
+    column-gap: 32px;
+  }
+}
