@@ -1,13 +1,17 @@
+@import '@/styles/vars';
+
 .container {
   position: absolute;
-  top: 24px;
-  right: 0;
+  width: 100%;
   justify-content: flex-end;
+  align-items: center;
   display: flex;
-  padding-right: 70px;
   font-size: clamp(1rem, 1vw, 2rem);
+  height: 56px;
+  background-color: $color-background;
 
   ul {
+    margin-right: 70px;
     display: flex;
     column-gap: 32px;
   }
