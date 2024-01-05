@@ -3,7 +3,7 @@ import { NextPage } from 'next';
 const Page: NextPage = () => {
   return (
     <main>
-      My skills
+      <h1>Skills</h1>
     </main>
   );
 };
