@@ -82,7 +82,7 @@ const Elements = () => {
         transform: 'rotate(11.025deg)',
         backgroundColor: '#56CCF2',
         right: '4%',
-        top: '84%'
+        top: '88%'
       }
     }
   ];

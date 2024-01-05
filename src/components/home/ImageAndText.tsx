@@ -8,8 +8,8 @@ const ImageAndText: FunctionComponent = () => {
       <Image src={'/images/home/dusan.png'}
              priority
              alt={'Dušan Todorović in a formal white shirt'}
-             width={300}
-             height={400}
+             width={400}
+             height={500}
              className={styles.image}
       />
       <section className={styles.textSection}>
