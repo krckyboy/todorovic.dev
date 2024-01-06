@@ -22,8 +22,8 @@ const ImageAndText: FunctionComponent = () => {
         <Image src={'/images/home/dusan.png'}
                priority
                alt={'Dušan Todorović in a formal white shirt'}
-               width={400}
-               height={500}
+               width={200}
+               height={200}
                className={styles.image}
         />
       </motion.div>
@@ -46,6 +46,17 @@ const ImageAndText: FunctionComponent = () => {
           <a className={styles.locationLink} href={'https://maps.app.goo.gl/DHTdsDU24RjWYhhV8'} target={'_blank'}>
             Belgrade, Serbia.
           </a>
+        </motion.p>
+        <motion.p className={styles.paragraphBelow}
+                  initial="hidden"
+                  animate="visible"
+                  variants={variants}
+                  transition={{ duration: 1, delay: 2 }}>
+          <span>Bacon ipsum dolor amet nulla corned beef occaecat do aliqua sausage. Bresaola velit commodo pork belly. Ad eiusmod sunt tenderloin officia cupidatat excepteur pork chop.</span>
+
+          <span>Ex nostrud aute, meatball venison doner turkey sed fatback commodo qui ground round.</span>
+
+          <span>Rump officia salami in deserunt non bresaola, short ribs ullamco pork belly t-bone ipsum fatback velit. Qui frankfurter swine sirloin cupim pariatur salami irure pig officia proident.</span>
         </motion.p>
       </section>
     </div>

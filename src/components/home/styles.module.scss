@@ -15,8 +15,8 @@
 
 .containerImageText {
   display: flex;
-  align-items: center;
-  margin-left: 10%;
+  align-items: flex-start;
+  margin-left: 20%;
   background-color: #262A32;
   padding-block: 80px;
   padding-left: 48px;
@@ -27,26 +27,24 @@
 
   .image {
     object-fit: cover;
-    max-width: 100%;
+    border-radius: 5000px;
   }
 
   .textSection {
     color: $color-text;
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    align-items: flex-start;
     row-gap: 12px;
-    translate: -10%;
     font-weight: 300;
+    margin-left: 2rem;
 
     .title {
       font-size: clamp(1.5rem, 3.3vw, 3.5rem);
-      background-color: rgba(255, 99, 81, 0.2);
-      padding: 1rem;
     }
 
     .location {
-      font-size: clamp(1rem, 3vw, 1.5rem);
+      font-size: clamp(1rem, 1vw, 1.5rem);
     }
 
     a {
@@ -60,12 +58,21 @@
     .locationLink {
       text-decoration: underline;
     }
+
+    .paragraphBelow {
+      margin-top: 24px;
+      font-size: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-width: 60%;
+    }
   }
 }
 
 .element {
   position: absolute;
-  opacity: 20%;
+  opacity: 10%;
 }
 
 .socialIcons {
