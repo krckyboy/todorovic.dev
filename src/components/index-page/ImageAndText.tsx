@@ -47,17 +47,17 @@ const ImageAndText: FunctionComponent = () => {
             Belgrade, Serbia.
           </a>
         </motion.p>
-        <motion.p className={styles.paragraphBelow}
+        <motion.section className={styles.paragraphBelow}
                   initial="hidden"
                   animate="visible"
                   variants={variants}
                   transition={{ duration: 0.5, delay: 1 }}>
-          <span>Bacon ipsum dolor amet nulla corned beef occaecat do aliqua sausage. Bresaola velit commodo pork belly. Ad eiusmod sunt tenderloin officia cupidatat excepteur pork chop.</span>
+          <p>Bacon ipsum dolor amet nulla corned beef occaecat do aliqua sausage. Bresaola velit commodo pork belly. Ad eiusmod sunt tenderloin officia cupidatat excepteur pork chop.</p>
 
-          <span>Ex nostrud aute, meatball venison doner turkey sed fatback commodo qui ground round.</span>
+          <p>Ex nostrud aute, meatball venison doner turkey sed fatback commodo qui ground round.</p>
 
-          <span>Rump officia salami in deserunt non bresaola, short ribs ullamco pork belly t-bone ipsum fatback velit. Qui frankfurter swine sirloin cupim pariatur salami irure pig officia proident.</span>
-        </motion.p>
+          <p>Rump officia salami in deserunt non bresaola, short ribs ullamco pork belly t-bone ipsum fatback velit. Qui frankfurter swine sirloin cupim pariatur salami irure pig officia proident.</p>
+        </motion.section>
       </section>
     </div>
   );
