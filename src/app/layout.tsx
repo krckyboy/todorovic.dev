@@ -1,15 +1,16 @@
 import React from 'react';
 import type { Metadata } from 'next';
 import { League_Spartan } from 'next/font/google';
-import Navigation from '@/components/navigation/Navigation';
-import 'reset-css';
+import Header from '@/components/header/Header';
+import Footer from '@/components/footer/Footer';
 import '@/styles/global.scss';
+import 'reset-css';
 
 const leagueSpartan = League_Spartan({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'krcky.dev',
-  description: 'Created by Dušan Todorović Krcky'
+  title: 'dtodorovic.com',
+  description: 'Created by Dušan Todorović'
 };
 
 interface Props {
@@ -22,8 +23,9 @@ const RootLayout = ({
   return (
     <html lang="en">
     <body className={leagueSpartan.className}>
-    <Navigation />
+    <Header />
     {children}
+    <Footer />
     </body>
     </html>
   );
