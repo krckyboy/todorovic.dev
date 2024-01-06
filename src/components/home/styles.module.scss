@@ -1,11 +1,16 @@
 @import '@/styles/vars';
 
 .section {
+  flex-direction: column;
   background-color: $color-background;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (min-width: 769px) {
+    flex-direction: row;
+  }
 }
 
 .containerImageText {
@@ -13,7 +18,7 @@
   align-items: center;
   margin-left: 10%;
   background-color: #262A32;
-  padding-block: 120px;
+  padding-block: 80px;
   padding-left: 48px;
   padding-right: 70px;
   border-top-left-radius: 12px;
@@ -32,16 +37,23 @@
     align-items: flex-end;
     row-gap: 12px;
     translate: -10%;
+    font-weight: 300;
 
     .title {
-      font-size: clamp(1.5rem, 3.5vw, 3.5rem);
+      font-size: clamp(1.5rem, 3.3vw, 3.5rem);
+      background-color: rgba(255, 99, 81, 0.2);
+      padding: 1rem;
     }
 
     .location {
-      font-size: clamp(1rem, 3vw, 1rem);
+      font-size: clamp(1rem, 3vw, 1.5rem);
     }
 
-    strong {
+    a {
+      font-weight: 500;
+    }
+
+    .accented {
       color: $color-accent;
     }
 

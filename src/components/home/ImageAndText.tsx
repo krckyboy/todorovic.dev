@@ -3,6 +3,7 @@ import React, { FunctionComponent } from 'react';
 import styles from '@/components/home/styles.module.scss';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 
 const ImageAndText: FunctionComponent = () => {
   const variants = {
@@ -33,7 +34,7 @@ const ImageAndText: FunctionComponent = () => {
                    variants={variants}
                    transition={{ duration: 1, delay: 1 }}
         >
-          I'm <strong className={styles.name}>Dušan Todorović</strong>, a Web Developer.
+          I'm <Link href={'/about'} className={styles.accented}>Dušan Todorović</Link>, a Web Developer.
         </motion.h1>
         <motion.p className={styles.location}
                   initial="hidden"
