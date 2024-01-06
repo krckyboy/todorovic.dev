@@ -12,7 +12,7 @@ const ImageAndText: FunctionComponent = () => {
   };
 
   return (
-    <div className={styles.containerImageText}>
+    <div className={styles.container}>
       <motion.div
         initial="hidden"
         animate="visible"

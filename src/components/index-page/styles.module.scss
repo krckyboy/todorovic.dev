@@ -1,16 +1,6 @@
 @import '@/styles/vars';
 
-.section {
-  flex-direction: column;
-  background-color: $color-background;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding-top: 2rem;
-  margin-inline: 25%;
-}
-
-.containerImageText {
+.container {
   display: flex;
   align-items: flex-start;
   width: 100%;
