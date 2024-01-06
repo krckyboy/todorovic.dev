@@ -1,15 +1,13 @@
 import React from 'react';
 import { NextPage } from 'next';
-import styles from '@/components/home/styles.module.scss';
-import SocialIcons from '@/components/home/SocialIcons';
-import ImageAndText from '@/components/home/ImageAndText';
+import styles from './styles.module.scss';
+import ImageAndText from '@/components/index-page/ImageAndText';
 
 const Page: NextPage = () => {
   return (
     <main>
       <section className={styles.section}>
         <ImageAndText />
-        <SocialIcons />
       </section>
     </main>
   );

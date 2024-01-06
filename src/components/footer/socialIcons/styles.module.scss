@@ -1,0 +1,10 @@
+@import '@/styles/vars';
+
+.socialIcons {
+  display: inline-flex;
+  column-gap: 12px;
+  align-items: center;
+  padding-inline: 12px;
+  background-color: $color-background;
+  position: relative;
+}

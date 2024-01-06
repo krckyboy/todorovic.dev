@@ -3,7 +3,8 @@ import styles from './styles.module.scss';
 
 const Elements = () => {
   const elements = [
-    { type: 'PurpleRectangle',
+    {
+      type: 'PurpleRectangle',
       style: {
         width: '72.277px',
         height: '122.695px',
@@ -13,7 +14,8 @@ const Elements = () => {
         top: '44%'
       }
     },
-    { type: 'GreenEllipse',
+    {
+      type: 'GreenEllipse',
       style: {
         width: '68.697px',
         height: '68.697px',
@@ -23,7 +25,8 @@ const Elements = () => {
         top: '84%'
       }
     },
-    { type: 'YellowRectangle',
+    {
+      type: 'YellowRectangle',
       style: {
         width: '72.277px',
         height: '28.492px',
@@ -33,7 +36,8 @@ const Elements = () => {
         top: '25%'
       }
     },
-    { type: 'BlueRectangle',
+    {
+      type: 'BlueRectangle',
       style: {
         width: '62.109px',
         height: '59.671px',
@@ -43,7 +47,8 @@ const Elements = () => {
         top: '80%'
       }
     },
-    { type: 'RedRectangle',
+    {
+      type: 'RedRectangle',
       style: {
         width: '46.5px',
         height: '198.068px',
@@ -53,7 +58,8 @@ const Elements = () => {
         top: '18%'
       }
     },
-    { type: 'BlueTriangle',
+    {
+      type: 'BlueTriangle',
       style: {
         width: '0',
         height: '0',
@@ -65,7 +71,8 @@ const Elements = () => {
         top: '61%'
       }
     },
-    { type: 'OrangeEllipse',
+    {
+      type: 'OrangeEllipse',
       style: {
         width: '84px',
         height: '84px',
@@ -75,14 +82,15 @@ const Elements = () => {
         top: '44%'
       }
     },
-    { type: 'MintRectangle',
+    {
+      type: 'MintRectangle',
       style: {
         width: '75.945px',
         height: '72.964px',
         transform: 'rotate(11.025deg)',
         backgroundColor: '#56CCF2',
         right: '4%',
-        top: '88%'
+        top: '90%'
       }
     }
   ];

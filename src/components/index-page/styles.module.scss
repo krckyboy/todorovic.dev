@@ -1,0 +1,59 @@
+@import '@/styles/vars';
+
+.container {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  flex-direction: column;
+
+  .imageAndIconsWrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .image {
+    object-fit: cover;
+    border-radius: 5000px;
+  }
+
+  .textSection {
+    margin-top: 2rem;
+    color: $color-text;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    row-gap: 12px;
+    font-weight: 300;
+
+    .title {
+      font-size: clamp(1.5rem, 3vw, 3.5rem);
+    }
+
+    .location {
+      font-size: clamp(1rem, 1vw, 1.5rem);
+    }
+
+    a {
+      font-weight: 500;
+    }
+
+    .accented {
+      color: $color-accent;
+    }
+
+    .locationLink {
+      text-decoration: underline;
+    }
+
+    .paragraphBelow {
+      margin-top: 24px;
+      font-size: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-width: 60%;
+    }
+  }
+}
