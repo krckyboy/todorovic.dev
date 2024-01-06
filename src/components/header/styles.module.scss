@@ -3,15 +3,17 @@
 .container {
   grid-row: 1;
   padding-inline: 25%;
+  background-color: $color-background;
 
   .nav {
+    margin-top: 2rem;
     width: 100%;
     justify-content: flex-start;
     align-items: center;
     display: flex;
     font-size: clamp(1rem, 1vw, 2rem);
+    text-transform: lowercase;
     height: 56px;
-    background-color: $color-background;
 
     ul {
       display: flex;
