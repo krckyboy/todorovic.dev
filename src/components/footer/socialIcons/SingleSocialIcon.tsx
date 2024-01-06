@@ -11,7 +11,7 @@ const SingleSocialIcon: FunctionComponent<Props> = (props) => {
   return (
     <li>
       <a href={props.url} target={'_blank'}>
-        <Image src={props.imgSrc} alt={props.imgAlt} width={48} height={48} />
+        <Image src={props.imgSrc} alt={props.imgAlt} width={40} height={40} />
       </a>
     </li>
   );
