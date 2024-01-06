@@ -1,6 +1,6 @@
 'use client';
 import React, { FunctionComponent } from 'react';
-import styles from '@/components/home/styles.module.scss';
+import styles from '@/components/index-page/styles.module.scss';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
@@ -17,9 +17,9 @@ const ImageAndText: FunctionComponent = () => {
         initial="hidden"
         animate="visible"
         variants={variants}
-        transition={{ duration: 1 }}
+        transition={{ duration: 0.5 }}
       >
-        <Image src={'/images/home/dusan.png'}
+        <Image src={'/images/index-page/dusan.png'}
                priority
                alt={'Dušan Todorović in a formal white shirt'}
                width={200}
@@ -32,7 +32,7 @@ const ImageAndText: FunctionComponent = () => {
                    initial="hidden"
                    animate="visible"
                    variants={variants}
-                   transition={{ duration: 1, delay: 1 }}
+                   transition={{ duration: 0.5, delay: 0.5 }}
         >
           I'm <Link href={'/about'} className={styles.accented}>Dušan Todorović</Link>, a Web Developer.
         </motion.h1>
@@ -40,7 +40,7 @@ const ImageAndText: FunctionComponent = () => {
                   initial="hidden"
                   animate="visible"
                   variants={variants}
-                  transition={{ duration: 1, delay: 1.5 }}
+                  transition={{ duration: 0.5, delay: 0.8 }}
         >
           Based in {' '}
           <a className={styles.locationLink} href={'https://maps.app.goo.gl/DHTdsDU24RjWYhhV8'} target={'_blank'}>
@@ -51,7 +51,7 @@ const ImageAndText: FunctionComponent = () => {
                   initial="hidden"
                   animate="visible"
                   variants={variants}
-                  transition={{ duration: 1, delay: 2 }}>
+                  transition={{ duration: 0.5, delay: 1 }}>
           <span>Bacon ipsum dolor amet nulla corned beef occaecat do aliqua sausage. Bresaola velit commodo pork belly. Ad eiusmod sunt tenderloin officia cupidatat excepteur pork chop.</span>
 
           <span>Ex nostrud aute, meatball venison doner turkey sed fatback commodo qui ground round.</span>
