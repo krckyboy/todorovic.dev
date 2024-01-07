@@ -28,23 +28,28 @@
     font-weight: 300;
 
     .title {
-      font-size: clamp(1.8rem, 2.5vw, 3.5rem);
+      font-size: clamp(2.2rem, 4vw, 3.5rem);
+
+      a {
+        font-weight: 500;
+      }
     }
 
     .location {
       font-size: clamp(1rem, 1.2vw, 1.5rem);
+
+      .locationLink {
+        text-decoration: underline;
+        font-weight: 300;
+      }
     }
 
-    a {
-      font-weight: 500;
+    .tags {
+      color: #eea953;
     }
 
     .accented {
       color: $color-accent;
-    }
-
-    .locationLink {
-      text-decoration: underline;
     }
 
     .paragraphBelow {
@@ -56,8 +61,8 @@
       line-height: 1.5;
 
       a {
-        text-decoration: underline;
         color: $color-accent;
+        font-weight: 500;
       }
 
       .ul {
