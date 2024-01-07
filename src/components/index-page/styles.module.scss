@@ -28,11 +28,11 @@
     font-weight: 300;
 
     .title {
-      font-size: clamp(1.5rem, 3vw, 3.5rem);
+      font-size: clamp(1.5rem, 2.5vw, 3.5rem);
     }
 
     .location {
-      font-size: clamp(1rem, 1vw, 1.5rem);
+      font-size: clamp(1rem, 1.2vw, 1.5rem);
     }
 
     a {
@@ -49,11 +49,16 @@
 
     .paragraphBelow {
       margin-top: 24px;
-      font-size: 16px;
+      font-size: 1.2rem;
       display: flex;
       flex-direction: column;
       gap: 12px;
-      max-width: 60%;
+      line-height: 1.5;
+
+      a {
+        text-decoration: underline;
+        color: $color-accent;
+      }
     }
   }
 }
