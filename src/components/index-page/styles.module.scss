@@ -59,6 +59,18 @@
         text-decoration: underline;
         color: $color-accent;
       }
+
+      .ul {
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        row-gap: 16px;
+        list-style-type: circle;
+
+        li {
+          margin-left: .8rem;
+        }
+      }
     }
   }
 }

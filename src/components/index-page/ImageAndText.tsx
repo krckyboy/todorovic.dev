@@ -52,18 +52,18 @@ const ImageAndText: FunctionComponent = () => {
                         animate="visible"
                         variants={variants}
                         transition={{ duration: 0.5, delay: 1 }}>
-          <p>Hello, internet! I'm a dedicated Web Developer with a knack for diving deep into the
-            code. Over the past few years, I've honed my skills and worked on some truly impressive projects. I've also
-            led (still am) a team of awesome developers, managing projects and ensuring everything runs smoothly.</p>
+          <p>Hello, internet! I'm Dušan Todorović, a dedicated Web Developer. I specialize in diving deep into the code
+            and leading teams to ensure smooth project execution.</p>
 
-          <p>But I'm not just about making things work - I'm all about coding, solving problems, and creating digital
-            experiences that are not only functional but also enjoyable. My leadership role has allowed me to develop
-            strong communication and collaboration skills, which I believe are crucial in today's fast-paced tech
-            industry.</p>
-
-          <p>Interested in my skills? Check out my projects. Curious about my journey? Visit my blog. Or if you're a
-            company or individual client looking for a dedicated, experienced developer, let's chat! I'd love to hear
-            about your project and see how we can make it even better.</p>
+          <ul className={styles.ul}>
+            <li>Interested in my skills and professional experience? <Link href={'/skills'}>Go here</Link>.</li>
+            <li>Want to know more about me? Visit my <Link href={'/about'}>About Me</Link> page.</li>
+            <li>Curious about my journey or picking my brain? <Link href={'/blog'}>Visit my blog.</Link></li>
+            <li>You can also <Link href={'/cv'}>download my CV</Link>.</li>
+            <li>If you're a company or individual client looking for a dedicated, experienced developer, <Link
+              href="https://www.linkedin.com/in/dusan-todorovic-krcky/">let's chat</Link>! Let's make your project better... or at least, less buggy!
+            </li>
+          </ul>
         </motion.section>
       </section>
     </div>
