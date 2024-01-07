@@ -52,27 +52,18 @@ const ImageAndText: FunctionComponent = () => {
                         animate="visible"
                         variants={variants}
                         transition={{ duration: 0.5, delay: 1 }}>
-          <p>Hello, internet! I'm currently engaged in a rewarding role as a dedicated Front-End Team Lead.
-            I thrive on diving deep into the code and have a proven track record in web development. While I'm deeply
-            committed to my current project, I'm always open to learning about new opportunities that align with my
-            skills and interests.</p>
+          <p>Hello, internet! I'm a dedicated Web Developer with a knack for diving deep into the
+            code. Over the past few years, I've honed my skills and worked on some truly impressive projects. I've also
+            led (still am) a team of awesome developers, managing projects and ensuring everything runs smoothly.</p>
 
-          <p>I've spent the last few years honing my <Link href={'/skills'}>skills</Link> and working on some pretty
-            cool projects. Additionally, I've had the privilege of leading a team of exceptional developers, overseeing
-            project management, and ensuring seamless operations.</p>
+          <p>But I'm not just about making things work - I'm all about coding, solving problems, and creating digital
+            experiences that are not only functional but also enjoyable. My leadership role has allowed me to develop
+            strong communication and collaboration skills, which I believe are crucial in today's fast-paced tech
+            industry.</p>
 
-          <p>But I'm not just about making things work. In addition to my professional experience, I also share insights
-            on various aspects of web development on my <Link href={'/blog'}>blog</Link>. Whether you're interested in
-            learning more about my technical expertise or improving your own soft skills, there's something for
-            everyone.</p>
-
-          <p>Whether you're a company seeking a dedicated, experienced developer who loves what they do or an individual
-            client valuing quality, creativity, and dedication in their web solutions, I'd be thrilled to connect with
-            you. <a href="https://www.linkedin.com/in/dusan-todorovic-krcky/">Let's chat</a> and see how we can make
-            your project even better!</p>
-
-          <p>If you would like to learn more about me, feel free to roam around or just head to the <Link
-            href={'/about'}>about page</Link>.</p>
+          <p>Interested in my skills? Check out my projects. Curious about my journey? Visit my blog. Or if you're a
+            company or individual client looking for a dedicated, experienced developer, let's chat! I'd love to hear
+            about your project and see how we can make it even better.</p>
         </motion.section>
       </section>
     </div>
