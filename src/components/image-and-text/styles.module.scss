@@ -28,7 +28,7 @@
     font-weight: 300;
 
     .title {
-      font-size: clamp(1.5rem, 2.5vw, 3.5rem);
+      font-size: clamp(1.8rem, 2.5vw, 3.5rem);
     }
 
     .location {
@@ -49,7 +49,7 @@
 
     .paragraphBelow {
       margin-top: 24px;
-      font-size: 1.2rem;
+      font-size: clamp(1.2rem, 1.3vw, 1.5rem);
       display: flex;
       flex-direction: column;
       gap: 12px;

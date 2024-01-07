@@ -1,0 +1,11 @@
+.paddingInline {
+  padding-inline: 5%;
+
+  @media (min-width: 768px) {
+    padding-inline: 16%;
+  }
+
+  @media (min-width: 1024px) {
+    padding-inline: 28%;
+  }
+}
