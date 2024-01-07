@@ -1,7 +1,7 @@
 import React from 'react';
 import { NextPage } from 'next';
 import styles from './styles.module.scss';
-import ImageAndText from '@/components/index-page/ImageAndText';
+import ImageAndText from '@/components/image-and-text/ImageAndText';
 
 const Page: NextPage = () => {
   return (

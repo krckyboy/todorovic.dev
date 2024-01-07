@@ -1,6 +1,6 @@
 'use client';
 import React, { FunctionComponent } from 'react';
-import styles from '@/components/index-page/styles.module.scss';
+import styles from '@/components/image-and-text/styles.module.scss';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
@@ -19,7 +19,7 @@ const ImageAndText: FunctionComponent = () => {
         variants={variants}
         transition={{ duration: 0.5 }}
       >
-        <Image src={'/images/index-page/dusan.png'}
+        <Image src={'/images/dusan.png'}
                priority
                alt={'Dušan Todorović in a formal white shirt'}
                width={200}
