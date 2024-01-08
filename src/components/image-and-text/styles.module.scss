@@ -35,17 +35,18 @@
       }
     }
 
-    .location {
-      font-size: clamp(1rem, 1.2vw, 1.5rem);
-
-      .locationLink {
-        text-decoration: underline;
-        font-weight: 300;
-      }
+    .locationLink {
+      text-decoration: underline;
+      font-weight: 300;
     }
 
     .tags {
+      font-size: clamp(1.1rem, 1.3vw, 1.7rem);
       color: #eea953;
+
+      span {
+        color: #4E5564;
+      }
     }
 
     .accented {
@@ -60,17 +61,17 @@
       gap: 12px;
       line-height: 1.5;
 
-      a {
-        color: $color-accent;
-        font-weight: 500;
-      }
-
       .ul {
         margin-top: 1rem;
         display: flex;
         flex-direction: column;
         row-gap: 16px;
         list-style-type: circle;
+
+        a {
+          color: $color-accent;
+          font-weight: 500;
+        }
 
         li {
           margin-left: .8rem;

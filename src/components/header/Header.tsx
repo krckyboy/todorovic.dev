@@ -12,10 +12,10 @@ const Header: FunctionComponent = () => {
             <Link href={'/'}>Home</Link>
           </li>
           <li>
-            <Link href={'/about'}>About</Link>
+            <Link href={'/skills'}>Skills</Link>
           </li>
           <li>
-            <Link href={'/skills'}>Skills</Link>
+            <Link href={'/about'}>About</Link>
           </li>
           <li>
             <Link href={'/blog'}>Blog</Link>

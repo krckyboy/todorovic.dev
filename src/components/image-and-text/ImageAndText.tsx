@@ -34,7 +34,7 @@ const ImageAndText: FunctionComponent = () => {
                    variants={variants}
                    transition={{ duration: 0.5, delay: 0.5 }}
         >
-          I'm <Link href={'/about'} className={styles.accented}>Dušan Todorović</Link>.
+          <Link href={'/about'} className={styles.accented}>Dušan Todorović</Link>
         </motion.h1>
         <motion.p className={styles.tags}
                   initial="hidden"
@@ -42,24 +42,18 @@ const ImageAndText: FunctionComponent = () => {
                   variants={variants}
                   transition={{ duration: 0.5, delay: 0.8 }}
         >
-          Web Developer | Team Leader | Specializing in React
-        </motion.p>
-        <motion.p className={styles.location}
-                  initial="hidden"
-                  animate="visible"
-                  variants={variants}
-                  transition={{ duration: 0.5, delay: 1 }}
-        >Based in {' '}
-          <a className={styles.locationLink} href={'https://maps.app.goo.gl/DHTdsDU24RjWYhhV8'} target={'_blank'}>
-            Belgrade, Serbia.
-          </a>
+          Developer <span>|</span> Team Leader <span>|</span> React Specialist
         </motion.p>
         <motion.section className={styles.paragraphBelow}
                         initial="hidden"
                         animate="visible"
                         variants={variants}
                         transition={{ duration: 0.5, delay: 1.2 }}>
-          <p>Hello, internet! I'm Dušan Todorović, a dedicated Web Developer. I specialize in diving deep into the code
+          <p>Hello, internet! I'm Dušan Todorović, a dedicated Web Developer based in <a className={styles.locationLink}
+                                                                                         href={'https://maps.app.goo.gl/DHTdsDU24RjWYhhV8'}
+                                                                                         target={'_blank'}>
+            Belgrade, Serbia
+          </a>. I specialize in diving deep into the code
             and leading teams to ensure smooth project execution.</p>
 
           <ul className={styles.ul}>
