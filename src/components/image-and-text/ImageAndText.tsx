@@ -2,53 +2,27 @@
 import React, { FunctionComponent } from 'react';
 import styles from '@/components/image-and-text/styles.module.scss';
 import Image from 'next/image';
-import { motion } from 'framer-motion';
 import Link from 'next/link';
 
 const ImageAndText: FunctionComponent = () => {
-  const variants = {
-    hidden: { opacity: 0, x: -100 }, // start off-screen to the left
-    visible: { opacity: 1, x: 0 }
-  };
-
   return (
     <div className={styles.container}>
-      <motion.div
-        initial="hidden"
-        animate="visible"
-        variants={variants}
-        transition={{ duration: 0.5 }}
-      >
-        <Image src={'/images/dusan.png'}
-               priority
-               alt={'Dušan Todorović in a formal white shirt'}
-               width={200}
-               height={200}
-               className={styles.image}
-        />
-      </motion.div>
+      <Image src={'/images/dusan.png'}
+             priority
+             alt={'Dušan Todorović in a formal white shirt'}
+             width={200}
+             height={200}
+             className={styles.image}
+      />
       <section className={styles.textSection}>
-        <motion.h1 className={styles.title}
-                   initial="hidden"
-                   animate="visible"
-                   variants={variants}
-                   transition={{ duration: 0.5, delay: 0.5 }}
+        <h1 className={styles.title}
         >
           <Link href={'/about'} className={styles.accented}>Dušan Todorović</Link>
-        </motion.h1>
-        <motion.p className={styles.tags}
-                  initial="hidden"
-                  animate="visible"
-                  variants={variants}
-                  transition={{ duration: 0.5, delay: 0.8 }}
-        >
+        </h1>
+        <p className={styles.tags}>
           Developer <span>|</span> Team Leader <span>|</span> React Specialist
-        </motion.p>
-        <motion.section className={styles.paragraphBelow}
-                        initial="hidden"
-                        animate="visible"
-                        variants={variants}
-                        transition={{ duration: 0.5, delay: 1.2 }}>
+        </p>
+        <section className={styles.paragraphBelow}>
           <p>Hello, internet! I'm Dušan Todorović, a dedicated Web Developer based in <a className={styles.locationLink}
                                                                                          href={'https://maps.app.goo.gl/DHTdsDU24RjWYhhV8'}
                                                                                          target={'_blank'}>
@@ -66,7 +40,7 @@ const ImageAndText: FunctionComponent = () => {
               better... or at least, less buggy!
             </li>
           </ul>
-        </motion.section>
+        </section>
       </section>
     </div>
   );
