@@ -28,7 +28,7 @@
     font-weight: 300;
 
     .title {
-      font-size: clamp(2.2rem, 4vw, 3.5rem);
+      font-size: clamp(2.6rem, 4vw, 5rem);
 
       a {
         font-weight: 500;
@@ -42,10 +42,11 @@
 
     .tags {
       font-size: clamp(1.1rem, 1.3vw, 1.7rem);
-      color: #eea953;
+      color: $color-accent-2;
 
       span {
         color: #4E5564;
+        margin-inline: .3rem;
       }
     }
 
@@ -55,7 +56,7 @@
 
     .paragraphBelow {
       margin-top: 24px;
-      font-size: clamp(1.2rem, 1.3vw, 1.5rem);
+      font-size: clamp(1.3rem, 1.3vw, 1.5rem);
       display: flex;
       flex-direction: column;
       gap: 12px;
