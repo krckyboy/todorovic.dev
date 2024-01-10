@@ -1,0 +1,28 @@
+@import '@/styles/vars';
+
+.container {
+  background-color: #262A32;
+  padding: 2rem;
+  border-radius: 12px;
+  position: relative;
+
+  .heading {
+    font-weight: 400;
+    font-size: clamp(1.2rem, 1.3vw, 1.6rem);
+  }
+
+  .date {
+    display: inline-flex;
+    color: $color-accent-2;
+    margin-top: .3rem;
+    font-size: .8rem;
+    font-weight: 300;
+  }
+
+  .text {
+    font-weight: 300;
+    font-size: clamp(1rem, 1.1vw, 1.3rem);
+    line-height: 1.3;
+    margin-top: .8rem;
+  }
+}
