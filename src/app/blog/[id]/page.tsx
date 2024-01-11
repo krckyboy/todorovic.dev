@@ -1,5 +1,6 @@
 import React from 'react';
 import { NextPage } from 'next';
+import gStyles from '@/styles/global.module.scss';
 
 interface Props {
   params: {
@@ -11,7 +12,9 @@ const Page: NextPage<Props> = (props) => {
   const { id } = props.params;
 
   return (
-    <>Blog {id} </>
+    <section className={`${gStyles.section} ${gStyles.paddingInline}`}>
+      <>Blog {id} </>
+    </section>
   );
 };
 
