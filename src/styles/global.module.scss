@@ -27,3 +27,15 @@
   gap: 20px;
   margin-top: 1rem;
 }
+
+.pageHeading {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+}
+
+.pageHeadingMini {
+  @extend .pageHeading;
+  font-size: clamp(1.5rem, 2vw, 4rem);
+}
