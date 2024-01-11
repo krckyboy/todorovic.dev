@@ -4,17 +4,22 @@ import Link from 'next/link';
 
 interface Props {
   id: string | number;
+  slim?: boolean;
 }
 
-const BlogPostItem: FunctionComponent<Props> = ({ id }) => {
+const BlogPostItem: FunctionComponent<Props> = ({ id, slim }) => {
   return (
-    <Link href={`/blog/${id}`} className={styles.container}>
+    <Link href={`/blog/${id}`} className={`${styles.container} ${slim ? styles.slim : ''}`}>
       <h1 className={styles.heading}>How I created this website</h1>
       <time className={styles.date}>08.01.2024.</time>
-      <p className={styles.text}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequatur dolor
-        dolorum ducimus inventore
-        laborum.</p>
-      <meta name="description" content="This is a description of the blog post." />
+      {!slim && (
+        <>
+          <p className={styles.text}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequatur dolor
+            dolorum ducimus inventore
+            laborum.</p>
+          <meta name="description" content="This is a description of the blog post." />
+        </>
+      )}
     </Link>
   );
 };

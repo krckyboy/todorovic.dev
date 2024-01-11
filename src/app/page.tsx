@@ -13,9 +13,9 @@ const Page: NextPage = () => {
         <ImageAndText />
       </section>
       <section className={`${gStyles.section} ${gStyles.paddingInline}`}>
-        <h2 className={styles.featuredPostsHeading}>Featured posts</h2>
+        <h2 className={`${styles.featuredPostsHeading} ${gStyles.pageHeadingMini}`}>Featured posts</h2>
         <div className={gStyles.blogs}>
-          {[0, 1, 2].map((item) => <BlogPostItem id={item} key={item} />)}
+          {[0, 1, 2].map((item) => <BlogPostItem id={item} key={item} slim />)}
           <Link href={'/blog'} className={styles.checkAllPosts}>Check all</Link>
         </div>
       </section>

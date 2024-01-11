@@ -1,10 +1,17 @@
 @import '@/styles/vars';
 
 .container {
-  background-color: #262A32;
-  padding: 2rem;
-  border-radius: .35rem;
+  //border: 6px solid #262A32;
+  border-top: none;
+  border-left: none;
+  padding: 1rem 1rem 1rem 0;
+  border-radius: 0 0 .35rem 0;
   position: relative;
+
+  &.slim {
+    //border: none;
+    padding-block: .5rem;
+  }
 
   .heading {
     font-weight: 400;
@@ -15,7 +22,7 @@
     display: inline-flex;
     color: $color-accent-2;
     margin-top: .3rem;
-    font-size: .8rem;
+    font-size: clamp(.8rem, .8vw, 1.3rem);
     font-weight: 300;
   }
 
