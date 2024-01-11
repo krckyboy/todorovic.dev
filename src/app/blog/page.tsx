@@ -1,11 +1,17 @@
 import { NextPage } from 'next';
+import gStyles from '@/styles/global.module.scss';
+import BlogPostItem from '@/components/blog-post-item/BlogPostItem';
+import React from 'react';
 
 const Page: NextPage = () => {
   return (
     <main>
-      <h1>Blog</h1>
-      <p>Stay updated with my latest thoughts on web development, UX/UI design, and the latest trends in the tech
-        industry. Subscribe to my newsletter for regular updates.</p>
+      <section className={`${gStyles.section} ${gStyles.paddingInline}`}>
+        <h1>Blog</h1>
+        <div className={gStyles.blogs}>
+          {[0, 1, 2].map((item) => <BlogPostItem id={item} key={item} />)}
+        </div>
+      </section>
     </main>
   );
 };

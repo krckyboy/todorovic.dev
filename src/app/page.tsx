@@ -9,13 +9,13 @@ import Link from 'next/link';
 const Page: NextPage = () => {
   return (
     <main>
-      <section className={`${styles.section} ${gStyles.paddingInline}`}>
+      <section className={`${gStyles.section} ${gStyles.paddingInline}`}>
         <ImageAndText />
       </section>
-      <section className={`${styles.section} ${gStyles.paddingInline}`}>
+      <section className={`${gStyles.section} ${gStyles.paddingInline}`}>
         <h2 className={styles.featuredPostsHeading}>Featured posts</h2>
-        <div className={styles.featuredPosts}>
-          {[0, 1, 2].map((item) => <BlogPostItem key={item} />)}
+        <div className={gStyles.blogs}>
+          {[0, 1, 2].map((item) => <BlogPostItem id={item} key={item} />)}
           <Link href={'/blog'} className={styles.checkAllPosts}>Check all</Link>
         </div>
       </section>

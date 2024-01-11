@@ -1,9 +1,13 @@
 import { NextPage } from 'next';
+import styles from '@/app/styles.module.scss';
+import gStyles from '@/styles/global.module.scss';
 
 const Page: NextPage = () => {
   return (
     <main>
-      <h1>About me</h1>
+      <section className={`${styles.section} ${gStyles.paddingInline}`}>
+        <h1>About me</h1>
+      </section>
     </main>
   );
 };
