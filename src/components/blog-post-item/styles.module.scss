@@ -1,7 +1,7 @@
 @import '@/styles/vars';
 
 .container {
-  //border: 6px solid #262A32;
+  border: 6px solid #262A32;
   border-top: none;
   border-left: none;
   padding: 1rem 1rem 1rem 0;
@@ -10,6 +10,11 @@
 
   &.slim {
     padding-block: .5rem;
+    border: none;
+
+    .heading {
+      font-weight: 300;
+    }
   }
 
   .heading {
