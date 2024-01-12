@@ -15,7 +15,7 @@ const Page: NextPage = () => {
       <section className={`${gStyles.section} ${gStyles.paddingInline}`}>
         <h2 className={`${styles.featuredPostsHeading} ${gStyles.pageHeadingMini}`}>Featured posts</h2>
         <div className={gStyles.blogs}>
-          {[0, 1, 2].map((item) => <BlogPostItem id={item} key={item} slim />)}
+          {[0, 1, 2].map((item) => <BlogPostItem id={item} key={item} featured />)}
           <Link href={'/blog'} className={styles.checkAllPosts}>Check all</Link>
         </div>
       </section>

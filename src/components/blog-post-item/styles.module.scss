@@ -4,12 +4,12 @@
   border: 6px solid #262A32;
   border-top: none;
   border-left: none;
-  padding: 1rem 1rem 1rem 0;
   border-radius: 0 0 .35rem 0;
-  position: relative;
+  padding: 2rem;
 
-  &.slim {
-    padding-block: .5rem;
+  &.featured {
+    background-color: #262A32;
+    border-radius: .35rem;
     border: none;
 
     .heading {
