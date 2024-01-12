@@ -1,6 +1,6 @@
 import { NextPage } from 'next';
-import gStyles from '@/styles/global.module.scss';
-import BlogPostItem from '@/components/blog-post-item/BlogPostItem';
+import gStyles from '../../styles/global.module.scss';
+import BlogPostItem from '../../components/blog-post-item/BlogPostItem';
 import React from 'react';
 
 const Page: NextPage = () => {

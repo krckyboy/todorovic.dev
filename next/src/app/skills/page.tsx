@@ -1,5 +1,5 @@
 import { NextPage } from 'next';
-import gStyles from '@/styles/global.module.scss';
+import gStyles from '../../styles/global.module.scss';
 import React from 'react';
 
 const Page: NextPage = () => {

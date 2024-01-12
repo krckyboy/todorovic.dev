@@ -1,8 +1,8 @@
 import React from 'react';
 import { NextPage } from 'next';
-import ImageAndText from '@/components/image-and-text/ImageAndText';
+import ImageAndText from '../components/image-and-text/ImageAndText';
 import styles from './styles.module.scss';
-import gStyles from '@/styles/global.module.scss';
+import gStyles from '../styles/global.module.scss';
 import BlogPostItem from '@/components/blog-post-item/BlogPostItem';
 import Link from 'next/link';
 
