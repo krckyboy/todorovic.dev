@@ -21,7 +21,7 @@
     "posts": {
       "type": "relation",
       "relation": "manyToMany",
-      "target": "api::blog.blog",
+      "target": "api::post.post",
       "mappedBy": "categories"
     }
   }

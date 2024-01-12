@@ -1,9 +1,9 @@
 {
   "kind": "collectionType",
-  "collectionName": "blogs",
+  "collectionName": "posts",
   "info": {
-    "singularName": "blog",
-    "pluralName": "blogs",
+    "singularName": "post",
+    "pluralName": "posts",
     "displayName": "Post",
     "description": ""
   },
@@ -16,27 +16,10 @@
       "type": "string",
       "required": true,
       "unique": true,
-      "minLength": 5,
-      "maxLength": 255
+      "minLength": 1,
+      "maxLength": 30
     },
-    "summary": {
-      "type": "text",
-      "required": true,
-      "unique": true
-    },
-    "date": {
-      "type": "date",
-      "required": true
-    },
-    "image_main": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images"
-      ]
-    },
-    "featured": {
+    "isFeatured": {
       "type": "boolean",
       "default": false
     },
@@ -44,11 +27,25 @@
       "type": "blocks",
       "required": true
     },
+    "summary": {
+      "type": "text",
+      "required": true,
+      "maxLength": 255,
+      "unique": true,
+      "minLength": 10
+    },
+    "mainImage": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
     "categories": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::category.category",
-      "private": true,
       "inversedBy": "posts"
     }
   }
