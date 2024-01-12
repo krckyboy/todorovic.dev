@@ -5,6 +5,7 @@ import Header from '@/components/header/Header';
 import Footer from '@/components/footer/Footer';
 import '@/styles/global.scss';
 import 'reset-css';
+import LoadingIndicator from '@/components/loading-indicator/LoadingIndicator';
 
 const leagueSpartan = League_Spartan({ subsets: ['latin'] });
 
@@ -26,6 +27,7 @@ const RootLayout = ({
     <Header />
     {children}
     <Footer />
+    <LoadingIndicator />
     </body>
     </html>
   );
