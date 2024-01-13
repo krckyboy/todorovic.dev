@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 import type { Metadata } from 'next';
 import { League_Spartan } from 'next/font/google';
 import Header from '@/components/header/Header';
@@ -27,7 +27,9 @@ const RootLayout = ({
     <Header />
     {children}
     <Footer />
-    <LoadingIndicator />
+    <Suspense>
+      <LoadingIndicator />
+    </Suspense>
     </body>
     </html>
   );
