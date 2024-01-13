@@ -5,9 +5,10 @@
   border-top: none;
   border-left: none;
   border-radius: 0 0 .35rem 0;
-  padding: 2rem;
+  padding: 2rem 2rem 2rem 0;
 
   &.featured {
+    padding: 2rem;
     background-color: #262A32;
     border-radius: .35rem;
     border: none;
