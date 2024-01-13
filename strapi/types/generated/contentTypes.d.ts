@@ -843,6 +843,12 @@ export interface ApiPostPost extends Schema.CollectionType {
       'manyToMany',
       'api::category.category'
     >;
+    slug: Attribute.String &
+      Attribute.Required &
+      Attribute.SetMinMaxLength<{
+        minLength: 1;
+        maxLength: 30;
+      }>;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

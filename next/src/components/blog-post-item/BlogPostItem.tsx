@@ -1,21 +1,23 @@
 import React, { FunctionComponent } from 'react';
 import styles from './styles.module.scss';
 import Link from 'next/link';
+import { convertToHumanReadableDate } from '@/components/blog-post-item/scripts';
+import { Post } from '@/components/blog-post-item/types';
 
 interface Props {
-  id: string | number;
+  post: Post;
   featured?: boolean;
 }
 
-const BlogPostItem: FunctionComponent<Props> = ({ id, featured }) => {
+const BlogPostItem: FunctionComponent<Props> = ({ post, featured }) => {
+  const humanReadableDate = convertToHumanReadableDate(post.attributes.publishedAt);
+
   return (
-    <Link href={`/blog/${id}`} className={`${styles.container} ${featured ? styles.featured : ''}`}>
-      <h1 className={styles.heading}>How I created this website</h1>
-      <time className={styles.date}>08.01.2024.</time>
-      <p className={styles.text}>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias consequatur dolor
-        dolorum ducimus inventore
-        laborum.</p>
-      <meta name="description" content="This is a description of the blog post." />
+    <Link href={`/blog/${post.id}`} className={`${styles.container} ${featured ? styles.featured : ''}`}>
+      <h1 className={styles.heading}>{post.attributes.title}</h1>
+      <time className={styles.date}>{humanReadableDate}</time>
+      <p className={styles.text}>{post.attributes.summary}</p>
+      <meta name="description" content={post.attributes.summary} />
     </Link>
   );
 };

@@ -47,6 +47,12 @@
       "relation": "manyToMany",
       "target": "api::category.category",
       "inversedBy": "posts"
+    },
+    "slug": {
+      "type": "string",
+      "required": true,
+      "minLength": 1,
+      "maxLength": 30
     }
   }
 }
