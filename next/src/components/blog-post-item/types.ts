@@ -8,7 +8,7 @@ export interface Post {
     summary: string,
     featured: boolean,
     slug: string;
-    content: object[]
+    content: string;
   }
 }
 

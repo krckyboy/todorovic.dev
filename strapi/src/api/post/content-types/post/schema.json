@@ -23,10 +23,6 @@
       "type": "boolean",
       "default": false
     },
-    "content": {
-      "type": "blocks",
-      "required": true
-    },
     "summary": {
       "type": "text",
       "required": true,
@@ -53,6 +49,9 @@
       "required": true,
       "minLength": 1,
       "maxLength": 30
+    },
+    "content": {
+      "type": "richtext"
     }
   }
 }
