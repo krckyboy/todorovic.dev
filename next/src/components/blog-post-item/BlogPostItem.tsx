@@ -13,7 +13,7 @@ const BlogPostItem: FunctionComponent<Props> = ({ post, featured }) => {
   const humanReadableDate = convertToHumanReadableDate(post.attributes.publishedAt);
 
   return (
-    <Link href={`/blog/${post.id}`} className={`${styles.container} ${featured ? styles.featured : ''}`}>
+    <Link href={`/blog/${post.attributes.slug}`} className={`${styles.container} ${featured ? styles.featured : ''}`}>
       <h1 className={styles.heading}>{post.attributes.title}</h1>
       <time className={styles.date}>{humanReadableDate}</time>
       <p className={styles.text}>{post.attributes.summary}</p>

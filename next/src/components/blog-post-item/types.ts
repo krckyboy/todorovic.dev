@@ -7,6 +7,7 @@ export interface Post {
     title: string,
     summary: string,
     featured: boolean,
+    slug: string;
     content: object[]
   }
 }
