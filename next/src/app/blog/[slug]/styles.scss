@@ -1,7 +1,8 @@
 .blog-post {
-  font-size: clamp(1.2rem, 1vw, 1.4rem);
+  font-size: clamp(1.2rem, 1vw, 1.3rem);
   line-height: 1.3;
   font-weight: 300;
+  overflow: hidden;
 
   h1 {
     margin-bottom: 2rem;
@@ -13,10 +14,14 @@
   }
 
   p {
-    margin-bottom: 1rem;
+    margin-bottom: 1.1rem;
   }
 
   img {
     max-width: 100%;
+  }
+
+  pre {
+    font-size: 1rem;
   }
 }
