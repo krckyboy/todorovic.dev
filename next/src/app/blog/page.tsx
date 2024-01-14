@@ -2,11 +2,10 @@ import { NextPage } from 'next';
 import gStyles from '../../styles/global.module.scss';
 import BlogPostItem from '../../components/blog-post-item/BlogPostItem';
 import React from 'react';
-import { fetchWrapper } from '@/scripts/fetch';
-import { PostsFetchResponse } from '@/components/blog-post-item/types';
+import { db } from '@/scripts/fetch';
 
 const Page: NextPage = async () => {
-  const posts = await fetchWrapper<PostsFetchResponse>('/posts');
+  const posts = await db.getPosts();
 
   return (
     <main>

@@ -5,11 +5,10 @@ import styles from './styles.module.scss';
 import gStyles from '../styles/global.module.scss';
 import BlogPostItem from '@/components/blog-post-item/BlogPostItem';
 import Link from 'next/link';
-import { fetchWrapper } from '@/scripts/fetch';
-import { PostsFetchResponse } from '@/components/blog-post-item/types';
+import { db } from '@/scripts/fetch';
 
 const Page: NextPage = async () => {
-  const posts = await fetchWrapper<PostsFetchResponse>('/posts?isFeatured=tru');
+  const posts = await db.getFeaturedPosts();
 
   return (
     <main>

@@ -1,3 +1,15 @@
+interface Category {
+  id: number;
+  attributes: {
+    name: string;
+    color: string;
+    background: string;
+    createdAt: string,
+    updatedAt: string,
+    publishedAt: string,
+  };
+}
+
 export interface Post {
   id: number,
   attributes: {
@@ -9,6 +21,7 @@ export interface Post {
     featured: boolean,
     slug: string;
     content: string;
+    categories?: { data: Category[] }
   }
 }
 
