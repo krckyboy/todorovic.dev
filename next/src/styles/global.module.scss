@@ -1,0 +1,42 @@
+@import '@/styles/vars';
+
+.paddingInline {
+  padding-inline: 5%;
+
+  @media (min-width: 768px) {
+    padding-inline: 16%;
+  }
+
+  @media (min-width: 1024px) {
+    padding-inline: 26%;
+  }
+}
+
+.section {
+  flex-direction: column;
+  background-color: $color-background;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 4rem;
+}
+
+.blogs {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+  margin-top: 2rem;
+  width: 100%;
+}
+
+.pageHeading {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+}
+
+.pageHeadingMini {
+  @extend .pageHeading;
+  font-size: clamp(1.5rem, 2vw, 4rem);
+}

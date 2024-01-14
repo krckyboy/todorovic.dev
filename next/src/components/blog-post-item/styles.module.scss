@@ -1,0 +1,40 @@
+@import '@/styles/vars';
+
+.container {
+  border: 6px solid #262A32;
+  border-top: none;
+  border-left: none;
+  border-radius: 0 0 .35rem 0;
+  padding: 0 2rem 1rem 0;
+
+  &.featured {
+    padding: 1.5rem;
+    background-color: #262A32;
+    border-radius: .35rem;
+    border: none;
+
+    .heading {
+      font-weight: 300;
+    }
+  }
+
+  .heading {
+    font-weight: 400;
+    font-size: clamp(1.2rem, 1.3vw, 1.6rem);
+  }
+
+  .date {
+    display: inline-flex;
+    color: $color-accent-2;
+    margin-top: .3rem;
+    font-size: clamp(.8rem, .8vw, 1.3rem);
+    font-weight: 300;
+  }
+
+  .text {
+    margin-top: .8rem;
+    font-weight: 300;
+    font-size: clamp(1rem, 1.1vw, 1.3rem);
+    line-height: 1.3;
+  }
+}
