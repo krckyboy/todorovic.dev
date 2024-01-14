@@ -16,6 +16,6 @@
     height: 6px;
     width: 100%;
     left: 0;
-    background-color: #262A32;
+    background-color: lighten($color-background, 3%);
   }
 }
