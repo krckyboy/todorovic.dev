@@ -2,8 +2,8 @@ import React from 'react';
 import { NextPage } from 'next';
 import gStyles from '@/styles/global.module.scss';
 import { db } from '@/scripts/fetch';
-import ReactMarkdown from 'react-markdown';
 import './styles.scss';
+import BlogContent from '@/app/blog/[slug]/BlogContent';
 
 interface Props {
   params: {
@@ -26,7 +26,7 @@ const Page: NextPage<Props> = async (props) => {
           ))}
         </ul>
       )}
-      <ReactMarkdown>{post.attributes.content}</ReactMarkdown>
+      <BlogContent markdown={post.attributes.content} />
     </article>
   );
 };
