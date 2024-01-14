@@ -12,15 +12,11 @@
     background-color: lighten($color-background, 3%);
     border-radius: .35rem;
     border: none;
-
-    .heading {
-      font-weight: 300;
-    }
   }
 
   .heading {
-    font-weight: 400;
-    font-size: clamp(1.2rem, 1.3vw, 1.6rem);
+    font-weight: 500;
+    font-size: clamp(1.1rem, 1.1vw, 1.3rem);
   }
 
   .date {
