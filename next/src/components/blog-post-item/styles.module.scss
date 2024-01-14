@@ -7,10 +7,6 @@
   border-radius: 0 0 .35rem 0;
   padding: 0 2rem 1rem 0;
 
-  &:not(:last-of-type) {
-    margin-bottom: 1rem;
-  }
-
   &.featured {
     padding: 1.5rem;
     background-color: #262A32;
