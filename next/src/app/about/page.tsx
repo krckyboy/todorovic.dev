@@ -3,8 +3,6 @@ import gStyles from '../../styles/global.module.scss';
 import React from 'react';
 
 const Page: NextPage = () => {
-  // Adding error to test lint job.
-  !
   return (
     <main>
       <section className={`${gStyles.section} ${gStyles.paddingInline}`}>
