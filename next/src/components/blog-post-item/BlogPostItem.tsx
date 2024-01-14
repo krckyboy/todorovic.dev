@@ -3,6 +3,7 @@ import styles from './styles.module.scss';
 import Link from 'next/link';
 import { convertToHumanReadableDate } from '@/components/blog-post-item/scripts';
 import { Post } from '@/components/blog-post-item/types';
+import readingTime from 'reading-time';
 
 interface Props {
   post: Post;
@@ -10,15 +11,17 @@ interface Props {
 }
 
 const BlogPostItem: FunctionComponent<Props> = ({ post, featured }) => {
-  const humanReadableDate = convertToHumanReadableDate(post.attributes.publishedAt);
+  const humanReadablePublishDate = convertToHumanReadableDate(post.attributes.publishedAt);
   const categories = post?.attributes?.categories?.data;
+  const stats = readingTime(post.attributes.content);
 
   return (
     <Link href={`/blog/${post.attributes.slug}`} className={`${styles.container} ${featured ? styles.featured : ''}`}>
       <h1 className={styles.heading}>{post.attributes.title}</h1>
-      <time className={styles.date}>{humanReadableDate}</time>
+      <time className={styles.date}>{humanReadablePublishDate}</time>
       <p className={styles.text}>{post.attributes.summary}</p>
       <meta name="description" content={post.attributes.summary} />
+      <p>{stats.text}</p>
       {categories && (
         <ul>
           {categories.map((category) => (
