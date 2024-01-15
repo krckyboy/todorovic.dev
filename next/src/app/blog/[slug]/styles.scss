@@ -1,3 +1,5 @@
+@import '@/styles/vars';
+
 .blog-post {
   overflow: hidden;
 
@@ -6,6 +8,7 @@
   }
 
   h2 {
+    margin-bottom: 1rem;
     font-weight: 500;
     font-size: clamp(1.4rem, 1.1vw, 1.6rem);
   }
@@ -18,7 +21,15 @@
     max-width: 100%;
   }
 
+  .rehype-code-title {
+    background-color: darken($color-background, 2%);
+    color: $color-accent;
+    padding: .5em;
+    padding-inline: 1em;
+  }
+
   pre {
     font-size: clamp(1rem, .8vw, 1.2rem);
+    margin-bottom: 1.1rem;
   }
 }
