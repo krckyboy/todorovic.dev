@@ -36,3 +36,15 @@ export interface PostsFetchResponse {
     }
   }
 }
+
+export interface CategoriesFetchResponse {
+  data: Category[],
+  meta: {
+    pagination: {
+      page: number,
+      pageSize: number,
+      pageCount: number,
+      total: number
+    }
+  }
+}

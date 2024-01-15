@@ -7,10 +7,10 @@ const ImageAndText: FunctionComponent = () => {
   return (
     <div className={styles.container}>
       <img src={'images/dusan.png'}
-             alt={'Dušan Todorović in a formal white shirt'}
-             width={200}
-             height={200}
-             className={styles.image}
+           alt={'Dušan Todorović in a formal white shirt'}
+           width={200}
+           height={200}
+           className={styles.image}
       />
       <section className={styles.textSection}>
         <h1 className={styles.title}
@@ -29,8 +29,9 @@ const ImageAndText: FunctionComponent = () => {
             and leading teams to ensure smooth project execution.</p>
 
           <ul className={styles.ul}>
-            <li>Interested in my skills and professional experience? <Link href={'/skills'}>Go here</Link>.</li>
-            <li>You can also <Link href={'/cv'}>download my CV</Link>.</li>
+            <li>Interested in my skills? Visit my <Link href={'/skills'}>skills page</Link>, or if you prefer - <Link
+              href={'/cv'}>download my CV</Link>.
+            </li>
             <li>If you're a company or individual client looking for a dedicated, experienced developer, <Link
               href="https://www.linkedin.com/in/dusan-todorovic-krcky/">let's chat</Link>! Let's make your project
               better... or at least, less buggy!
