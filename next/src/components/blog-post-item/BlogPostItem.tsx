@@ -21,8 +21,12 @@ const BlogPostItem: FunctionComponent<Props> = ({ post, featured }) => {
         <time className={styles.date}>{humanReadablePublishDate}</time>
         <p>{stats.text}</p>
       </div>
-      <p className={styles.text}>{post.attributes.summary}</p>
-      <meta name="description" content={post.attributes.summary} />
+      {post.attributes.summary && (
+        <>
+          <p className={styles.text}>{post.attributes.summary}</p>
+          <meta name="description" content={post.attributes.summary} />
+        </>
+      )}
     </Link>
   );
 };
