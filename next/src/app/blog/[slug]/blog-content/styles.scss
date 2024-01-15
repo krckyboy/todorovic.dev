@@ -1,14 +1,11 @@
 @import '@/styles/vars';
 
-.blog-post {
-  overflow: hidden;
-
-  h1 {
-    margin-bottom: 2rem;
-  }
+.blog-content {
+  overflow-x: hidden;
+  max-width: 100%;
 
   h2 {
-    margin-bottom: 1rem;
+    margin-bottom: 1.1rem;
     font-weight: 500;
     font-size: clamp(1.4rem, 1.1vw, 1.6rem);
   }

@@ -37,6 +37,7 @@
 .pageHeadingMini {
   @extend .pageHeading;
   font-size: clamp(1.5rem, 2vw, 4rem);
+  margin-bottom: 1.5rem;
 }
 
 .text {
