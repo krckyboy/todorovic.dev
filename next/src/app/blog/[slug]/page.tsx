@@ -17,17 +17,19 @@ const Page: NextPage<Props> = async (props) => {
   const categories = post?.attributes?.categories?.data;
 
   return (
-    <article className={`${gStyles.section} ${gStyles.paddingInline} blog-post text`}>
-      <h1 className={gStyles.pageHeadingMini}>{post.attributes.title}</h1>
-      {categories && (
-        <ul>
-          {categories.map((category) => (
-            <li key={category.id}>{category.attributes.name}</li>
-          ))}
-        </ul>
-      )}
-      <BlogContent markdown={post.attributes.content} />
-    </article>
+    <main>
+      <article className={`${gStyles.section} ${gStyles.paddingInline} blog-post text`}>
+        <h1 className={gStyles.pageHeadingMini}>{post.attributes.title}</h1>
+        {categories && (
+          <ul>
+            {categories.map((category) => (
+              <li key={category.id}>{category.attributes.name}</li>
+            ))}
+          </ul>
+        )}
+        <BlogContent markdown={post.attributes.content} />
+      </article>
+    </main>
   );
 };
 
