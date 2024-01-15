@@ -5,7 +5,7 @@ import gStyles from '@/styles/global.module.scss';
 
 const Header: FunctionComponent = () => {
   return (
-    <header className={`${styles.container} ${gStyles.paddingInline}`}>
+    <header className={`${styles.container} ${gStyles.paddingInline} text`}>
       <nav className={styles.nav}>
         <ul>
           <li>

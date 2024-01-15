@@ -17,7 +17,7 @@ const Page: NextPage<Props> = async (props) => {
   const categories = post?.attributes?.categories?.data;
 
   return (
-    <article className={`${gStyles.section} ${gStyles.paddingInline} blog-post`}>
+    <article className={`${gStyles.section} ${gStyles.paddingInline} blog-post text`}>
       <h1 className={gStyles.pageHeadingMini}>{post.attributes.title}</h1>
       {categories && (
         <ul>
