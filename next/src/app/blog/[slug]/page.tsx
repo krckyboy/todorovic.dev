@@ -18,7 +18,7 @@ const Page: NextPage<Props> = async (props) => {
 
   return (
     <main>
-      <article className={`${gStyles.section} ${gStyles.paddingInline} blog-post text`}>
+      <article className={`${gStyles.section} ${gStyles.paddingInline} ${gStyles.text} blog-post`}>
         <h1 className={gStyles.pageHeadingMini}>{post.attributes.title}</h1>
         {categories && (
           <ul>

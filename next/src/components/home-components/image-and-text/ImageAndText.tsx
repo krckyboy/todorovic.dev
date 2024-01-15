@@ -22,7 +22,7 @@ const ImageAndText: FunctionComponent = () => {
           <p className={styles.tags}>
             Developer <span>|</span> Team Leader <span>|</span> React Specialist
           </p>
-          <section className={`${styles.paragraphBelow} text`}>
+          <section className={`${styles.paragraphBelow} ${gStyles.text}`}>
             <p>Hello, internet! I'm Dušan Todorović, a dedicated Web Developer based in <a
               className={styles.locationLink}
               href={'https://maps.app.goo.gl/DHTdsDU24RjWYhhV8'}

@@ -38,3 +38,9 @@
   @extend .pageHeading;
   font-size: clamp(1.5rem, 2vw, 4rem);
 }
+
+.text {
+  font-size: clamp(1.1rem, 1vw, 1.3rem);
+  line-height: 1.5;
+  font-weight: 300;
+}
