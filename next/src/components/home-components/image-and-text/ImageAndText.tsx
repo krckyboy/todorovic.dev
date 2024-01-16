@@ -3,16 +3,18 @@ import React, { FunctionComponent } from 'react';
 import styles from './styles.module.scss';
 import Link from 'next/link';
 import gStyles from '@/styles/global.module.scss';
+import Image from 'next/image';
 
 const ImageAndText: FunctionComponent = () => {
   return (
     <section className={`${gStyles.section} ${gStyles.paddingInline}`}>
       <div className={styles.container}>
-        <img src={'images/dusan.png'}
-             alt={'Dušan Todorović in a formal white shirt'}
-             width={200}
-             height={200}
-             className={styles.image}
+        <Image src={'/images/dusan.png'}
+               priority
+               alt={'Dušan Todorović in a formal white shirt'}
+               width={200}
+               height={200}
+               className={styles.image}
         />
         <section className={styles.textSection}>
           <h1 className={styles.title}
