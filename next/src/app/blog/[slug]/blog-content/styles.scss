@@ -20,7 +20,7 @@
 
   .rehype-code-title {
     background-color: darken($color-background, 2%);
-    color: $color-accent;
+    color: lighten($color-background, 35%);
     padding: .5em;
     padding-inline: 1em;
   }

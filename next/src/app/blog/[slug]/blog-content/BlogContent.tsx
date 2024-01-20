@@ -11,9 +11,9 @@ interface Props {
 
 const BlogContent: FunctionComponent<Props> = async ({ markdown }) => {
   return (
-    <div className={'blog-content'}>
+    <section className={'blog-content'}>
       <ReactMarkdown rehypePlugins={[rehypeCodeTitles, rehypeHighlight]}>{markdown}</ReactMarkdown>
-    </div>
+    </section>
   );
 };
 
