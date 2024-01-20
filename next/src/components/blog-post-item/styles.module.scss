@@ -17,6 +17,7 @@
   .heading {
     font-weight: 500;
     font-size: clamp(1.1rem, 1.1vw, 1.3rem);
+    color: $color-accent;
   }
 
   .metadata {

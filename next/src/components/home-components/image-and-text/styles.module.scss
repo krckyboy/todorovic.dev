@@ -28,9 +28,10 @@
     font-weight: 300;
 
     .title {
-      font-size: clamp(2.6rem, 4vw, 5rem);
+      font-size: clamp(2.6rem, 3vw, 4rem);
 
       a {
+        color: inherit;
         font-weight: 500;
       }
     }
@@ -42,7 +43,7 @@
 
     .tags {
       font-size: clamp(1.1rem, 1.3vw, 1.7rem);
-      color: $color-accent-2;
+      color: lighten($color-background, 35%);
 
       span {
         color: #4E5564;
