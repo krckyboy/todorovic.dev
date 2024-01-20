@@ -19,7 +19,7 @@ main {
 }
 
 a {
-  &:focus, &:focus-visible {
+  &:focus-visible {
     outline: 1px solid $color-accent; /* Red outline */
   }
 }
