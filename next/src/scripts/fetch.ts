@@ -21,9 +21,11 @@ export const fetchWrapper = async <T>(url: string | URL) => {
   }
 };
 
+const sortByPublishedAt = 'sort=publishedAt:desc';
+
 export const db = {
   getPosts: async () => {
-    return await fetchWrapper<PostsFetchResponse>('/posts');
+    return await fetchWrapper<PostsFetchResponse>(`/posts?${sortByPublishedAt}`);
   },
   getPostBySlug: async (slug: string) => {
     return await fetchWrapper<PostsFetchResponse>(`/posts/?&filters[slug]=${slug}`);
@@ -32,7 +34,7 @@ export const db = {
     return await fetchWrapper<PostsFetchResponse>('/posts?fields[0]=slug');
   },
   getFeaturedPosts: async () => {
-    return await fetchWrapper<PostsFetchResponse>('/posts?&filters[isFeatured][$eq]=true&fields[0]=slug&fields[1]=title&fields[2]=content&fields[3]=publishedAt');
+    return await fetchWrapper<PostsFetchResponse>(`/posts?&filters[isFeatured][$eq]=true&${sortByPublishedAt}&fields[0]=slug&fields[1]=title&fields[2]=content&fields[3]=publishedAt`);
   },
   getCategories: async () => {
     return await fetchWrapper<CategoriesFetchResponse>('/categories');
