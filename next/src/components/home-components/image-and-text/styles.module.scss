@@ -41,16 +41,6 @@
       font-weight: 300;
     }
 
-    .tags {
-      font-size: clamp(1.1rem, 1.3vw, 1.7rem);
-      color: lighten($color-background, 35%);
-
-      span {
-        color: #4E5564;
-        margin-inline: .3rem;
-      }
-    }
-
     .accented {
       color: $color-accent;
     }

@@ -21,7 +21,7 @@ const ImageAndText: FunctionComponent = () => {
           >
             <Link href={'/about'} className={styles.accented}>Dušan Todorović</Link>
           </h1>
-          <p className={styles.tags}>
+          <p className={gStyles.tags}>
             Developer <span>|</span> Team Leader <span>|</span> React Specialist
           </p>
           <section className={`${styles.paragraphBelow} ${gStyles.text}`}>
