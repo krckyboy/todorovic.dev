@@ -17,7 +17,7 @@
       "required": true,
       "unique": true,
       "minLength": 1,
-      "maxLength": 30
+      "maxLength": 50
     },
     "isFeatured": {
       "type": "boolean",
@@ -46,7 +46,7 @@
     },
     "slug": {
       "type": "string",
-      "required": true,
+      "required": false,
       "minLength": 1,
       "maxLength": 30
     },

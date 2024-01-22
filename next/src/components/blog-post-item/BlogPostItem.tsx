@@ -12,23 +12,15 @@ interface Props {
 
 const BlogPostItem: FunctionComponent<Props> = ({ post, featured }) => {
   const humanReadablePublishDate = convertToHumanReadableDate(post.attributes.publishedAt);
-  const categories = post?.attributes?.categories?.data;
   const stats = readingTime(post.attributes.content);
 
   return (
     <Link href={`/blog/${post.attributes.slug}`} className={`${styles.container} ${featured ? styles.featured : ''}`}>
       <h1 className={styles.heading}>{post.attributes.title}</h1>
-      <time className={styles.date}>{humanReadablePublishDate}</time>
-      <p className={styles.text}>{post.attributes.summary}</p>
-      <meta name="description" content={post.attributes.summary} />
-      <p>{stats.text}</p>
-      {categories && (
-        <ul>
-          {categories.map((category) => (
-            <li key={category.id}>#{category.attributes.name}</li>
-          ))}
-        </ul>
-      )}
+      <div className={styles.metadata}>
+        <time className={styles.date}>{humanReadablePublishDate}</time>
+        <p>{stats.text}</p>
+      </div>
     </Link>
   );
 };

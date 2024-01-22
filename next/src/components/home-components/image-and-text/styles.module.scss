@@ -24,13 +24,14 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    row-gap: 12px;
+    row-gap: 1rem;
     font-weight: 300;
 
     .title {
-      font-size: clamp(2.6rem, 4vw, 5rem);
+      font-size: clamp(2.6rem, 3vw, 4rem);
 
       a {
+        color: inherit;
         font-weight: 500;
       }
     }
@@ -40,34 +41,22 @@
       font-weight: 300;
     }
 
-    .tags {
-      font-size: clamp(1.1rem, 1.3vw, 1.7rem);
-      color: $color-accent-2;
-
-      span {
-        color: #4E5564;
-        margin-inline: .3rem;
-      }
-    }
-
     .accented {
       color: $color-accent;
     }
 
     .paragraphBelow {
       margin-top: 24px;
-      font-size: clamp(1.1rem, 1vw, 1.3rem);
       display: flex;
       flex-direction: column;
       gap: 12px;
-      line-height: 1.5;
 
       .ul {
         margin-top: 1rem;
         display: flex;
         flex-direction: column;
-        row-gap: 16px;
-        list-style-type: circle;
+        row-gap: 1rem;
+        list-style-type: disc;
 
         a {
           color: $color-accent;

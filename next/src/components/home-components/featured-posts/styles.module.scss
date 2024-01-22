@@ -2,12 +2,13 @@
 
 .featuredPostsHeading {
   margin-top: .5rem;
+  margin-bottom: 1.5rem;
   font-weight: 500;
   align-self: flex-start;
 }
 
 .checkAllPosts {
-  background-color: $color-accent-2;
+  background-color: $color-accent;
   color: $color-background;
   border-radius: .35rem;
   display: inline-flex;
@@ -17,4 +18,9 @@
   padding-inline: 3rem;
   font-weight: 600;
   margin-left: auto;
+}
+
+.blogs {
+  gap: 1rem;
+  margin-top: 2rem;
 }

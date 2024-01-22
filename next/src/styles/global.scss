@@ -17,3 +17,9 @@ main {
   grid-row: 2;
   overflow: auto;
 }
+
+a {
+  &:focus-visible {
+    outline: 1px solid $color-accent; /* Red outline */
+  }
+}

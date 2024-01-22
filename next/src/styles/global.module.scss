@@ -24,8 +24,6 @@
 .blogs {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  gap: 2rem;
-  margin-top: 2rem;
   width: 100%;
 }
 
@@ -34,9 +32,32 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: .2rem;
+  color: $color-text;
 }
 
 .pageHeadingMini {
   @extend .pageHeading;
   font-size: clamp(1.5rem, 2vw, 4rem);
+  margin-bottom: 1.5rem;
+}
+
+.text {
+  font-size: clamp(1.1rem, 1vw, 1.3rem);
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+.tags {
+  font-size: clamp(1.1rem, 1.3vw, 1.7rem);
+    color: lighten($color-background, 35%);
+
+  span {
+    color: #4E5564;
+    margin-inline: .3rem;
+  }
+}
+
+.tagsMini {
+  @extend .tags;
+  font-size: clamp(1rem, 1.1vw, 1.4rem);
 }

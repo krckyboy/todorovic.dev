@@ -10,7 +10,7 @@ import LoadingIndicator from '@/components/loading-indicator/LoadingIndicator';
 const leagueSpartan = League_Spartan({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'dtodorovic.com',
+  title: 'Dušan Todorović - Developer | Team Leader | React Specialist',
   description: 'Created by Dušan Todorović'
 };
 
