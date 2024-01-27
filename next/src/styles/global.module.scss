@@ -30,7 +30,7 @@
 .pageHeading {
   font-size: clamp(1.5rem, 3vw, 2.5rem);
   font-weight: 600;
-  text-transform: uppercase;
+  text-transform: lowercase;
   letter-spacing: .2rem;
   color: $color-text;
 }
