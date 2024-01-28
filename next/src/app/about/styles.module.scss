@@ -5,8 +5,12 @@
 
   .imagesContainer {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
+
+    @media (min-width: 480px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
 
     img {
       max-width: 100%;
@@ -34,11 +38,24 @@
     }
 
     p {
-      margin-top: 1.5rem;
+      margin-top: 1rem;
 
       &:first-child {
         margin-top: 0;
       }
     }
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  ul, ol {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    padding-left: 1.5rem;
+    list-style-type: decimal;
+    margin-top: 1.5rem;
   }
 }
