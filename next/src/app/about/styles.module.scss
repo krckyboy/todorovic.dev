@@ -1,0 +1,44 @@
+.main {
+  h1 {
+    margin-bottom: 2rem;
+  }
+
+  .imagesContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+
+    img {
+      max-width: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .mainContent {
+    margin-top: 3rem;
+
+    .subheading {
+      font-weight: 500;
+      font-size: clamp(1.4rem, 1.1vw, 1.6rem);
+      margin-bottom: 1rem;
+
+      &:not(:first-of-type) {
+        margin-top: 2rem;
+      }
+
+      + img {
+        + p {
+          margin-top: 1rem;
+        }
+      }
+    }
+
+    p {
+      margin-top: 1.5rem;
+
+      &:first-child {
+        margin-top: 0;
+      }
+    }
+  }
+}
