@@ -5,15 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="99c32651-979a-460c-81a0-65d4ab216914" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/next/src/app/skills/job-item/styles.module.scss" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/next/src/app/skills/styles.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next/public/images/about/27318BF1-3FDE-4F44-99AB-301A371463F0_1_105_c.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/next/public/images/about/846FD215-D652-4225-9AC1-BDB43CCC56DF_1_105_c.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/next/public/images/about/E7FF333A-32F1-4E1A-B624-8FD917A8F194_1_105_c.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/next/src/app/about/image-section/data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/next/src/app/about/image-section/data.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next/src/app/about/styles.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/next/src/app/about/styles.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next/src/app/skills/job-item/JobItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/next/src/app/skills/job-item/JobItem.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next/src/app/skills/job-item/data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/next/src/app/skills/job-item/data.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next/src/app/about/section/Section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/next/src/app/about/section/Section.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/next/src/app/skills/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/next/src/app/skills/page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,25 +40,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "#10",
-    "js.linters.configure.manually.selectedeslint": "true",
-    "last_opened_file_path": "/Users/dtodorovic/WebstormProjects/krcky-dev-nextjs/next/src/app/skills/job-item",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.editor",
-    "ts.external.directory.path": "/Users/dtodorovic/WebstormProjects/krcky-dev-nextjs/next/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;#10&quot;,
+    &quot;js.linters.configure.manually.selectedeslint&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/dtodorovic/WebstormProjects/krcky-dev-nextjs/next/src/app/skills/job-item&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/dtodorovic/WebstormProjects/krcky-dev-nextjs/next/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/next/src/app/skills/job-item" />
@@ -93,22 +87,7 @@
       <workItem from="1704133957596" duration="63000" />
       <workItem from="1704134026067" duration="153507000" />
       <workItem from="1705252380506" duration="85297000" />
-    </task>
-    <task id="LOCAL-00070" summary="#7 Resolving error with pages going client side.">
-      <option name="closed" value="true" />
-      <created>1705181025454</created>
-      <option name="number" value="00070" />
-      <option name="presentableId" value="LOCAL-00070" />
-      <option name="project" value="LOCAL" />
-      <updated>1705181025454</updated>
-    </task>
-    <task id="LOCAL-00071" summary="#7 Style change for blog item.">
-      <option name="closed" value="true" />
-      <created>1705181045306</created>
-      <option name="number" value="00071" />
-      <option name="presentableId" value="LOCAL-00071" />
-      <option name="project" value="LOCAL" />
-      <updated>1705181045306</updated>
+      <workItem from="1706817389423" duration="188000" />
     </task>
     <task id="LOCAL-00072" summary="#7 Adding background color and color to categories schema.">
       <option name="closed" value="true" />
@@ -486,7 +465,23 @@
       <option name="project" value="LOCAL" />
       <updated>1706817323860</updated>
     </task>
-    <option name="localTasksCounter" value="119" />
+    <task id="LOCAL-00119" summary="#10 Adding more features to JobItem such as human-readable date + calculation.">
+      <option name="closed" value="true" />
+      <created>1706817473305</created>
+      <option name="number" value="00119" />
+      <option name="presentableId" value="LOCAL-00119" />
+      <option name="project" value="LOCAL" />
+      <updated>1706817473305</updated>
+    </task>
+    <task id="LOCAL-00120" summary="#10 IDE stuff.">
+      <option name="closed" value="true" />
+      <created>1706817500913</created>
+      <option name="number" value="00120" />
+      <option name="presentableId" value="LOCAL-00120" />
+      <option name="project" value="LOCAL" />
+      <updated>1706817500913</updated>
+    </task>
+    <option name="localTasksCounter" value="121" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -523,8 +518,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="#10 Refactoring folder structure." />
-    <MESSAGE value="#10 Using css module instead of plain class name." />
     <MESSAGE value="#10 Slight style changes + additional refactoring with folder structure and such." />
     <MESSAGE value="#10 Going back to node server, since ISR will not work statically." />
     <MESSAGE value="#10 Going back to using node, since we need ISR." />
@@ -548,5 +541,8 @@
     <MESSAGE value="#10 Adding data.ts for ImageSection.tsx" />
     <MESSAGE value="#10 Added JobItem and data.ts as an example." />
     <MESSAGE value="#10 Deleting unused photos." />
+    <MESSAGE value="#10 Adding more features to JobItem such as human-readable date + calculation." />
+    <MESSAGE value="#10 IDE stuff." />
+    <option name="LAST_COMMIT_MESSAGE" value="#10 IDE stuff." />
   </component>
 </project>
