@@ -13,14 +13,13 @@ const Page: NextPage = () => {
         <ImageSection />
         <section className={`${gStyles.text} ${styles.mainContent}`}>
           <h2 className={styles.subheading}>Introduction</h2>
-          <p>Hello! I'm Dušan Todorović, a proud resident of Belgrade, Serbia. You might think I've been coding since
-            I
-            was in diapers, but nope! I come from a long line of musicians - my dad, granddad, and great-granddad were
+          <p>Hello! I'm Dušan Todorović, a resident of Belgrade, Serbia. You might think I've been coding since
+            I was in diapers, but nope!</p>
+          <p>I come from a long line of musicians - my dad, granddad, and great-granddad were
             all accordion players.</p>
           <p>So, you can imagine music has always been a big part of my life. I picked up the accordion at the tender
             age of 8 and I was pretty good at it!</p>
           <h2 className={styles.subheading}>Musical Background</h2>
-
           <p>I wasn't just limited to the accordion. I also played the keyboard and it became my main source of
             income for years. I even taught others how to play accordion and keyboard.</p>
           <p>Oh, really, I could share so much about this. The main point is, my father was rooting for me to
@@ -35,7 +34,6 @@ const Page: NextPage = () => {
           <p>Eventually, I landed my first job as a junior front-end developer through a friend of a friend. At that
             time, knowing HTML, CSS (with a bit of Bootstrap), and some JavaScript was enough to get by.</p>
           <h2 className={styles.subheading}>Early Career</h2>
-
           <p>Despite the lack of advanced tools, I made significant progress after leaving my first job. I spent a lot
             of time reading documentation and working on personal projects to build up my full-stack skills. I also
             continued to teach music and play on parties to support myself financially.</p>
@@ -46,8 +44,7 @@ const Page: NextPage = () => {
           <h2 className={styles.subheading}>Current Role</h2>
           <p>After building my portfolio and honing my skills, I landed a job that changed my life. I'm currently a
             front-end team lead at a reputable company. I love how I've grown not just in my tech skills, but also in
-            my
-            management and soft skills.</p>
+            my management and soft skills.</p>
           <p>I enjoy both the operational side of work, and also managing people.</p>
           <h2 className={styles.subheading}>Interests</h2>
           <p>I have a few quirky habits that might surprise you. For instance, I used to watch streams of League of
