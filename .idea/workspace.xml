@@ -5,16 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="99c32651-979a-460c-81a0-65d4ab216914" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/next/src/app/skills/styles.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/next/src/app/skills/jobs/Jobs.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/next/src/app/skills/jobs/styles.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/next/src/app/skills/soft-skills/SoftSkills.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/next/src/app/skills/tech-skills/TechSkills.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/next/src/app/about/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/next/src/app/about/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next/src/app/about/section/Section.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/next/src/app/blog/[slug]/blog-header/BlogHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/next/src/app/blog/[slug]/blog-header/BlogHeader.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next/src/app/blog/styles.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/next/src/app/blog/styles.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next/src/app/skills/job-item/JobItem.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/next/src/app/skills/jobs/job-item/JobItem.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next/src/app/skills/job-item/data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/next/src/app/skills/jobs/data.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next/src/app/skills/job-item/scripts.ts" beforeDir="false" afterPath="$PROJECT_DIR$/next/src/app/skills/jobs/job-item/scripts.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next/src/app/skills/job-item/styles.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/next/src/app/skills/jobs/job-item/styles.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/next/src/app/skills/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/next/src/app/skills/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next/src/components/home-components/featured-posts/FeaturedPosts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/next/src/components/home-components/featured-posts/FeaturedPosts.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next/src/components/home-components/featured-posts/styles.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/next/src/components/home-components/featured-posts/styles.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next/src/styles/global.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/next/src/styles/global.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next/src/app/skills/styles.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/next/src/app/skills/styles.module.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,11 +76,11 @@
       <recent name="$PROJECT_DIR$/public/images/home" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/next/src/app/skills/jobs" />
+      <recent name="$PROJECT_DIR$/next/src/app/skills/jobs/job-item" />
       <recent name="$PROJECT_DIR$/next/src/app/skills/job-item" />
       <recent name="$PROJECT_DIR$/next/src/app/blog/[slug]/blog-header" />
       <recent name="$PROJECT_DIR$/next/src/app/blog/[slug]/blog-content" />
-      <recent name="$PROJECT_DIR$/next/src/components/home-components/featured-posts" />
-      <recent name="$PROJECT_DIR$/next/src/components/home-components/image-and-text" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -93,15 +95,7 @@
       <workItem from="1704133957596" duration="63000" />
       <workItem from="1704134026067" duration="153507000" />
       <workItem from="1705252380506" duration="85297000" />
-      <workItem from="1706817389423" duration="4907000" />
-    </task>
-    <task id="LOCAL-00074" summary="#7 Added db helper for readability, additional style tweaks, added categories from strapi.">
-      <option name="closed" value="true" />
-      <created>1705245486323</created>
-      <option name="number" value="00074" />
-      <option name="presentableId" value="LOCAL-00074" />
-      <option name="project" value="LOCAL" />
-      <updated>1705245486323</updated>
+      <workItem from="1706817389423" duration="8505000" />
     </task>
     <task id="LOCAL-00075" summary="#7 Adding try catch blocks.">
       <option name="closed" value="true" />
@@ -487,7 +481,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706821596961</updated>
     </task>
-    <option name="localTasksCounter" value="123" />
+    <task id="LOCAL-00123" summary="#10 Additions to skills page and some minor refactoring.">
+      <option name="closed" value="true" />
+      <created>1706985220228</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1706985220228</updated>
+    </task>
+    <option name="localTasksCounter" value="124" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -524,7 +526,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="#10 Slight style changes + additional refactoring with folder structure and such." />
     <MESSAGE value="#10 Going back to node server, since ISR will not work statically." />
     <MESSAGE value="#10 Going back to using node, since we need ISR." />
     <MESSAGE value="#10 Adding additional styles + tweaking." />
@@ -549,5 +550,7 @@
     <MESSAGE value="#10 Deleting unused photos." />
     <MESSAGE value="#10 Adding more features to JobItem such as human-readable date + calculation." />
     <MESSAGE value="#10 IDE stuff." />
+    <MESSAGE value="#10 Additions to skills page and some minor refactoring." />
+    <option name="LAST_COMMIT_MESSAGE" value="#10 Additions to skills page and some minor refactoring." />
   </component>
 </project>

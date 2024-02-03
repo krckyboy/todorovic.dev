@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from 'react';
 import styles from './styles.module.scss';
 import gStyles from '@/styles/global.module.scss';
-import { JobItem } from './data';
+import { JobItem } from '../data';
 import { convertToString, formatDuration } from './scripts';
 
 const JobItem: FunctionComponent<JobItem> = ({
