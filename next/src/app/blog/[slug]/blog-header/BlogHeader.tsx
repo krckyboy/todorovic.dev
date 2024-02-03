@@ -12,7 +12,7 @@ const BlogHeader: FunctionComponent<Props> = ({ post }) => {
 
   return (
     <header>
-      <h1 className={`${gStyles.pageHeadingMini} ${styles.heading}`}>{post.attributes.title}</h1>
+      <h1 className={`${gStyles.pageHeading} ${styles.heading}`}>{post.attributes.title}</h1>
       {categories && (
         <ul>
           {categories.map((category) => (

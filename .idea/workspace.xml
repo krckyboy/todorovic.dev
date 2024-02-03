@@ -7,8 +7,14 @@
     <list default="true" id="99c32651-979a-460c-81a0-65d4ab216914" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/next/src/app/skills/styles.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/next/src/app/about/section/Section.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/next/src/app/about/section/Section.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next/src/app/about/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/next/src/app/about/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next/src/app/about/section/Section.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/next/src/app/blog/[slug]/blog-header/BlogHeader.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/next/src/app/blog/[slug]/blog-header/BlogHeader.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next/src/app/blog/styles.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/next/src/app/blog/styles.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/next/src/app/skills/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/next/src/app/skills/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next/src/components/home-components/featured-posts/FeaturedPosts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/next/src/components/home-components/featured-posts/FeaturedPosts.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next/src/components/home-components/featured-posts/styles.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/next/src/components/home-components/featured-posts/styles.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next/src/styles/global.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/next/src/styles/global.module.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,15 +93,7 @@
       <workItem from="1704133957596" duration="63000" />
       <workItem from="1704134026067" duration="153507000" />
       <workItem from="1705252380506" duration="85297000" />
-      <workItem from="1706817389423" duration="1560000" />
-    </task>
-    <task id="LOCAL-00073" summary="#7 IDE config.">
-      <option name="closed" value="true" />
-      <created>1705245420125</created>
-      <option name="number" value="00073" />
-      <option name="presentableId" value="LOCAL-00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1705245420125</updated>
+      <workItem from="1706817389423" duration="4907000" />
     </task>
     <task id="LOCAL-00074" summary="#7 Added db helper for readability, additional style tweaks, added categories from strapi.">
       <option name="closed" value="true" />
@@ -481,7 +479,15 @@
       <option name="project" value="LOCAL" />
       <updated>1706817585780</updated>
     </task>
-    <option name="localTasksCounter" value="122" />
+    <task id="LOCAL-00122" summary="#10 IDE stuff.">
+      <option name="closed" value="true" />
+      <created>1706821596961</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1706821596961</updated>
+    </task>
+    <option name="localTasksCounter" value="123" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -543,6 +549,5 @@
     <MESSAGE value="#10 Deleting unused photos." />
     <MESSAGE value="#10 Adding more features to JobItem such as human-readable date + calculation." />
     <MESSAGE value="#10 IDE stuff." />
-    <option name="LAST_COMMIT_MESSAGE" value="#10 IDE stuff." />
   </component>
 </project>

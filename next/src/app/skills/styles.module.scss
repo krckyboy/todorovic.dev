@@ -1,0 +1,47 @@
+@import '@/styles/vars';
+
+.main {
+  .subheading {
+    font-weight: 500;
+    font-size: clamp(1.4rem, 1.1vw, 1.6rem);
+    margin-bottom: 1rem;
+
+    &:not(:first-child) {
+      margin-top: 2rem;
+    }
+  }
+
+  ul {
+    li {
+      &:not(:first-of-type) {
+        margin-top: 1rem;
+      }
+    }
+  }
+
+  p {
+    + p {
+      margin-top: 1rem;
+    }
+  }
+
+  .jobs {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  ul, ol {
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    padding-left: 1.5rem;
+    list-style-type: decimal;
+    margin-top: 1.5rem;
+  }
+}
+
