@@ -1,91 +1,88 @@
 @import '@/styles/vars';
 
-.container {
+
+.list, .content {
+  display: flex;
   background-color: lighten($color-background, 3%);
-  border-radius: .35rem;
-  width: 100%;
 
-  .list, .content {
+  li {
+    width: 100%;
     display: flex;
-
-    li {
-      width: 100%;
-      display: flex;
-    }
   }
+}
 
-  .list {
-    font-size: clamp(1rem, 1vw, 1.2rem);
-    border-bottom: 6px solid lighten($color-background, 5%);
-    overflow-x: auto;
+.list {
+  font-size: clamp(1rem, 1vw, 1.2rem);
+  border-bottom: 6px solid lighten($color-background, 5%);
+  overflow-x: auto;
 
-    li {
-      display: flex;
-      width: fit-content;
-      cursor: pointer;
-      font-weight: 600;
-      padding: 1rem;
-      background-color: lighten($color-background, 3%);
-      flex: 1 0;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
+  li {
+    display: flex;
+    width: fit-content;
+    cursor: pointer;
+    font-weight: 600;
+    padding: 1rem;
+    background-color: lighten($color-background, 3%);
+    flex: 1 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 
-      &:hover, &.active {
-        background-color: lighten($color-background, 5%);
+    &:hover, &.active {
+      background-color: lighten($color-background, 5%);
 
-        span {
-          color: $color-accent;
-        }
+      span {
+        color: $color-accent;
       }
     }
   }
+}
 
-  .content {
-    flex: 1 0 50%;
-    background-color: lighten($color-background, 3%);
-    padding: 1rem;
+.content {
+  flex: 1 0 50%;
+  background-color: lighten($color-background, 3%);
+  padding: 1rem;
 
-    li {
-      display: none;
+  .experience {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+
+    &.active {
+      display: flex;
+    }
+
+    .position {
+      display: flex;
+      flex: 1 0;
       width: 100%;
       flex-direction: column;
 
-      &.active {
-        display: flex;
+      &:not(:first-of-type) {
+        margin-top: 2rem;
       }
 
-      .position {
-        display: flex;
-        flex: 1 0;
-        width: 100%;
-        flex-direction: column;
+      .title {
+        font-weight: 500;
+      }
 
-        &:not(:first-of-type) {
-          margin-top: 2rem;
-        }
+      .duration {
+        font-weight: 300;
+      }
 
-        .title {
-          font-weight: 500;
-        }
+      .duration, .location {
+        color: darken($color-text, 40%);
+        font-size: clamp(.9rem, .8vw, 1.3rem);
+      }
 
-        .duration {
-          font-weight: 300;
-        }
+      .achievements {
+        margin-top: 1rem;
+        margin-left: 1rem;
+        list-style-type: disc;
 
-        .duration, .location {
-          color: darken($color-text, 40%);
-          font-size: clamp(.9rem, .8vw, 1.3rem);
-        }
-
-        .achievements {
-          margin-top: 1rem;
-          margin-left: 1rem;
-
-          .achievement {
-            &:not(:first-of-type) {
-              margin-top: .5rem;
-            }
+        .achievement {
+          &:not(:first-of-type) {
+            margin-top: .5rem;
           }
         }
       }

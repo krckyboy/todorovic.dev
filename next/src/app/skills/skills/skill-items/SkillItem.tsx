@@ -21,15 +21,15 @@ const SkillItems: FunctionComponent<Props> = ({ skills }) => {
           )
         )}
       </ul>
-      <ul className={styles.content}>
+      <div className={styles.content}>
         {skills.map((skill) => (
-            <li key={skill.title}
-                className={`${activeSkill === skill.title ? styles.active : ''}`}>
-              <p>{skill.content}</p>
-            </li>
+            <p key={skill.title}
+               className={`${activeSkill === skill.title ? styles.active : ''} ${styles.item}`}>
+              {skill.content}
+            </p>
           )
         )}
-      </ul>
+      </div>
     </>
   );
 };

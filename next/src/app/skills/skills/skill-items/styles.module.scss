@@ -34,7 +34,7 @@
   background-color: lighten($color-background, 3%);
   padding: 1rem;
 
-  li {
+  .item {
     display: none;
 
     &.active {
