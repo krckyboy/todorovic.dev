@@ -3,8 +3,8 @@ import gStyles from '@/styles/global.module.scss';
 import styles from './styles.module.scss';
 import React from 'react';
 import Link from 'next/link';
-import SoftSkills from '@/app/skills/soft-skills/SoftSkills';
-import TechSkills from '@/app/skills/tech-skills/TechSkills';
+import SoftSkills from '@/app/skills/skills/soft-skills/SoftSkills';
+import TechSkills from '@/app/skills/skills/tech-skills/TechSkills';
 import Jobs from '@/app/skills/jobs/Jobs';
 
 const Page: NextPage = () => {
