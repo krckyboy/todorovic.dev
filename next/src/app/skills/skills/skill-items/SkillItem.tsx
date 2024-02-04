@@ -1,13 +1,13 @@
 'use client';
 import React, { FunctionComponent, useState } from 'react';
-import styles from '@/app/skills/skills/tech-skills/styles.module.scss';
+import styles from './styles.module.scss';
 import { Skill } from '@/app/skills/skills/types';
 
 interface Props {
   skills: Skill[];
 }
 
-const SkillItem: FunctionComponent<Props> = ({ skills }) => {
+const SkillItems: FunctionComponent<Props> = ({ skills }) => {
   const [activeSkill, setActiveSkill] = useState(skills[0].title);
 
   return (
@@ -34,4 +34,4 @@ const SkillItem: FunctionComponent<Props> = ({ skills }) => {
   );
 };
 
-export default SkillItem;
+export default SkillItems;

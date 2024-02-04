@@ -1,17 +1,20 @@
-import React, { FunctionComponent } from 'react';
+'use client';
+import React, { FunctionComponent, useState } from 'react';
 import styles from './styles.module.scss';
 import gStyles from '@/styles/global.module.scss';
 import { JobItem } from '../data';
 import { convertToString, formatDuration } from './scripts';
 
-const JobItem: FunctionComponent<JobItem> = ({
-                                               jobTitle,
-                                               companyName,
-                                               location,
-                                               achievements,
-                                               startDate,
-                                               endDate
-                                             }) => {
+const JobItems: FunctionComponent<JobItem> = ({
+                                                jobTitle,
+                                                companyName,
+                                                location,
+                                                achievements,
+                                                startDate,
+                                                endDate
+                                              }) => {
+  // const [activeJob, setActiveJob] = useState(jobs[0].title);
+
   return (
     <div className={`${styles.container} ${gStyles.text}`}>
       <div>
@@ -30,4 +33,4 @@ const JobItem: FunctionComponent<JobItem> = ({
   );
 };
 
-export default JobItem;
+export default JobItems;
