@@ -1,9 +1,6 @@
 import React, { FunctionComponent } from 'react';
 
-interface Props {
-}
-
-const SoftSkills: FunctionComponent<Props> = () => {
+const SoftSkills: FunctionComponent = () => {
   return (
     <>
       <h2>Soft Skills</h2>

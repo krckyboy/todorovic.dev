@@ -3,10 +3,7 @@ import styles from './styles.module.scss';
 import jobsData from './data';
 import JobItem from './job-item/JobItem';
 
-interface Props {
-}
-
-const Jobs: FunctionComponent<Props> = () => {
+const Jobs: FunctionComponent = () => {
   return (
     <>
       <h2>Work Experience</h2>

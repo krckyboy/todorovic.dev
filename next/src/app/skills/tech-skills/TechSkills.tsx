@@ -1,10 +1,7 @@
 import React, { FunctionComponent } from 'react';
 import Link from 'next/link';
 
-interface Props {
-}
-
-const TechSkills: FunctionComponent<Props> = () => {
+const TechSkills: FunctionComponent = () => {
   return (
     <>
       <h2>Technical Skills</h2>
