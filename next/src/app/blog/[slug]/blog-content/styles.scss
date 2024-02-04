@@ -11,7 +11,7 @@
   }
 
   p, ul, ol {
-    margin-bottom: 1.1rem;
+    margin-bottom: 1.5rem;
   }
 
   img {
@@ -21,21 +21,12 @@
   .rehype-code-title {
     background-color: darken($color-background, 2%);
     color: lighten($color-background, 35%);
-    padding: .5em;
-    padding-inline: 1em;
+    padding: .5em 1em;
   }
 
   pre {
-    font-size: clamp(1rem, .8vw, 1.2rem);
-    margin-bottom: 1.1rem;
-  }
-
-  ul {
-    list-style-type: disc;
-  }
-
-  ol {
-    list-style-type: decimal;
+    font-size: clamp(1rem, 1vw, 1.2rem);
+    margin-bottom: 1.5rem;
   }
 
   ul, ol {
@@ -43,5 +34,6 @@
     flex-direction: column;
     row-gap: 1rem;
     padding-left: 1.5rem;
+    list-style-type: decimal;
   }
 }

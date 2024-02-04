@@ -1,5 +1,6 @@
 import React, { FunctionComponent } from 'react';
 import gStyles from '@/styles/global.module.scss';
+import styles from './styles.module.scss';
 import { Post } from '@/components/blog-post-item/types';
 
 interface Props {
@@ -11,7 +12,7 @@ const BlogHeader: FunctionComponent<Props> = ({ post }) => {
 
   return (
     <header>
-      <h1 className={`${gStyles.pageHeadingMini}`}>{post.attributes.title}</h1>
+      <h1 className={`${gStyles.pageHeading} ${styles.heading}`}>{post.attributes.title}</h1>
       {categories && (
         <ul>
           {categories.map((category) => (

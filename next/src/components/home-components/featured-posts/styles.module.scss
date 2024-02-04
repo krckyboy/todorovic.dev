@@ -3,8 +3,11 @@
 .featuredPostsHeading {
   margin-top: .5rem;
   margin-bottom: 1.5rem;
-  font-weight: 500;
   align-self: flex-start;
+  font-size: clamp(1.5rem, 2vw, 4rem);
+  font-weight: 600;
+  text-transform: lowercase;
+  letter-spacing: .2rem;
 }
 
 .checkAllPosts {
