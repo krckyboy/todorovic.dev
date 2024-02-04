@@ -1,7 +1,7 @@
 'use client';
 import React, { FunctionComponent, useState } from 'react';
 import styles from './styles.module.scss';
-import { Skill } from '@/app/skills/skills/types';
+import type { Skill } from '../data';
 
 interface Props {
   skills: Skill[];

@@ -1,29 +1,24 @@
 @import '@/styles/vars';
 
-// @todo Refactor to remove !important
 .list {
-  list-style-type: none !important;
-  padding-left: 0 !important;
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
-  flex-direction: row !important;
-  gap: 0 !important;
-  font-size: clamp(1rem, 1vw, 1.2rem) !important;
+  flex-direction: row;
+  font-size: clamp(1rem, 1vw, 1.2rem);
+  overflow-x: auto;
+  border-bottom: 6px solid lighten($color-background, 5%);
 
   li {
-    display: inline-flex;
+    display: flex;
     width: fit-content;
     cursor: pointer;
     font-weight: 600;
-    padding-inline: 1rem;
-    padding-block: 1rem;
+    padding: 1rem;
     background-color: lighten($color-background, 3%);
     flex: 1 0;
     justify-content: center;
     align-items: center;
     text-align: center;
-    border-bottom: 6px solid lighten($color-background, 5%);
 
     &:hover, &.active {
       background-color: lighten($color-background, 5%);
@@ -36,10 +31,8 @@
 }
 
 .content {
-  list-style-type: none !important;
   background-color: lighten($color-background, 3%);
-  margin-top: 0 !important;
-  padding: 1rem !important;
+  padding: 1rem;
 
   li {
     display: none;

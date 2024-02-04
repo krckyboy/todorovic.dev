@@ -1,0 +1,94 @@
+@import '@/styles/vars';
+
+.container {
+  background-color: lighten($color-background, 3%);
+  border-radius: .35rem;
+  width: 100%;
+
+  .list, .content {
+    display: flex;
+
+    li {
+      width: 100%;
+      display: flex;
+    }
+  }
+
+  .list {
+    font-size: clamp(1rem, 1vw, 1.2rem);
+    border-bottom: 6px solid lighten($color-background, 5%);
+    overflow-x: auto;
+
+    li {
+      display: flex;
+      width: fit-content;
+      cursor: pointer;
+      font-weight: 600;
+      padding: 1rem;
+      background-color: lighten($color-background, 3%);
+      flex: 1 0;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+
+      &:hover, &.active {
+        background-color: lighten($color-background, 5%);
+
+        span {
+          color: $color-accent;
+        }
+      }
+    }
+  }
+
+  .content {
+    flex: 1 0 50%;
+    background-color: lighten($color-background, 3%);
+    padding: 1rem;
+
+    li {
+      display: none;
+      width: 100%;
+      flex-direction: column;
+
+      &.active {
+        display: flex;
+      }
+
+      .position {
+        display: flex;
+        flex: 1 0;
+        width: 100%;
+        flex-direction: column;
+
+        &:not(:first-of-type) {
+          margin-top: 2rem;
+        }
+
+        .title {
+          font-weight: 500;
+        }
+
+        .duration {
+          font-weight: 300;
+        }
+
+        .duration, .location {
+          color: darken($color-text, 40%);
+          font-size: clamp(.9rem, .8vw, 1.3rem);
+        }
+
+        .achievements {
+          margin-top: 1rem;
+          margin-left: 1rem;
+
+          .achievement {
+            &:not(:first-of-type) {
+              margin-top: .5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
