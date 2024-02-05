@@ -1,25 +1,17 @@
 import React, { FunctionComponent } from 'react';
-import Link from 'next/link';
 import styles from './styles.module.scss';
 import gStyles from '@/styles/global.module.scss';
+import NavLink from '@/components/header/nav-link/NavLink';
 
 const Header: FunctionComponent = () => {
   return (
     <header className={`${styles.container} ${gStyles.paddingInline} ${gStyles.text}`}>
       <nav className={styles.nav}>
         <ul>
-          <li>
-            <Link href={'/'}>Home</Link>
-          </li>
-          <li>
-            <Link href={'/skills'}>Skills</Link>
-          </li>
-          <li>
-            <Link href={'/about'}>About</Link>
-          </li>
-          <li>
-            <Link href={'/blog'}>Blog</Link>
-          </li>
+          <NavLink href={'/'}>Home</NavLink>
+          <NavLink href={'/skills'}>Skills</NavLink>
+          <NavLink href={'/about'}>About</NavLink>
+          <NavLink href={'/blog'}>Blog</NavLink>
         </ul>
       </nav>
     </header>
