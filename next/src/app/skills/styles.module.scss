@@ -19,3 +19,47 @@
     }
   }
 }
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  font-size: clamp(1rem, 1vw, 1.2rem);
+  border-bottom: 6px solid lighten($color-background, 5%);
+  overflow-x: auto;
+
+  li {
+    display: flex;
+    width: fit-content;
+    cursor: pointer;
+    font-weight: 600;
+    padding: 1rem;
+    background-color: lighten($color-background, 3%);
+    flex: 1 0;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    &:hover, &.active {
+      background-color: lighten($color-background, 5%);
+
+      span {
+        color: $color-accent;
+      }
+    }
+  }
+}
+
+.content {
+  background-color: lighten($color-background, 3%);
+  padding: 1rem;
+
+  .item {
+    display: none;
+    flex-direction: column;
+
+    &.active {
+      display: flex;
+    }
+  }
+}

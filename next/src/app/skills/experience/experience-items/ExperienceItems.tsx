@@ -1,6 +1,7 @@
 'use client';
 import React, { FunctionComponent, useState } from 'react';
 import styles from './styles.module.scss';
+import parentStyles from '../../styles.module.scss';
 import { Experience } from '../data';
 import { convertToString, formatDuration } from './scripts';
 
@@ -13,18 +14,18 @@ const ExperienceItems: FunctionComponent<Props> = ({ experienceItems }) => {
 
   return (
     <>
-      <ul className={styles.list}>
+      <ul className={parentStyles.list}>
         {experienceItems.map((experience) => (
           <li onClick={() => setActiveExperience(experience.companyName)} key={experience.companyName}
-              className={`${activeExperience === experience.companyName ? styles.active : ''}`}>
+              className={`${activeExperience === experience.companyName ? parentStyles.active : ''}`}>
             <span>{experience.companyName}</span>
           </li>
         ))}
       </ul>
-      <div className={styles.content}>
+      <div className={`${styles.content} ${parentStyles.content}`}>
         {experienceItems.map((experience) => (
           <div key={experience.companyName}
-               className={`${activeExperience === experience.companyName ? styles.active : ''} ${styles.experience}`}>
+               className={`${activeExperience === experience.companyName ? parentStyles.active : ''} ${parentStyles.item}`}>
             {experience.position.map(({ title, endDate, startDate, location, achievements }) => (
               <div key={title} className={styles.position}>
                 <h3 className={styles.title}>{title}</h3>
