@@ -34,7 +34,7 @@
     cursor: pointer;
     font-weight: 600;
     padding: 1rem;
-    background-color: lighten($color-background, 3%);
+    background-color: $color-background-lighten;
     flex: 1 0;
     justify-content: center;
     align-items: center;
@@ -51,7 +51,7 @@
 }
 
 .content {
-  background-color: lighten($color-background, 3%);
+  background-color: $color-background-lighten;
   padding: 1rem;
 
   .item {
@@ -60,6 +60,18 @@
 
     &.active {
       display: flex;
+    }
+  }
+
+  .listContent {
+    margin-top: 1rem;
+    margin-left: 1rem;
+    list-style-type: disc;
+
+    .listContentItem {
+      &:not(:first-of-type) {
+        margin-top: 1rem;
+      }
     }
   }
 }

@@ -32,9 +32,9 @@ const ExperienceItems: FunctionComponent<Props> = ({ experienceItems }) => {
                 <p
                   className={styles.duration}>{convertToString(startDate, endDate)} | {formatDuration(startDate, endDate)}</p>
                 <p className={styles.location}>{location}</p>
-                <ul className={styles.achievements}>
+                <ul className={parentStyles.listContent}>
                   {achievements.map((achievement, index) => (
-                    <li className={styles.achievement} key={index}>{achievement}</li>
+                    <li className={parentStyles.listContentItem} key={index}>{achievement}</li>
                   ))}
                 </ul>
               </div>

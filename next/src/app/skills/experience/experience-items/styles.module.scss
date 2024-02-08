@@ -22,17 +22,5 @@
       color: darken($color-text, 40%);
       font-size: clamp(.9rem, .8vw, 1.3rem);
     }
-
-    .achievements {
-      margin-top: 1rem;
-      margin-left: 1rem;
-      list-style-type: disc;
-
-      .achievement {
-        &:not(:first-of-type) {
-          margin-top: 1rem;
-        }
-      }
-    }
   }
 }

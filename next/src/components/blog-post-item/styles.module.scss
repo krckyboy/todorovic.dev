@@ -1,7 +1,7 @@
 @import '@/styles/vars';
 
 .container {
-  border: 6px solid lighten($color-background, 3%);
+  border: 6px solid $color-background-lighten;
   border-top: none;
   border-left: none;
   border-radius: 0 0 .35rem 0;
@@ -9,7 +9,7 @@
 
   &.featured {
     padding: 1.5rem;
-    background-color: lighten($color-background, 3%);
+    background-color: $color-background-lighten;
     border-radius: .35rem;
     border: none;
   }

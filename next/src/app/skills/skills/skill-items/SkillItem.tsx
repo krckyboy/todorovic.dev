@@ -1,6 +1,7 @@
 'use client';
 import React, { FunctionComponent, useState } from 'react';
 import parentStyles from '../../styles.module.scss';
+import styles from './styles.module.scss';
 import type { Skill } from '../data';
 
 interface Props {
@@ -23,10 +24,14 @@ const SkillItems: FunctionComponent<Props> = ({ skills }) => {
       </ul>
       <div className={parentStyles.content}>
         {skills.map((skill) => (
-            <p key={skill.title}
-               className={`${activeSkill === skill.title ? parentStyles.active : ''} ${parentStyles.item}`}>
-              {skill.content}
-            </p>
+            <ul key={skill.title}
+                className={`${activeSkill === skill.title ? parentStyles.active : ''} ${parentStyles.item} ${parentStyles.listContent} ${styles.skillList}`}>
+              {skill.content.map((item) => (
+                <li key={item} className={parentStyles.listContentItem}>
+                  {item}
+                </li>
+              ))}
+            </ul>
           )
         )}
       </div>
