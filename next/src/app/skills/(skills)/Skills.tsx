@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react';
 import { techSkillsData, softSkillsData } from './data';
-import SkillItems from '@/app/skills/skills/skill-items/SkillItem';
+import SkillItems from './(skill-items)/SkillItem';
 
 const Skills: FunctionComponent = () => {
   return (

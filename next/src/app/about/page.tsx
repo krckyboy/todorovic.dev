@@ -2,8 +2,8 @@ import { NextPage } from 'next';
 import gStyles from '@/styles/global.module.scss';
 import styles from './styles.module.scss';
 import React from 'react';
-import Link from 'next/link';
-import ImageSection from '@/app/about/image-section/ImageSection';
+import ImageSection from '@/app/about/(image-section)/ImageSection';
+import AuthorCard from '@/components/author-card/AuthorCard';
 
 const Page: NextPage = () => {
   return (
@@ -54,18 +54,8 @@ const Page: NextPage = () => {
             lovable and they are our best friends! I always get fascinated, over and over, by how much positive energy
             I get from Lilly. Lilly is my dog, Shi Tzuh!</p>
           <p>I also like TV shows and movies. Some of my favorites include The Sopranos, Dexter, Mad Men.</p>
-          <h2 className={styles.subheading}>Contact Information</h2>
-          <p>Feel free to reach out to me if you want to chat about coding, or anything else. I'm always open to new
-            connections and opportunities:</p>
-          <ul>
-            <li>
-              <Link href="https://www.linkedin.com/in/dusan-todorovic-krcky/">Linkedin</Link>
-            </li>
-            <li>
-              <Link href="mailto:dusan.todorovic.dev@gmail.com">Mail</Link>
-            </li>
-          </ul>
         </section>
+        <AuthorCard />
       </article>
     </main>
   );

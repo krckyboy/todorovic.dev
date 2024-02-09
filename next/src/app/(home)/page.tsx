@@ -1,7 +1,7 @@
 import React from 'react';
 import { NextPage } from 'next';
-import ImageAndText from '@/components/home-components/image-and-text/ImageAndText';
-import FeaturedPosts from '@/components/home-components/featured-posts/FeaturedPosts';
+import ImageAndText from '@/app/(home)/(image-and-text)/ImageAndText';
+import FeaturedPosts from '@/app/(home)/(featured-posts)/FeaturedPosts';
 
 const Page: NextPage = async () => {
   return (
