@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react';
 import styles from './styles.module.scss';
-import SingleSocialIcon from '@/components/footer/socialIcons/SingleSocialIcon';
+import SingleSocialIcon from './single-social-icon/SingleSocialIcon';
 
 const SocialIcons: FunctionComponent = () => {
   return (

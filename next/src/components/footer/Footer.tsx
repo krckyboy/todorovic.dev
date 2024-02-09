@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react';
-import SocialIcons from '@/components/footer/socialIcons/SocialIcons';
+import SocialIcons from './social-icons/SocialIcons';
 import styles from './styles.module.scss';
 import gStyles from '@/styles/global.module.scss';
 
