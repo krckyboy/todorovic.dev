@@ -1,12 +1,12 @@
 import React from 'react';
 import { NextPage } from 'next';
 import { Metadata } from 'next';
-import BlogContent from '@/app/blog/[slug]/(blog-content)/BlogContent';
 import { db } from '@/scripts/fetch';
 import gStyles from '@/styles/global.module.scss';
 import './(blog-content)/styles.scss';
+import BlogContent from '@/app/blog/[slug]/(blog-content)/BlogContent';
 import BlogHeader from './(blog-header)/BlogHeader';
-import BlogFooter from './(blog-footer)/BlogFooter';
+import AuthorCard from '@/components/author-card/AuthorCard';
 
 interface Props {
   params: {
@@ -20,10 +20,10 @@ const Page: NextPage<Props> = async (props) => {
 
   return (
     <main>
-      <article className={`${gStyles.section} ${gStyles.paddingInline} ${gStyles.text}`}>
+      <article className={`${gStyles.section} ${gStyles.paddingInline}`}>
         <BlogHeader post={post} />
         <BlogContent markdown={post.attributes.content} />
-        <BlogFooter />
+        <AuthorCard />
       </article>
     </main>
   );

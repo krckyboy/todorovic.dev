@@ -1,0 +1,52 @@
+@import '@/styles/vars';
+
+.container {
+  display: flex;
+  width: 100%;
+  margin-top: 1.5rem;
+  padding-top: 3rem;
+  border-top: solid $color-background-lighten 6px;
+  align-items: center;
+
+  .linkContainer {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .image {
+    min-width: 70px;
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 5000px;
+
+    @media (min-width: 420px) {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  .textContainer {
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+
+    .name {
+      font-size: clamp(1.2rem, 1.2vw, 1.5rem);
+      font-weight: 500;
+    }
+  }
+
+  .links {
+    display: flex;
+    gap: 8px;
+    color: $color-accent;
+    font-weight: 500;
+    margin-top: .2rem;
+
+    li, a {
+      color: inherit;
+    }
+  }
+}

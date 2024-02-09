@@ -45,18 +45,18 @@
         margin-top: 0;
       }
     }
-  }
 
-  a {
-    text-decoration: underline;
-  }
+    a {
+      text-decoration: underline;
+    }
 
-  ul, ol {
-    display: flex;
-    flex-direction: column;
-    row-gap: 1rem;
-    padding-left: 1.5rem;
-    list-style-type: decimal;
-    margin-top: 1.5rem;
+    ul, ol {
+      display: flex;
+      flex-direction: column;
+      row-gap: 1rem;
+      padding-left: 1.5rem;
+      list-style-type: decimal;
+      margin-top: 1.5rem;
+    }
   }
 }

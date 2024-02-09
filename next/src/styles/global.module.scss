@@ -34,6 +34,7 @@
   letter-spacing: .2rem;
   color: $color-text;
   margin-bottom: 2rem;
+  line-height: 1.5;
 }
 
 .text {
@@ -45,6 +46,7 @@
 .tags {
   font-size: clamp(1.1rem, 1.3vw, 1.7rem);
   color: lighten($color-background, 35%);
+  font-weight: 300;
 
   span {
     color: #4E5564;
