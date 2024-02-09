@@ -3,7 +3,7 @@ import gStyles from '@/styles/global.module.scss';
 import styles from './styles.module.scss';
 import React from 'react';
 import Link from 'next/link';
-import ImageSection from '@/app/about/image-section/ImageSection';
+import ImageSection from '@/app/about/(image-section)/ImageSection';
 
 const Page: NextPage = () => {
   return (

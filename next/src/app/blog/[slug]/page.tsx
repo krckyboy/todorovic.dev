@@ -1,12 +1,12 @@
 import React from 'react';
 import { NextPage } from 'next';
 import { Metadata } from 'next';
-import BlogContent from '@/app/blog/[slug]/blog-content/BlogContent';
+import BlogContent from '@/app/blog/[slug]/(blog-content)/BlogContent';
 import { db } from '@/scripts/fetch';
 import gStyles from '@/styles/global.module.scss';
-import './blog-content/styles.scss';
-import BlogHeader from '@/app/blog/[slug]/blog-header/BlogHeader';
-import BlogFooter from '@/app/blog/[slug]/blog-footer/BlogFooter';
+import './(blog-content)/styles.scss';
+import BlogHeader from './(blog-header)/BlogHeader';
+import BlogFooter from './(blog-footer)/BlogFooter';
 
 interface Props {
   params: {
