@@ -14,9 +14,9 @@ const BlogHeader: FunctionComponent<Props> = ({ post }) => {
     <header>
       <h1 className={`${gStyles.pageHeading} ${styles.heading}`}>{post.attributes.title}</h1>
       {categories && (
-        <ul>
+        <ul className={`${gStyles.categories} ${styles.categories}`}>
           {categories.map((category) => (
-            <li key={category.id}>{category.attributes.name}</li>
+            <li key={category.id}>#{category.attributes.name}</li>
           ))}
         </ul>
       )}
