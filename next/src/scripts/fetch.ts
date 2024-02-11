@@ -31,6 +31,7 @@ export const db = {
         page: 1
       }
     };
+
     const queryString = qs.stringify(queryParams);
     return await fetchWrapper<PostsFetchResponse>(`/posts?${queryString}`);
   },
@@ -41,6 +42,7 @@ export const db = {
       },
       populate: ['categories']
     };
+
     const queryString = qs.stringify(queryParams);
     return await fetchWrapper<PostsFetchResponse>(`/posts?${queryString}`);
   },
@@ -48,6 +50,7 @@ export const db = {
     const queryParams = {
       fields: ['slug']
     };
+
     const queryString = qs.stringify(queryParams);
     return await fetchWrapper<PostsFetchResponse>(`/posts?${queryString}`);
   },
@@ -61,6 +64,7 @@ export const db = {
       sort: ['publishedAt:desc'],
       fields: ['slug', 'title', 'content', 'publishedAt']
     };
+
     const queryString = qs.stringify(queryParams);
     return await fetchWrapper<PostsFetchResponse>(`/posts?${queryString}`);
   },
