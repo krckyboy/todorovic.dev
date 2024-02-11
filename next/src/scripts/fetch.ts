@@ -1,4 +1,5 @@
 import type { CategoriesFetchResponse, PostsFetchResponse } from '@/components/blog-post-item/types';
+import qs from 'qs';
 
 export const fetchWrapper = async <T>(url: string | URL) => {
   try {
@@ -21,20 +22,51 @@ export const fetchWrapper = async <T>(url: string | URL) => {
   }
 };
 
-const sortByPublishedAt = 'sort=publishedAt:desc';
-
 export const db = {
   getPosts: async () => {
-    return await fetchWrapper<PostsFetchResponse>(`/posts?${sortByPublishedAt}`);
+    const queryParams = {
+      sort: ['publishedAt:desc'],
+      pagination: {
+        pageSize: 10,
+        page: 1
+      }
+    };
+
+    const queryString = qs.stringify(queryParams);
+    return await fetchWrapper<PostsFetchResponse>(`/posts?${queryString}`);
   },
   getPostBySlug: async (slug: string) => {
-    return await fetchWrapper<PostsFetchResponse>(`/posts/?&filters[slug]=${slug}&populate[0]=categories`);
+    const queryParams = {
+      filters: {
+        slug: slug
+      },
+      populate: ['categories']
+    };
+
+    const queryString = qs.stringify(queryParams);
+    return await fetchWrapper<PostsFetchResponse>(`/posts?${queryString}`);
   },
   getPostSlugs: async () => {
-    return await fetchWrapper<PostsFetchResponse>('/posts?fields[0]=slug');
+    const queryParams = {
+      fields: ['slug']
+    };
+
+    const queryString = qs.stringify(queryParams);
+    return await fetchWrapper<PostsFetchResponse>(`/posts?${queryString}`);
   },
   getFeaturedPosts: async () => {
-    return await fetchWrapper<PostsFetchResponse>(`/posts?&filters[isFeatured][$eq]=true&${sortByPublishedAt}&fields[0]=slug&fields[1]=title&fields[2]=content&fields[3]=publishedAt`);
+    const queryParams = {
+      filters: {
+        isFeatured: {
+          $eq: true
+        }
+      },
+      sort: ['publishedAt:desc'],
+      fields: ['slug', 'title', 'content', 'publishedAt']
+    };
+
+    const queryString = qs.stringify(queryParams);
+    return await fetchWrapper<PostsFetchResponse>(`/posts?${queryString}`);
   },
   getCategories: async () => {
     return await fetchWrapper<CategoriesFetchResponse>('/categories');
