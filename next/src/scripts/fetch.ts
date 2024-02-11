@@ -28,7 +28,7 @@ export const db = {
     return await fetchWrapper<PostsFetchResponse>(`/posts?${sortByPublishedAt}`);
   },
   getPostBySlug: async (slug: string) => {
-    return await fetchWrapper<PostsFetchResponse>(`/posts/?&filters[slug]=${slug}`);
+    return await fetchWrapper<PostsFetchResponse>(`/posts/?&filters[slug]=${slug}&populate[0]=categories`);
   },
   getPostSlugs: async () => {
     return await fetchWrapper<PostsFetchResponse>('/posts?fields[0]=slug');

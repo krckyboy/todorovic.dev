@@ -4,13 +4,3 @@
   margin-top: 3rem;
   gap: 3rem;
 }
-
-.categories {
-  justify-content: flex-start;
-  display: flex;
-  gap: .5rem;
-
-  li {
-    color: darken($color-text, 40%);
-  }
-}

@@ -1,39 +1,23 @@
 @import '@/styles/vars';
+@import '@/styles/about-and-blog-content.module';
 
 .blog-content {
   overflow-x: hidden;
   max-width: 100%;
 
-  h2 {
-    margin-bottom: 1.1rem;
-    font-weight: 500;
-    font-size: clamp(1.4rem, 1.1vw, 1.6rem);
-  }
-
-  p, ul, ol {
-    margin-bottom: 1.5rem;
-  }
-
-  img {
-    max-width: 100%;
-  }
-
   .rehype-code-title {
+    margin-top: $margin-top-value;
     background-color: darken($color-background, 2%);
     color: lighten($color-background, 35%);
     padding: .5em 1em;
+
+    + pre {
+      margin-top: 0;
+    }
   }
 
   pre {
+    margin-top: $margin-top-value;
     font-size: clamp(1rem, 1vw, 1.2rem);
-    margin-bottom: 1.5rem;
-  }
-
-  ul, ol {
-    display: flex;
-    flex-direction: column;
-    row-gap: 1rem;
-    padding-left: 1.5rem;
-    list-style-type: decimal;
   }
 }

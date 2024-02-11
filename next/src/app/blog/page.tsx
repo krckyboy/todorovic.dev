@@ -13,7 +13,7 @@ const Page: NextPage = async () => {
     <main>
       <section className={`${gStyles.section} ${gStyles.paddingInline}`}>
         <h1 className={gStyles.pageHeading}>Blog</h1>
-        <ul className={styles.categories}>
+        <ul className={gStyles.categories}>
           {categories.data.map((category) => (
             <li key={category.id}>#{category.attributes.name}</li>
           ))}
