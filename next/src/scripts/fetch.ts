@@ -24,27 +24,45 @@ export const fetchWrapper = async <T>(url: string | URL) => {
 
 export const db = {
   getPosts: async () => {
-    const queryParams = qs.stringify({ sort: 'publishedAt:desc' });
-    return await fetchWrapper<PostsFetchResponse>(`/posts?${queryParams}`);
+    const queryParams = {
+      sort: ['publishedAt:desc'],
+      pagination: {
+        pageSize: 10,
+        page: 1
+      }
+    };
+    const queryString = qs.stringify(queryParams);
+    return await fetchWrapper<PostsFetchResponse>(`/posts?${queryString}`);
   },
   getPostBySlug: async (slug: string) => {
-    const queryParams = qs.stringify({
-      'filters[slug]': slug,
-      'populate[0]': 'categories'
-    });
-    return await fetchWrapper<PostsFetchResponse>(`/posts?${queryParams}`);
+    const queryParams = {
+      filters: {
+        slug: slug
+      },
+      populate: ['categories']
+    };
+    const queryString = qs.stringify(queryParams);
+    return await fetchWrapper<PostsFetchResponse>(`/posts?${queryString}`);
   },
   getPostSlugs: async () => {
-    const queryParams = qs.stringify({ fields: ['slug'] });
-    return await fetchWrapper<PostsFetchResponse>(`/posts?${queryParams}`);
+    const queryParams = {
+      fields: ['slug']
+    };
+    const queryString = qs.stringify(queryParams);
+    return await fetchWrapper<PostsFetchResponse>(`/posts?${queryString}`);
   },
   getFeaturedPosts: async () => {
-    const queryParams = qs.stringify({
-      'filters[isFeatured][$eq]': true,
-      sort: 'publishedAt:desc',
+    const queryParams = {
+      filters: {
+        isFeatured: {
+          $eq: true
+        }
+      },
+      sort: ['publishedAt:desc'],
       fields: ['slug', 'title', 'content', 'publishedAt']
-    });
-    return await fetchWrapper<PostsFetchResponse>(`/posts?${queryParams}`);
+    };
+    const queryString = qs.stringify(queryParams);
+    return await fetchWrapper<PostsFetchResponse>(`/posts?${queryString}`);
   },
   getCategories: async () => {
     return await fetchWrapper<CategoriesFetchResponse>('/categories');
