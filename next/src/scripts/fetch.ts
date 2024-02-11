@@ -1,4 +1,5 @@
 import type { CategoriesFetchResponse, PostsFetchResponse } from '@/components/blog-post-item/types';
+import qs from 'qs';
 
 export const fetchWrapper = async <T>(url: string | URL) => {
   try {
@@ -21,20 +22,29 @@ export const fetchWrapper = async <T>(url: string | URL) => {
   }
 };
 
-const sortByPublishedAt = 'sort=publishedAt:desc';
-
 export const db = {
   getPosts: async () => {
-    return await fetchWrapper<PostsFetchResponse>(`/posts?${sortByPublishedAt}`);
+    const queryParams = qs.stringify({ sort: 'publishedAt:desc' });
+    return await fetchWrapper<PostsFetchResponse>(`/posts?${queryParams}`);
   },
   getPostBySlug: async (slug: string) => {
-    return await fetchWrapper<PostsFetchResponse>(`/posts/?&filters[slug]=${slug}&populate[0]=categories`);
+    const queryParams = qs.stringify({
+      'filters[slug]': slug,
+      'populate[0]': 'categories'
+    });
+    return await fetchWrapper<PostsFetchResponse>(`/posts?${queryParams}`);
   },
   getPostSlugs: async () => {
-    return await fetchWrapper<PostsFetchResponse>('/posts?fields[0]=slug');
+    const queryParams = qs.stringify({ fields: ['slug'] });
+    return await fetchWrapper<PostsFetchResponse>(`/posts?${queryParams}`);
   },
   getFeaturedPosts: async () => {
-    return await fetchWrapper<PostsFetchResponse>(`/posts?&filters[isFeatured][$eq]=true&${sortByPublishedAt}&fields[0]=slug&fields[1]=title&fields[2]=content&fields[3]=publishedAt`);
+    const queryParams = qs.stringify({
+      'filters[isFeatured][$eq]': true,
+      sort: 'publishedAt:desc',
+      fields: ['slug', 'title', 'content', 'publishedAt']
+    });
+    return await fetchWrapper<PostsFetchResponse>(`/posts?${queryParams}`);
   },
   getCategories: async () => {
     return await fetchWrapper<CategoriesFetchResponse>('/categories');
