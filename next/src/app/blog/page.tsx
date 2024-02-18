@@ -13,7 +13,7 @@ interface Props {
 }
 
 const Page: NextPage<Props> = async ({ searchParams: { category } }) => {
-  const posts = await db.getPosts();
+  const posts = category ? await db.getPostsByCategory(category) : await db.getPosts();
   const categories = await db.getCategories();
 
   return (

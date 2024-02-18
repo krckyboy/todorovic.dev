@@ -36,6 +36,25 @@ export const db = {
     const queryString = qs.stringify(queryParams);
     return await fetchWrapper<PostsFetchResponse>(`/posts?${queryString}`);
   },
+  getPostsByCategory: async (category: string) => {
+    const queryParams = {
+      sort: ['publishedAt:desc'],
+      filters: {
+        categories: {
+          name: {
+            $eq: category
+          }
+        }
+      },
+      pagination: {
+        pageSize: 10,
+        page: 1
+      }
+    };
+
+    const queryString = qs.stringify(queryParams);
+    return await fetchWrapper<PostsFetchResponse>(`/posts?${queryString}`);
+  },
   getPostBySlug: async (slug: string) => {
     const queryParams = {
       filters: {
