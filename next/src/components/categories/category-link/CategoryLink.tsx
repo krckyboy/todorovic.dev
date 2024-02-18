@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import React, { FunctionComponent } from 'react';
-import styles from '@/components/categories/styles.module.scss';
+import styles from './styles.module.scss';
 import { Category } from '@/components/categories/types';
 
 interface Props {
@@ -15,7 +15,7 @@ const CategoryLink: FunctionComponent<Props> = ({ activeCategory, name }) => {
   const setHref = isActiveCategory ? '/blog' : `/blog?category=${name}`;
 
   return (
-    <Link className={setActiveCategory} href={setHref}>#{name}</Link>
+    <Link className={`${styles.link} ${setActiveCategory}`} href={setHref}>#{name}</Link>
   );
 };
 

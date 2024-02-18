@@ -1,0 +1,9 @@
+@import '@/styles/vars';
+
+.link {
+  color: darken($color-text, 40%);
+
+  &.active {
+    color: $color-accent;
+  }
+}

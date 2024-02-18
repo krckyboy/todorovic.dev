@@ -1,8 +1,7 @@
 import React, { FunctionComponent } from 'react';
 import styles from './styles.module.scss';
 import { Category } from '@/components/categories/types';
-import Link from 'next/link';
-import CategoryLink from '@/components/categories/CategoryLink';
+import CategoryLink from './category-link/CategoryLink';
 
 interface Props {
   categories: Category[] | undefined;
