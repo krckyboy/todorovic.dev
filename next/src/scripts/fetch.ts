@@ -1,5 +1,6 @@
-import type { CategoriesFetchResponse, PostsFetchResponse } from '@/components/blog-post-item/types';
 import qs from 'qs';
+import type { PostsFetchResponse } from '@/components/blog-post-item/types';
+import { CategoriesFetchResponse } from '@/components/categories/types';
 
 export const fetchWrapper = async <T>(url: string | URL) => {
   try {

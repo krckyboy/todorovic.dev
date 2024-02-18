@@ -1,14 +1,4 @@
-interface Category {
-  id: number;
-  attributes: {
-    name: string;
-    color: string;
-    background: string;
-    createdAt: string,
-    updatedAt: string,
-    publishedAt: string,
-  };
-}
+import { Category } from '@/components/categories/types';
 
 export interface Post {
   id: number,
@@ -27,18 +17,6 @@ export interface Post {
 
 export interface PostsFetchResponse {
   data: Post[],
-  meta: {
-    pagination: {
-      page: number,
-      pageSize: number,
-      pageCount: number,
-      total: number
-    }
-  }
-}
-
-export interface CategoriesFetchResponse {
-  data: Category[],
   meta: {
     pagination: {
       page: number,

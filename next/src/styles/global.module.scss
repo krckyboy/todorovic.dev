@@ -58,13 +58,3 @@
   @extend .tags;
   font-size: clamp(1rem, 1.1vw, 1.4rem);
 }
-
-.categories {
-  justify-content: flex-start;
-  display: flex;
-  gap: .5rem;
-
-  li {
-    color: darken($color-text, 40%);
-  }
-}

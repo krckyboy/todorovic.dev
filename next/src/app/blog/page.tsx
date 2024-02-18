@@ -4,8 +4,15 @@ import styles from './styles.module.scss';
 import BlogPostItem from '@/components/blog-post-item/BlogPostItem';
 import React from 'react';
 import { db } from '@/scripts/fetch';
+import Categories from '@/components/categories/Categories';
 
-const Page: NextPage = async () => {
+interface Props {
+  searchParams: {
+    category?: string;
+  };
+}
+
+const Page: NextPage<Props> = async ({ searchParams: { category } }) => {
   const posts = await db.getPosts();
   const categories = await db.getCategories();
 
@@ -13,11 +20,7 @@ const Page: NextPage = async () => {
     <main>
       <section className={`${gStyles.section} ${gStyles.paddingInline}`}>
         <h1 className={gStyles.pageHeading}>Blog</h1>
-        <ul className={gStyles.categories}>
-          {categories.data.map((category) => (
-            <li key={category.id}>#{category.attributes.name}</li>
-          ))}
-        </ul>
+        <Categories categories={categories.data} activeCategory={category} />
         <div className={`${gStyles.blogs} ${styles.blogs}`}>
           {posts.data.map((post) => <BlogPostItem post={post} key={post.id} />)}
         </div>
