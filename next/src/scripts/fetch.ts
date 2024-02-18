@@ -1,5 +1,6 @@
-import type { CategoriesFetchResponse, PostsFetchResponse } from '@/components/blog-post-item/types';
 import qs from 'qs';
+import type { PostsFetchResponse } from '@/components/blog-post-item/types';
+import { CategoriesFetchResponse } from '@/components/categories/types';
 
 export const fetchWrapper = async <T>(url: string | URL) => {
   try {
@@ -26,6 +27,25 @@ export const db = {
   getPosts: async () => {
     const queryParams = {
       sort: ['publishedAt:desc'],
+      pagination: {
+        pageSize: 10,
+        page: 1
+      }
+    };
+
+    const queryString = qs.stringify(queryParams);
+    return await fetchWrapper<PostsFetchResponse>(`/posts?${queryString}`);
+  },
+  getPostsByCategory: async (category: string) => {
+    const queryParams = {
+      sort: ['publishedAt:desc'],
+      filters: {
+        categories: {
+          name: {
+            $eq: category
+          }
+        }
+      },
       pagination: {
         pageSize: 10,
         page: 1
