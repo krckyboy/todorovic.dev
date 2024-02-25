@@ -24,19 +24,19 @@ export const fetchWrapper = async <T>(url: string | URL) => {
 };
 
 export const db = {
-  getPosts: async () => {
+  getPosts: async (page: number ) => {
     const queryParams = {
       sort: ['publishedAt:desc'],
       pagination: {
         pageSize: 10,
-        page: 1
+        page
       }
     };
 
     const queryString = qs.stringify(queryParams);
     return await fetchWrapper<PostsFetchResponse>(`/posts?${queryString}`);
   },
-  getPostsByCategory: async (category: string) => {
+  getPostsByCategory: async (category: string, page: number) => {
     const queryParams = {
       sort: ['publishedAt:desc'],
       filters: {
@@ -48,7 +48,7 @@ export const db = {
       },
       pagination: {
         pageSize: 10,
-        page: 1
+        page
       }
     };
 
