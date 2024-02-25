@@ -1,9 +1,24 @@
 @import '@/styles/vars';
 
 .link {
-  color: darken($color-text, 40%);
+  display: flex;
+  align-items: center;
+
+  .text {
+    color: darken($color-text, 40%);
+  }
+
+  .cross {
+    margin-left: .2rem;
+  }
 
   &.active {
-    color: $color-accent;
+    border-radius: .35rem;
+    padding: .5rem;
+    background-color: darken($color-text, 90%);
+
+    .text {
+      color: $color-accent;
+    }
   }
 }
