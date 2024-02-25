@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react';
-import styles from '@/app/blog/styles.module.scss';
+import styles from './styles.module.scss';
 import Link from 'next/link';
 import qs from 'qs';
 
@@ -24,7 +24,7 @@ const Navigation: FunctionComponent<Props> = ({ currentPageCount, pageNumber, ca
   const queryStringNext = qs.stringify(queryParamsNext);
 
   return (
-    <div className={styles.pagination}>
+    <div className={styles.container}>
       {Boolean(pageNumber > 1) && (
         <Link href={`/blog?${queryStringPrevious}`}>
           Previous
