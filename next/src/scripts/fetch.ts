@@ -66,6 +66,18 @@ export const db = {
     const queryString = qs.stringify(queryParams);
     return await fetchWrapper<PostsFetchResponse>(`/posts?${queryString}`);
   },
+  getPostsBySearchTerm: async (searchValue: string) => {
+    const queryParams = {
+      filters: {
+        title: {
+          $containsi: searchValue
+        }
+      }
+    };
+
+    const queryString = qs.stringify(queryParams);
+    return await fetchWrapper<PostsFetchResponse>(`/posts?${queryString}`);
+  },
   getPostSlugs: async () => {
     const queryParams = {
       fields: ['slug']
