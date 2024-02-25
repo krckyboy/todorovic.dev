@@ -6,11 +6,15 @@ import type { PostsFetchResponse } from '@/components/blog-post-item/types';
 import { db } from '@/scripts/fetch';
 import Link from 'next/link';
 import { useDebounce } from '@/app/blog/(search-bar)/useDebounce';
+import { useRouter } from 'next/navigation';
 
 const SearchBar: FunctionComponent = () => {
+  const router = useRouter();
+
   const [isActive, setFormActive] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [searchResults, setSearchResults] = useState<PostsFetchResponse['data'] | null>(null);
+  const [focusedIndex, setFocusedIndex] = useState(-1);
 
   const searchInputRef = useRef<HTMLInputElement>(null);
   const debouncedSearchQuery = useDebounce(searchQuery, 500);
@@ -20,8 +24,8 @@ const SearchBar: FunctionComponent = () => {
     setSearchResults(posts.data);
   };
 
-  const handleBlur = (event: React.FocusEvent<HTMLDivElement>) => {
-    const { currentTarget, relatedTarget } = event;
+  const handleBlur = (e: React.FocusEvent<HTMLDivElement>) => {
+    const { currentTarget, relatedTarget } = e;
 
     if (currentTarget.contains(relatedTarget)) {
       return;
@@ -30,10 +34,40 @@ const SearchBar: FunctionComponent = () => {
     setFormActive(false);
   };
 
-  const handleEscKey = (event: KeyboardEvent) => {
-    if (event.key === 'Escape') {
+  const handleEscKey = (e: KeyboardEvent) => {
+    if (e.key === 'Escape') {
       searchInputRef.current?.blur();
       setSearchQuery('');
+    }
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchQuery(e.target.value);
+    setFormActive(true);
+  };
+
+  // Keyboard navigation
+  const handleKeyDown = (e: React.KeyboardEvent) => {
+    if (e.key === 'ArrowDown') {
+      e.preventDefault();
+
+      if (!searchResults) {
+        return;
+      }
+
+      setFocusedIndex((prevIndex) => Math.min(prevIndex + 1, searchResults?.length - 1 ?? 0));
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault();
+
+      setFocusedIndex((prevIndex) => Math.max(prevIndex - 1, 0));
+    } else if (e.key === 'Enter' && focusedIndex !== -1) {
+      const postToGoTo = searchResults?.find((post, index) => focusedIndex === index);
+
+      if (!postToGoTo) {
+        return;
+      }
+
+      router.push(`/blog/${postToGoTo.attributes.slug}`);
     }
   };
 
@@ -55,7 +89,7 @@ const SearchBar: FunctionComponent = () => {
   }, [debouncedSearchQuery]);
 
   return (
-    <section className={styles.container} onBlur={handleBlur}>
+    <section className={styles.container} onBlur={handleBlur} onKeyDown={handleKeyDown}>
       <label className={styles.label}>
         <Image src={'/images/search/icon.svg'}
                priority
@@ -68,15 +102,16 @@ const SearchBar: FunctionComponent = () => {
                type="text"
                placeholder={'Search blog posts'}
                onClick={() => setFormActive(true)}
+               onFocus={() => setFormActive(true)}
                ref={searchInputRef}
                value={searchQuery}
-               onChange={(e) => setSearchQuery(e.target.value)}
+               onChange={handleChange}
         />
       </label>
       {Boolean(searchResults?.length && isActive) && (
         <ul className={styles.results}>
-          {searchResults?.map((post) => (
-            <li key={post.id}>
+          {searchResults?.map((post, index) => (
+            <li key={post.id} className={index === focusedIndex ? styles.focused : ''}>
               <Link href={`/blog/${post.attributes.slug}`}>{post.attributes.title}</Link>
             </li>
           ))}

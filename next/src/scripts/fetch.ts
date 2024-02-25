@@ -72,6 +72,10 @@ export const db = {
         title: {
           $containsi: searchValue
         }
+      },
+      pagination: {
+        pageSize: 10,
+        page: 1
       }
     };
 
