@@ -1,12 +1,12 @@
 'use client';
 import React, { FunctionComponent, useEffect, useRef, useState } from 'react';
-import styles from './styles.module.scss';
 import Image from 'next/image';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+import { useDebounce } from '@/app/blog/(search-bar)/useDebounce';
 import type { PostsFetchResponse } from '@/components/blog-post-item/types';
 import { db } from '@/scripts/fetch';
-import Link from 'next/link';
-import { useDebounce } from '@/app/blog/(search-bar)/useDebounce';
-import { useRouter } from 'next/navigation';
+import styles from './styles.module.scss';
 
 const SearchBar: FunctionComponent = () => {
   const router = useRouter();
