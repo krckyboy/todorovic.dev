@@ -6,15 +6,19 @@ import React from 'react';
 import { db } from '@/scripts/fetch';
 import Categories from '@/components/categories/Categories';
 import SearchBar from '@/app/blog/(search-bar)/SearchBar';
+import Navigation from '@/app/blog/_navigation/Navigation';
 
 interface Props {
   searchParams: {
     category?: string;
+    page?: string;
   };
 }
 
-const Page: NextPage<Props> = async ({ searchParams: { category } }) => {
-  const posts = category ? await db.getPostsByCategory(category) : await db.getPosts();
+const Page: NextPage<Props> = async ({ searchParams: { category, page } }) => {
+  const pageNumber = parseInt(page ?? '1');
+
+  const posts = category ? await db.getPostsByCategory(category, pageNumber) : await db.getPosts(pageNumber);
   const categories = await db.getCategories();
 
   return (
@@ -26,6 +30,9 @@ const Page: NextPage<Props> = async ({ searchParams: { category } }) => {
         <div className={`${gStyles.blogs} ${styles.blogs}`}>
           {posts.data.map((post) => <BlogPostItem post={post} key={post.id} />)}
         </div>
+        {Boolean(posts.meta.pagination.pageCount > 1) && (
+          <Navigation pageNumber={pageNumber} currentPageCount={posts.meta.pagination.pageCount} category={category} />
+        )}
       </section>
     </main>
   );
