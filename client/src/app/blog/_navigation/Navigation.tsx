@@ -10,28 +10,34 @@ interface Props {
 }
 
 const Navigation: FunctionComponent<Props> = ({ currentPageCount, pageNumber, category }) => {
-  const queryParamsPrevious = {
-    category,
-    page: pageNumber - 1
-  };
+  const rangeStart = 1;
+  const rangeEnd = currentPageCount;
 
-  const queryParamsNext = {
-    category,
-    page: pageNumber + 1
+  // Function to generate query string for a specific page
+  const generateQueryString = (page: number) => {
+    const queryParams = {
+      category,
+      page
+    };
+    return qs.stringify(queryParams);
   };
-
-  const queryStringPrevious = qs.stringify(queryParamsPrevious);
-  const queryStringNext = qs.stringify(queryParamsNext);
 
   return (
     <div className={styles.container}>
-      {Boolean(pageNumber > 1) && (
-        <Link href={`/blog?${queryStringPrevious}`}>
+      {pageNumber > 1 && (
+        <Link href={`/blog?${generateQueryString(pageNumber - 1)}`}>
           Previous
         </Link>
       )}
-      {currentPageCount !== pageNumber && (
-        <Link href={`/blog?${queryStringNext}`}>
+      {Array.from({ length: rangeEnd - rangeStart + 1 }, (_, i) => rangeStart + i).map((page) => (
+        <Link key={page}
+              href={`/blog?${generateQueryString(page)}`}
+              className={page === pageNumber ? styles.active : ''}>
+          {page}
+        </Link>
+      ))}
+      {currentPageCount > pageNumber && (
+        <Link href={`/blog?${generateQueryString(pageNumber + 1)}`}>
           Next
         </Link>
       )}

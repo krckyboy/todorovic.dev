@@ -9,7 +9,7 @@
   a {
     color: darken($color-text, 40%);
 
-    &:hover {
+    &.active, &:hover {
       color: $color-accent;
     }
   }
