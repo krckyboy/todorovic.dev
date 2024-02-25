@@ -15,10 +15,10 @@
   &.active {
     border-radius: .35rem;
     padding: .5rem;
-    background-color: darken($color-text, 90%);
+    background-color: darken($color-accent, 10%);
 
     .text {
-      color: $color-accent;
+      color: $color-text;
     }
   }
 }
