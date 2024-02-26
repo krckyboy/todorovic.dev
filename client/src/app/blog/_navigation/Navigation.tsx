@@ -37,6 +37,7 @@ const Navigation: FunctionComponent<Props> = ({ currentPageCount, pageNumber, ca
           {rangeStart}
         </Link>
       );
+
       if (start > rangeStart + 1) {
         links.push(<span key="ellipsis-start">...</span>);
       }
@@ -54,6 +55,7 @@ const Navigation: FunctionComponent<Props> = ({ currentPageCount, pageNumber, ca
       if (end < rangeEnd - 1) {
         links.push(<span key="ellipsis-end">...</span>);
       }
+
       links.push(
         <Link key="end" href={`/blog?${generateQueryString(rangeEnd)}`}>
           {rangeEnd}
