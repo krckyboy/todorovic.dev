@@ -1,7 +1,7 @@
 # krcky.dev
 
 Welcome to the repository for my portfolio website, [krcky.dev](https://krcky.dev/). Built with Next.js, it's the place
-where I share my journey as a Front-End Developer.
+where I share my journey as a Front-End Developer. 
 
 ## Getting Started
 
