@@ -1,0 +1,29 @@
+@import '@/styles/vars';
+
+.featuredPostsHeading {
+  margin-top: .5rem;
+  margin-bottom: 1.5rem;
+  align-self: flex-start;
+  font-size: clamp(1.5rem, 2vw, 4rem);
+  font-weight: 600;
+  text-transform: lowercase;
+  letter-spacing: .2rem;
+}
+
+.checkAllPosts {
+  background-color: $color-accent;
+  color: $color-background;
+  border-radius: .35rem;
+  display: inline-flex;
+  width: fit-content;
+  text-align: center;
+  padding-block: 1rem;
+  padding-inline: 3rem;
+  font-weight: 600;
+  margin-left: auto;
+}
+
+.blogs {
+  gap: 1rem;
+  margin-top: 2rem;
+}

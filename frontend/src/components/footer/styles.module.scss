@@ -1,0 +1,21 @@
+@import '@/styles/vars';
+
+.container {
+  grid-row: 3;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding-block: .8rem;
+  background-color: $color-background;
+  position: relative;
+  margin-bottom: 2rem;
+  margin-top: 4rem;
+
+  .horizontalLine {
+    position: absolute;
+    height: 6px;
+    width: 100%;
+    left: 0;
+    background-color: $color-background-lighten;
+  }
+}
