@@ -16,7 +16,7 @@ jobs:
           # Full git history is needed to get a proper list of changed files within `super-linter`
           fetch-depth: 0
 
-      - name: Cache node modules
+      - name: Cache node_modules
         uses: actions/cache@v3
         with:
           path: ~/.npm
