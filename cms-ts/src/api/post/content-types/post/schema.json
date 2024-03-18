@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "posts",
+  "info": {
+    "singularName": "post",
+    "pluralName": "posts",
+    "displayName": "Post",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true,
+      "maxLength": 50,
+      "unique": true,
+      "minLength": 1
+    },
+    "isFeatured": {
+      "type": "boolean",
+      "default": false,
+      "required": false
+    },
+    "slug": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 50,
+      "unique": true
+    },
+    "content": {
+      "type": "richtext",
+      "required": true,
+      "minLength": 1
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::category.category",
+      "mappedBy": "posts"
+    }
+  }
+}
