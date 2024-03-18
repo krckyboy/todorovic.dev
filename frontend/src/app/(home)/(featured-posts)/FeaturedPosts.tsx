@@ -8,6 +8,10 @@ import styles from './styles.module.scss';
 const FeaturedPosts: FunctionComponent = async () => {
   const posts = await db.getFeaturedPosts();
 
+  if (!posts.data.length) {
+    return null;
+  }
+
   return (
     <section className={`${gStyles.section} ${gStyles.paddingInline}`}>
       <h2 className={`${styles.featuredPostsHeading}`}>Featured posts</h2>
