@@ -11,6 +11,7 @@ interface Props {
   markdown: string;
 }
 
+// Note: You can add a title to a part of code in MD like this: ```tsx:index.ts and this way you cover both the extension and file name.
 const BlogContent: FunctionComponent<Props> = async ({ markdown }) => {
   return (
     <section className={`blog-content ${gStyles.text} ${sharedStyles.shared}`}>
