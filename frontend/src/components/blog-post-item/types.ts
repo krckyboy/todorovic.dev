@@ -8,9 +8,10 @@ export interface Post {
     publishedAt: string,
     title: string,
     summary: string,
-    featured: boolean,
+    isFeatured: boolean,
     slug: string;
     content: string;
+    viewCount: number;
     categories?: { data: Category[] }
   }
 }
