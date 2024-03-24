@@ -29,8 +29,6 @@ const Page: NextPage<Props> = async (props) => {
   );
 };
 
-export const revalidate = 3600;
-
 export async function generateStaticParams() {
   const posts = await db.getPostSlugs();
   const slugs = posts.data.map((post) => post.attributes.slug);

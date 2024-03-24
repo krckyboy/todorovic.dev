@@ -2,12 +2,21 @@ import qs from 'qs';
 import type { PostsFetchResponse } from '@/components/blog-post-item/types';
 import { CategoriesFetchResponse } from '@/components/categories/types';
 
-export const fetchWrapper = async <T>(url: string | URL) => {
+interface Options {
+  revalidate?: number;
+  cache?: 'no-cache';
+}
+
+export const fetchWrapper = async <T>(url: string | URL, { revalidate, cache }: Options = {}) => {
   try {
     const response = await fetch(`${process.env.NEXT_PUBLIC_STRAPI_URL}${url}`, {
       credentials: 'include',
       headers: {
         'Authorization': `Bearer ${process.env.NEXT_PUBLIC_STRAPI_TOKEN}`
+      },
+      cache,
+      next: {
+        revalidate
       }
     });
 
@@ -24,7 +33,7 @@ export const fetchWrapper = async <T>(url: string | URL) => {
 };
 
 export const db = {
-  getPosts: async (page: number ) => {
+  getPosts: async (page: number) => {
     const queryParams = {
       sort: ['publishedAt:desc'],
       pagination: {
@@ -34,7 +43,7 @@ export const db = {
     };
 
     const queryString = qs.stringify(queryParams);
-    return await fetchWrapper<PostsFetchResponse>(`/posts?${queryString}`);
+    return await fetchWrapper<PostsFetchResponse>(`/posts?${queryString}`, { revalidate: 900 });
   },
   getPostsByCategory: async (category: string, page: number) => {
     const queryParams = {
@@ -53,7 +62,7 @@ export const db = {
     };
 
     const queryString = qs.stringify(queryParams);
-    return await fetchWrapper<PostsFetchResponse>(`/posts?${queryString}`);
+    return await fetchWrapper<PostsFetchResponse>(`/posts?${queryString}`, { revalidate: 900 });
   },
   getPostBySlug: async (slug: string) => {
     const queryParams = {
@@ -64,7 +73,7 @@ export const db = {
     };
 
     const queryString = qs.stringify(queryParams);
-    return await fetchWrapper<PostsFetchResponse>(`/posts?${queryString}`);
+    return await fetchWrapper<PostsFetchResponse>(`/posts?${queryString}`, { revalidate: 1800 });
   },
   getPostsBySearchTerm: async (searchValue: string) => {
     const queryParams = {
@@ -80,7 +89,7 @@ export const db = {
     };
 
     const queryString = qs.stringify(queryParams);
-    return await fetchWrapper<PostsFetchResponse>(`/posts?${queryString}`);
+    return await fetchWrapper<PostsFetchResponse>(`/posts?${queryString}`, { cache: 'no-cache' });
   },
   getPostSlugs: async () => {
     const queryParams = {
@@ -88,7 +97,7 @@ export const db = {
     };
 
     const queryString = qs.stringify(queryParams);
-    return await fetchWrapper<PostsFetchResponse>(`/posts?${queryString}`);
+    return await fetchWrapper<PostsFetchResponse>(`/posts?${queryString}`, { revalidate: 900 });
   },
   getFeaturedPosts: async () => {
     const queryParams = {
@@ -102,9 +111,9 @@ export const db = {
     };
 
     const queryString = qs.stringify(queryParams);
-    return await fetchWrapper<PostsFetchResponse>(`/posts?${queryString}`);
+    return await fetchWrapper<PostsFetchResponse>(`/posts?${queryString}`, { revalidate: 900 });
   },
   getCategories: async () => {
-    return await fetchWrapper<CategoriesFetchResponse>('/categories');
+    return await fetchWrapper<CategoriesFetchResponse>('/categories', { revalidate: 3600 });
   }
 };
