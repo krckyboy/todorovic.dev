@@ -69,7 +69,6 @@ async function seedPosts() {
         isFeatured: faker.datatype.boolean(),
         content: generateBlogContent(),
         categories: [category.id],
-        viewCount: faker.number.int({ min: 0, max: 1000 })
       }
     });
   }

@@ -40,11 +40,6 @@
       "relation": "manyToMany",
       "target": "api::category.category",
       "mappedBy": "posts"
-    },
-    "viewCount": {
-      "type": "integer",
-      "required": true,
-      "default": 0
     }
   }
 }

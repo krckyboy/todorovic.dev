@@ -11,7 +11,6 @@ export interface Post {
     isFeatured: boolean,
     slug: string;
     content: string;
-    viewCount: number;
     categories?: { data: Category[] }
   }
 }
