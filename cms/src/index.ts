@@ -20,7 +20,7 @@ async function seedPosts() {
 
     await strapi.db.query('api::post.post').create({
       data: {
-        title: faker.lorem.sentence({ max: 10, min: 3 }),
+        title: faker.lorem.sentence({ max: 5, min: 3 }),
         isFeatured: faker.datatype.boolean(),
         content: faker.lorem.paragraphs(15).split('\n').join('\n\n'),
         categories: [category.id],
@@ -50,6 +50,12 @@ export default {
    * run jobs, or perform some special logic.
    */
   async bootstrap(/*{ strapi }*/) {
+    const isProduction = process.env.NODE_ENV === 'production';
+
+    if (isProduction) {
+      return;
+    }
+
     // Check if the database has already been seeded
     const postsCount = await strapi.db.query('api::post.post').count();
     const categoriesCount = await strapi.db.query('api::category.category').count();
