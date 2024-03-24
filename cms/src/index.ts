@@ -1,10 +1,10 @@
 import { faker } from '@faker-js/faker';
 
-const CATEGORY_COUNT = 4;
-const POST_COUNT = 25;
+const MINIMUM_CATEGORY_COUNT = 4;
+const MINIMUM_POST_COUNT = 25;
 
 async function seedCategories() {
-  for (let i = 0; i < CATEGORY_COUNT; i++) {
+  for (let i = 0; i < MINIMUM_CATEGORY_COUNT; i++) {
     await strapi.db.query('api::category.category').create({
       data: {
         name: faker.commerce.department().toLowerCase()
@@ -41,11 +41,11 @@ export const generateBlogContent = () => {
   const postsCount = await strapi.db.query('api::post.post').count();
   const categoriesCount = await strapi.db.query('api::category.category').count();
 
-  if (categoriesCount < CATEGORY_COUNT) {
+  if (categoriesCount < MINIMUM_CATEGORY_COUNT) {
     await seedCategories();
   }
 
-  if (postsCount < POST_COUNT) {
+  if (postsCount < MINIMUM_POST_COUNT) {
     await seedPosts();
   }
 }
@@ -60,7 +60,7 @@ export const generateBlogContent = () => {
 async function seedPosts() {
   const categories = await strapi.db.query('api::category.category').findMany();
 
-  for (let i = 0; i < POST_COUNT; i++) {
+  for (let i = 0; i < MINIMUM_POST_COUNT; i++) {
     const category = faker.helpers.arrayElement(categories);
 
     await strapi.db.query('api::post.post').create({
@@ -105,11 +105,11 @@ export default {
     const postsCount = await strapi.db.query('api::post.post').count();
     const categoriesCount = await strapi.db.query('api::category.category').count();
 
-    if (categoriesCount < CATEGORY_COUNT) {
+    if (categoriesCount < MINIMUM_CATEGORY_COUNT) {
       await seedCategories();
     }
 
-    if (postsCount < POST_COUNT) {
+    if (postsCount < MINIMUM_POST_COUNT) {
       await seedPosts();
     }
   }
