@@ -11,9 +11,10 @@ WORKDIR /opt/
 # Copy package.json and package-lock.json to the working directory
 COPY package*.json ./
 
-RUN npm install -g node-gyp
-RUN npm config set fetch-retry-maxtimeout 600000 -g && npm ci
-ENV PATH /opt/node_modules/.bin:$PATH
+#RUN npm install -g node-gyp
+#RUN npm config set fetch-retry-maxtimeout 600000 -g && npm ci
+#ENV PATH /opt/node_modules/.bin:$PATH
+RUN npm ci
 
 WORKDIR /opt/app
 COPY . .
