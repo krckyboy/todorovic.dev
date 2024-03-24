@@ -1,7 +1,10 @@
 import { faker } from '@faker-js/faker';
 
+const CATEGORY_COUNT = 4;
+const POST_COUNT = 25;
+
 async function seedCategories() {
-  for (let i = 0; i < 5; i++) {
+  for (let i = 0; i < CATEGORY_COUNT; i++) {
     await strapi.db.query('api::category.category').create({
       data: {
         name: faker.commerce.department().toLowerCase()
@@ -12,17 +15,48 @@ async function seedCategories() {
   console.log('Categories seeded successfully.');
 }
 
+export const generateBlogContent = () => {
+  // Generate the text content
+  const paragraphs = faker.lorem.paragraphs(15);
+  const content = paragraphs.split('\n').join('\n\n');
+
+  // Define a function to insert code snippets
+  const insertCodeSnippet = (text: string, code: string) => {
+    const lines = text.split('\n');
+    const insertIndex = Math.floor(Math.random() * lines.length);
+    lines.splice(insertIndex, 0, code);
+    return lines.join('\n');
+  };
+
+  // Insert code snippets
+  const codeSnippet = '```tsx:index.ts' +
+    `\nasync function seedCategories() {
+  for (let i = 0; i < CATEGORY_COUNT; i++) {
+    await strapi.db.query('api::category.category').create({
+      data: {
+        name: faker.commerce.department().toLowerCase()
+      }
+    });
+  }
+
+  console.log('Categories seeded successfully.');
+}` +
+    '\n```';
+
+  return insertCodeSnippet(content, codeSnippet);
+};
+
 async function seedPosts() {
   const categories = await strapi.db.query('api::category.category').findMany();
 
-  for (let i = 0; i < 20; i++) {
+  for (let i = 0; i < POST_COUNT; i++) {
     const category = faker.helpers.arrayElement(categories);
 
     await strapi.db.query('api::post.post').create({
       data: {
         title: faker.lorem.sentence({ max: 5, min: 3 }),
         isFeatured: faker.datatype.boolean(),
-        content: faker.lorem.paragraphs(15).split('\n').join('\n\n'),
+        content: generateBlogContent(),
         categories: [category.id],
         viewCount: faker.number.int({ min: 0, max: 1000 })
       }
@@ -60,11 +94,11 @@ export default {
     const postsCount = await strapi.db.query('api::post.post').count();
     const categoriesCount = await strapi.db.query('api::category.category').count();
 
-    if (categoriesCount < 5) {
+    if (categoriesCount < CATEGORY_COUNT) {
       await seedCategories();
     }
 
-    if (postsCount < 20) {
+    if (postsCount < POST_COUNT) {
       await seedPosts();
     }
   }
