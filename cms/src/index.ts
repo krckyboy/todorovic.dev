@@ -28,20 +28,31 @@ export const generateBlogContent = () => {
     return lines.join('\n');
   };
 
-  // Insert code snippets
-  const codeSnippet = '```tsx:index.ts' +
-    `\nasync function seedCategories() {
-  for (let i = 0; i < CATEGORY_COUNT; i++) {
-    await strapi.db.query('api::category.category').create({
-      data: {
-        name: faker.commerce.department().toLowerCase()
-      }
-    });
+  // Only code, without formatting for Markdown syntax
+  const codeToInsert = `
+  async bootstrap(/*{ strapi }*/) {
+  const isProduction = process.env.NODE_ENV === 'production';
+
+  if (isProduction) {
+    return;
   }
 
-  console.log('Categories seeded successfully.');
-}` +
-    '\n```';
+  // Check if the database has already been seeded
+  const postsCount = await strapi.db.query('api::post.post').count();
+  const categoriesCount = await strapi.db.query('api::category.category').count();
+
+  if (categoriesCount < CATEGORY_COUNT) {
+    await seedCategories();
+  }
+
+  if (postsCount < POST_COUNT) {
+    await seedPosts();
+  }
+}
+`;
+
+  // Insert code and format it for Markdown syntax
+  const codeSnippet = '```tsx:index.ts' + codeToInsert + '```';
 
   return insertCodeSnippet(content, codeSnippet);
 };
