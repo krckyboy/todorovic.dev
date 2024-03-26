@@ -1,0 +1,33 @@
+@import '@/styles/vars';
+
+.heading {
+  margin-bottom: 1rem;
+}
+
+.date {
+  display: flex;
+  font-size: clamp(.9rem, .8vw, 1.3rem);
+  font-weight: 300;
+  color: darken($color-text, 40%);
+  margin-bottom: 1rem;
+}
+
+.breadCrumbs {
+  display: flex;
+  font-size: clamp(.9rem, .8vw, 1.3rem);
+  margin-bottom: 1rem;
+
+  .separator {
+    color: darken($color-text, 40%);
+    margin-inline: .5rem;
+  }
+
+  a {
+    color: darken($color-text, 30%);
+    font-weight: 400;
+
+    &:hover {
+      color: $color-accent;
+    }
+  }
+}

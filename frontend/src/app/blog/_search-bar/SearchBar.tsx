@@ -3,7 +3,7 @@ import React, { FunctionComponent, useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { useDebounce } from '@/app/blog/(search-bar)/useDebounce';
+import { useDebounce } from '@/app/blog/_search-bar/useDebounce';
 import type { PostsFetchResponse } from '@/components/blog-post-item/types';
 import { db } from '@/scripts/fetch';
 import styles from './styles.module.scss';

@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from 'react';
 import data from './data';
-import ExperienceItems from './(experience-items)/ExperienceItems';
+import ExperienceItems from '@/app/skills/_experience/_experience-items/ExperienceItems';
 
 const Experience: FunctionComponent = () => {
   return (
