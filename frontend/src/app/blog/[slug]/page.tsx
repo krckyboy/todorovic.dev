@@ -7,6 +7,7 @@ import './(blog-content)/styles.scss';
 import BlogContent from '@/app/blog/[slug]/(blog-content)/BlogContent';
 import BlogHeader from './(blog-header)/BlogHeader';
 import AuthorCard from '@/components/author-card/AuthorCard';
+import { redirect } from 'next/navigation';
 
 interface Props {
   params: {
@@ -17,6 +18,11 @@ interface Props {
 const Page: NextPage<Props> = async (props) => {
   const { slug } = props.params;
   const { data: [post] } = await db.getPostBySlug(slug);
+
+  if (!post) {
+    // @todo Redirect to 404 page
+    redirect('/');
+  }
 
   return (
     <main>
@@ -42,6 +48,10 @@ export async function generateMetadata(
   { params: { slug } }: Props
 ): Promise<Metadata> {
   const { data: [post] } = await db.getPostBySlug(slug);
+
+  if (!post) {
+    return {};
+  }
 
   return {
     title: post.attributes.title,
