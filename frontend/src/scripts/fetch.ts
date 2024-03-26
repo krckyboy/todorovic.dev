@@ -8,7 +8,9 @@ interface Options {
 }
 
 export const fetchWrapper = async <T>(url: string | URL, { revalidate, cache }: Options = {}) => {
-  let hostname = typeof window === 'undefined' ? process.env.NEXT_PUBLIC_STRAPI_URL : process.env.NEXT_PUBLIC_STRAPI_URL_CLIENT;
+  const hostname = typeof window === 'undefined'
+    ? process.env.NEXT_PUBLIC_STRAPI_URL
+    : process.env.NEXT_PUBLIC_STRAPI_URL_CLIENT ?? process.env.NEXT_PUBLIC_STRAPI_URL;
 
   try {
     const response = await fetch(`${hostname}${url}`, {
