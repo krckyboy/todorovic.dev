@@ -5,7 +5,7 @@ import BlogPostItem from '@/components/blog-post-item/BlogPostItem';
 import React from 'react';
 import { db } from '@/scripts/fetch';
 import Categories from '@/components/categories/Categories';
-import SearchBar from '@/app/blog/(search-bar)/SearchBar';
+import SearchBar from '@/app/blog/_search-bar/SearchBar';
 import Navigation from '@/app/blog/_navigation/Navigation';
 
 interface Props {

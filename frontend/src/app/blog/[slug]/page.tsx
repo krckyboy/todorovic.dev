@@ -3,9 +3,9 @@ import { NextPage } from 'next';
 import { Metadata } from 'next';
 import { db } from '@/scripts/fetch';
 import gStyles from '@/styles/global.module.scss';
-import './(blog-content)/styles.scss';
-import BlogContent from '@/app/blog/[slug]/(blog-content)/BlogContent';
-import BlogHeader from './(blog-header)/BlogHeader';
+import './_blog-content/styles.scss';
+import BlogContent from './_blog-content/BlogContent';
+import BlogHeader from './_blog-header/BlogHeader';
 import AuthorCard from '@/components/author-card/AuthorCard';
 import { redirect } from 'next/navigation';
 

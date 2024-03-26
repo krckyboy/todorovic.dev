@@ -3,7 +3,7 @@ import gStyles from '@/styles/global.module.scss';
 import styles from './styles.module.scss';
 import sharedStyles from '@/styles/about-and-blog-content.module.scss';
 import React from 'react';
-import ImageSection from '@/app/about/(image-section)/ImageSection';
+import ImageSection from '@/app/about/_image-section/ImageSection';
 import AuthorCard from '@/components/author-card/AuthorCard';
 
 const Page: NextPage = () => {

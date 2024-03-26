@@ -2,8 +2,8 @@ import { NextPage } from 'next';
 import gStyles from '@/styles/global.module.scss';
 import styles from './styles.module.scss';
 import React from 'react';
-import Experience from './(experience)/Experience';
-import Skills from './(skills)/Skills';
+import Experience from '@/app/skills/_experience/Experience';
+import Skills from '@/app/skills/_skills/Skills';
 
 const Page: NextPage = () => {
   return (
