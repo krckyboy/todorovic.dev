@@ -58,3 +58,16 @@
   @extend .tags;
   font-size: clamp(1rem, 1.1vw, 1.4rem);
 }
+
+.button {
+  background-color: $color-accent;
+  color: $color-background;
+  border-radius: .35rem;
+  display: inline-flex;
+  width: fit-content;
+  text-align: center;
+  padding-block: 1rem;
+  padding-inline: 3rem;
+  font-weight: 600;
+  margin-left: auto;
+}

@@ -7,7 +7,7 @@ import './_blog-content/styles.scss';
 import BlogContent from './_blog-content/BlogContent';
 import BlogHeader from './_blog-header/BlogHeader';
 import AuthorCard from '@/components/author-card/AuthorCard';
-import { redirect } from 'next/navigation';
+import BlogNotFound from '@/app/blog/[slug]/_blog-not-found/BlogNotFound';
 
 interface Props {
   params: {
@@ -20,8 +20,9 @@ const Page: NextPage<Props> = async (props) => {
   const { data: [post] } = await db.getPostBySlug(slug);
 
   if (!post) {
-    // @todo Redirect to 404 page
-    redirect('/');
+    return (
+      <BlogNotFound />
+    );
   }
 
   return (

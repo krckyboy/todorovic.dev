@@ -20,7 +20,7 @@ const FeaturedPosts: FunctionComponent = async () => {
         and experiences.</p>
       <div className={`${gStyles.blogs} ${styles.blogs}`}>
         {posts.data.map((post) => <BlogPostItem post={post} key={post.id} featured />)}
-        <Link href={'/blog'} className={styles.checkAllPosts}>Check all</Link>
+        <Link href={'/blog'} className={gStyles.button}>Check all</Link>
       </div>
     </section>
   );
