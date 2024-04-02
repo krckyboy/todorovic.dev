@@ -12,6 +12,12 @@
     margin-left: .2rem;
   }
 
+  &:hover {
+    .text {
+      color: $color-accent;
+    }
+  }
+
   &.active {
     border-radius: .35rem;
     padding: .5rem;
