@@ -17,13 +17,15 @@ interface Props {
 
 const Page: NextPage<Props> = async (props) => {
   const { slug } = props.params;
-  const { data: [post] } = await db.getPostBySlug(slug);
+  const data = await db.getPostBySlug(slug);
 
-  if (!post) {
+  if (!data) {
     return (
       <BlogNotFound />
     );
   }
+
+  const { data: [post] } = data;
 
   return (
     <main>
@@ -38,6 +40,11 @@ const Page: NextPage<Props> = async (props) => {
 
 export async function generateStaticParams() {
   const posts = await db.getPostSlugs();
+
+  if (!posts) {
+    return [];
+  }
+
   const slugs = posts.data.map((post) => post.attributes.slug);
 
   return slugs.map((slug) => ({
@@ -48,11 +55,14 @@ export async function generateStaticParams() {
 export async function generateMetadata(
   { params: { slug } }: Props
 ): Promise<Metadata> {
-  const { data: [post] } = await db.getPostBySlug(slug);
+  const data = await db.getPostBySlug(slug);
 
-  if (!post) {
+  if (!data) {
     return {};
   }
+
+  const { data: [post] } = data;
+
 
   return {
     title: post.attributes.title,

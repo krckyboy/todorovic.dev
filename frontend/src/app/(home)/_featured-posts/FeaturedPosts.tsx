@@ -8,7 +8,7 @@ import styles from './styles.module.scss';
 const FeaturedPosts: FunctionComponent = async () => {
   const posts = await db.getFeaturedPosts();
 
-  if (!posts.data.length) {
+  if (!posts || !posts.data.length) {
     return null;
   }
 

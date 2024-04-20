@@ -24,14 +24,24 @@ const Page: NextPage<Props> = async ({ searchParams: { category, page } }) => {
     <main>
       <section className={`${gStyles.section} ${gStyles.paddingInline}`}>
         <h1 className={gStyles.pageHeading}>Blog</h1>
-        <SearchBar />
-        <Categories categories={categories.data} activeCategory={category} />
-        <div className={`${gStyles.blogs} ${styles.blogs}`}>
-          {posts.data.map((post) => <BlogPostItem post={post} key={post.id} />)}
-        </div>
-        {Boolean(posts.meta.pagination.pageCount > 1) && (
-          <Navigation pageNumber={pageNumber} currentPageCount={posts.meta.pagination.pageCount} category={category} />
+        {!posts || !categories ? (
+          <>
+            <h2>Sorry, no blog posts yet!</h2>
+          </>
+        ) : (
+          <>
+            <SearchBar />
+            <Categories categories={categories.data} activeCategory={category} />
+            <div className={`${gStyles.blogs} ${styles.blogs}`}>
+              {posts.data.map((post) => <BlogPostItem post={post} key={post.id} />)}
+            </div>
+            {Boolean(posts.meta.pagination.pageCount > 1) && (
+              <Navigation pageNumber={pageNumber} currentPageCount={posts.meta.pagination.pageCount}
+                          category={category} />
+            )}
+          </>
         )}
+
       </section>
     </main>
   );

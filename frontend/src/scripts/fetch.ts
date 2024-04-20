@@ -7,7 +7,7 @@ interface Options {
   cache?: 'no-cache';
 }
 
-export const fetchWrapper = async <T>(url: string | URL, { revalidate, cache }: Options = {}) => {
+export const fetchWrapper = async <T>(url: string | URL, { revalidate, cache }: Options = {}): Promise<T | null> => {
   const hostname = typeof window === 'undefined'
     ? process.env.NEXT_PUBLIC_STRAPI_URL
     : process.env.NEXT_PUBLIC_STRAPI_URL_CLIENT ?? process.env.NEXT_PUBLIC_STRAPI_URL;
@@ -24,15 +24,22 @@ export const fetchWrapper = async <T>(url: string | URL, { revalidate, cache }: 
       }
     });
 
+    // Check if the fetch request failed due to network issues
+    if (!response) {
+      console.error('Network request failed. Please check your internet connection or the server status.');
+      return null; // Return null if the fetch request fails
+    }
+
     if (!response.ok) {
       const txt = await response.text();
-      throw new Error(txt);
+      console.error(`An error occurred: ${txt}`);
+      return null; // Return null if the response is not ok
     }
 
     return await response.json() as T;
   } catch (error) {
     console.error('Fetch error:', error);
-    throw error;
+    return null; // Return null if any other error occurs
   }
 };
 
