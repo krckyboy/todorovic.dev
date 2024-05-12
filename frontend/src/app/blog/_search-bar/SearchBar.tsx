@@ -21,6 +21,11 @@ const SearchBar: FunctionComponent = () => {
 
   const fetchPosts = async () => {
     const posts = await db.getPostsBySearchTerm(debouncedSearchQuery);
+
+    if (!posts) {
+      return;
+    }
+
     setSearchResults(posts.data);
   };
 
