@@ -15,7 +15,7 @@ const Header: FunctionComponent = async () => {
           <NavLink href={'/'}>Home</NavLink>
           <NavLink href={'/skills'}>Skills</NavLink>
           <NavLink href={'/about'}>About</NavLink>
-          {hasAnyPosts && (
+          {Boolean(hasAnyPosts) && (
             <NavLink href={'/blog'}>Blog</NavLink>
           )}
         </ul>
