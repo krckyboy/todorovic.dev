@@ -10,7 +10,9 @@ services:
 
   cms:
     container_name: cms
-    build: ./cms
+    build:
+      context: ./cms
+      dockerfile: "Dockerfile.dev"
     restart: unless-stopped
     env_file: .env
     environment:
