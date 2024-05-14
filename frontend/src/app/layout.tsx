@@ -15,12 +15,12 @@ export const metadata: Metadata = {
   twitter: {
     title: 'Dušan Todorović | Senior Software Engineer & Team Leader',
     description: 'Join Dušan Todorović on his journey as a Software Engineer and Team Leader, specializing in React. Learn about his insights and impact on the tech world.',
-    images: 'images/dusan.png'
+    images: 'https://www.todorovic.dev/images/dusan.png'
   },
   openGraph: {
     title: 'Dušan Todorović | Senior Software Engineer & Team Leader',
     description: 'Dive into the professional journey of Dušan Todorović, a Software Engineer and Team Leader with a focus on React. Discover his expertise and leadership in the tech industry.',
-    images: 'images/dusan.png',
+    images: 'https://www.todorovic.dev/images/dusan.png',
     type: 'website',
     url: 'https://todorovic.dev'
   }
