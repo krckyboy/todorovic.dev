@@ -9,7 +9,7 @@ I document my journey and share knowledge with others interested in similar area
 
 ### Technologies
 
-- **Frontend:** Built with TypeScript and deployed on [Vercel](https://vercel.com).
+- **Frontend:** Built with [Next.js](https://nextjs.org/) and [TypeScript](https://www.typescriptlang.org/).
 - **Backend/CMS:** Powered by [Strapi](https://strapi.io) for content management, currently focused on handling blog
   content but with plans for expansion.
 - **Database:** [PostgreSQL](https://www.postgresql.org/) for storing data.
