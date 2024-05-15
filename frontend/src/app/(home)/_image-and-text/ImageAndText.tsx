@@ -38,7 +38,8 @@ const ImageAndText: FunctionComponent = () => {
                 href={'/CV.pdf'} target="_blank" rel="noopener noreferrer">download my CV</Link>.
               </li>
               <li>If you're a company or individual client looking for a dedicated, experienced developer, <Link
-                href="https://www.linkedin.com/in/dusan-todorovic-krcky/">let's chat</Link>! Let's make your project
+                href="https://www.linkedin.com/in/dusan-todorovic-krcky/" target="_blank">let's chat</Link>! Let's make
+                your project
                 better... or at least, less buggy!
               </li>
             </ul>
