@@ -16,8 +16,8 @@ export const metadata: Metadata = {
     title: 'Dušan Todorović | Senior Software Engineer & Team Leader',
     description: 'Join Dušan Todorović on his journey as a Software Engineer and Team Leader, specializing in React. Learn about his insights and impact on the tech world.',
     images: {
-      url: 'https://www.todorovic.dev/images/og-image.png',
-      secureUrl: 'https://www.todorovic.dev/images/og-image.png',
+      url: 'https://www.todorovic.dev/images/og.png',
+      secureUrl: 'https://www.todorovic.dev/images/og.png',
       alt: 'Dark Mode Type of a Website',
       width: 1200,
       height: 600
@@ -28,8 +28,8 @@ export const metadata: Metadata = {
     title: 'Dušan Todorović | Senior Software Engineer & Team Leader',
     description: 'Dive into the professional journey of Dušan Todorović, a Software Engineer and Team Leader with a focus on React. Discover his expertise and leadership in the tech industry.',
     images: {
-      url: 'https://www.todorovic.dev/images/og-image.png',
-      secureUrl: 'https://www.todorovic.dev/images/og-image.png',
+      url: 'https://www.todorovic.dev/images/og.png',
+      secureUrl: 'https://www.todorovic.dev/images/og.png',
       alt: 'Dark Mode Type of a Website',
       width: 1200,
       height: 600
