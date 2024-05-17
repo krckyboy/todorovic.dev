@@ -6,6 +6,7 @@ import Footer from '@/components/footer/Footer';
 import '@/styles/global.scss';
 import 'reset-css';
 import LoadingIndicator from '@/components/loading-indicator/LoadingIndicator';
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 const leagueSpartan = League_Spartan({ subsets: ['latin'] });
 
@@ -55,6 +56,7 @@ const RootLayout = ({
     <Suspense>
       <LoadingIndicator />
     </Suspense>
+    <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID ?? ''} />
     </body>
     </html>
   );
