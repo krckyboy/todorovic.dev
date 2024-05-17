@@ -35,7 +35,7 @@ export const metadata: Metadata = {
       height: 600
     },
     type: 'website',
-    url: 'https://todorovic.dev'
+    url: 'https://www.todorovic.dev'
   }
 };
 
