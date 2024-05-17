@@ -56,7 +56,7 @@ const RootLayout = ({
     <Suspense>
       <LoadingIndicator />
     </Suspense>
-    <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID ?? ''} />
+    <GoogleAnalytics gaId={'G-5BEM5384PJ'} />
     </body>
     </html>
   );
