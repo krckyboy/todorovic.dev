@@ -2,6 +2,7 @@ import React, { FunctionComponent } from 'react';
 import ReactMarkdown from 'react-markdown';
 import rehypeHighlight from 'rehype-highlight';
 import rehypeCodeTitles from 'rehype-code-titles';
+import MarkdownImage from './_markdown-image/MarkdownImage';
 import gStyles from '@/styles/global.module.scss';
 import sharedStyles from '@/styles/about-and-blog-content.module.scss';
 import 'highlight.js/styles/github-dark-dimmed.css';
@@ -11,11 +12,17 @@ interface Props {
   markdown: string;
 }
 
-// Note: You can add a title to a part of code in MD like this: ```tsx:index.ts and this way you cover both the extension and file name.
 const BlogContent: FunctionComponent<Props> = async ({ markdown }) => {
   return (
     <section className={`blog-content ${gStyles.text} ${sharedStyles.shared}`}>
-      <ReactMarkdown rehypePlugins={[rehypeCodeTitles, rehypeHighlight]}>{markdown}</ReactMarkdown>
+      <ReactMarkdown
+        rehypePlugins={[rehypeCodeTitles, rehypeHighlight]}
+        components={{
+          img: ({ node, ...props }) => <MarkdownImage src={props.src} alt={props.alt} />
+        }}
+      >
+        {markdown}
+      </ReactMarkdown>
     </section>
   );
 };
