@@ -2,9 +2,10 @@
 
 .container {
   display: flex;
-  align-items: flex-start;
   width: 100%;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
+  gap: 5%;
 
   .imageAndIconsWrapper {
     display: flex;
@@ -19,7 +20,6 @@
   }
 
   .textSection {
-    margin-top: 2rem;
     color: $color-text;
     display: flex;
     flex-direction: column;
@@ -28,7 +28,7 @@
     font-weight: 300;
 
     .title {
-      font-size: clamp(2.6rem, 3vw, 4rem);
+      font-size: clamp(1.5rem, 2.2vw, 3rem);
 
       a {
         color: inherit;
@@ -44,29 +44,30 @@
     .accented {
       color: $color-accent;
     }
+  }
+}
 
-    .paragraphBelow {
-      margin-top: 24px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
+.paragraphBelow {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
 
-      .ul {
-        margin-top: 1rem;
-        display: flex;
-        flex-direction: column;
-        row-gap: 1rem;
-        list-style-type: disc;
+  .ul {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    row-gap: 1rem;
+    list-style-type: disc;
 
-        a {
-          color: $color-accent;
-          font-weight: 500;
-        }
+    a {
+      color: $color-accent;
+      font-weight: 500;
+    }
 
-        li {
-          margin-left: .8rem;
-        }
-      }
+    li {
+      margin-left: .8rem;
     }
   }
 }

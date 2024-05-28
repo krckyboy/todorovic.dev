@@ -9,7 +9,7 @@ Typography, spacings and other styles for /about and /blog/[slug]
   }
 
   h2 {
-    font-size: clamp(1.4rem, 1.1vw, 1.6rem);
+    font-size: clamp(1.3rem, 1.5vw, 4rem);
     margin-bottom: 1rem;
 
     &:not(:first-of-type) {

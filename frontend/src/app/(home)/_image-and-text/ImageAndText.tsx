@@ -22,30 +22,25 @@ const ImageAndText: FunctionComponent = () => {
             <Link href={'/about'} className={styles.accented}>Dušan Todorović</Link>
           </h1>
           <p className={gStyles.tags}>
-            Developer <span>|</span> Team Leader <span>|</span> React Specialist
+            Software Engineer <span>|</span> Team Leader
           </p>
-          <section className={`${styles.paragraphBelow} ${gStyles.text}`}>
-            <p>Hello, internet! I'm Dušan Todorović, a dedicated Web Developer based in <a
-              className={styles.locationLink}
-              href={'https://maps.app.goo.gl/DHTdsDU24RjWYhhV8'}
-              target={'_blank'}>
-              Belgrade, Serbia
-            </a>. I specialize in diving deep into the code
-              and leading teams to ensure smooth project execution.</p>
-
-            <ul className={styles.ul}>
-              <li>Interested in my skills? Visit my <Link href={'/skills'}>skills page</Link>, or if you prefer - <Link
-                href={'/CV.pdf'} target="_blank" rel="noopener noreferrer">download my CV</Link>.
-              </li>
-              <li>If you're a company or individual client looking for a dedicated, experienced developer, <Link
-                href="https://www.linkedin.com/in/dusan-todorovic-krcky/" target="_blank">let's chat</Link>! Let's make
-                your project
-                better... or at least, less buggy!
-              </li>
-            </ul>
-          </section>
+          <a
+            className={styles.locationLink}
+            href={'https://maps.app.goo.gl/DHTdsDU24RjWYhhV8'}
+            target={'_blank'}>
+            Belgrade, Serbia
+          </a>
         </section>
       </div>
+      <section className={`${styles.paragraphBelow} ${gStyles.text}`}>
+        <ul className={styles.ul}>
+          <li>
+            Need my <Link href={'/skills'}>skills</Link>? Let's <Link
+            href="https://www.linkedin.com/in/dusan-todorovic-krcky/" target="_blank">chat</Link>!
+          </li>
+          <li>Download my <Link href={'/CV.pdf'} target="_blank" rel="noopener noreferrer">CV</Link>.</li>
+        </ul>
+      </section>
     </section>
   );
 };
