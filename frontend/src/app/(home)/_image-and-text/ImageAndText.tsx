@@ -4,6 +4,7 @@ import styles from './styles.module.scss';
 import Link from 'next/link';
 import gStyles from '@/styles/global.module.scss';
 import Image from 'next/image';
+import SocialIcons from '@/components/footer/social-icons/SocialIcons';
 
 const ImageAndText: FunctionComponent = () => {
   return (
@@ -32,13 +33,17 @@ const ImageAndText: FunctionComponent = () => {
           </a>
         </section>
       </div>
+      <SocialIcons />
       <section className={`${styles.paragraphBelow} ${gStyles.text}`}>
         <ul className={styles.ul}>
-          <li>
-            Need my <Link href={'/skills'}>skills</Link>? Let's <Link
-            href="https://www.linkedin.com/in/dusan-todorovic-krcky/" target="_blank">chat</Link>!
+          <li>Currently working as Frontend Lead @ <a href={'https://citrussys.com/'} target="_blank">Citrus Systems</a>.
           </li>
-          <li>Download my <Link href={'/CV.pdf'} target="_blank" rel="noopener noreferrer">CV</Link>.</li>
+          <li>
+            Check what I'm <Link href={'/skills'}>good at</Link>, download my
+            <Link href={'/CV.pdf'} target="_blank" rel="noopener noreferrer"> CV</Link>,
+            and let's <Link href="https://www.linkedin.com/in/dusan-todorovic-krcky/" target="_blank">chat</Link>!
+          </li>
+          <li>Also, feel free to read more <Link href={'/about'}>about me</Link>.</li>
         </ul>
       </section>
     </section>
