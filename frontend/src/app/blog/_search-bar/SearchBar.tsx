@@ -130,7 +130,7 @@ const SearchBar: FunctionComponent = () => {
                width={12}
                height={12}
                onClick={handleCrossClick}
-               className={`${styles.cross} ${searchQuery.length > 1 ? styles.active : ''}`}
+               className={`${styles.cross} ${searchQuery.length > 0 ? styles.active : ''}`}
         />
       </label>
       {showResultsNoGames && (
