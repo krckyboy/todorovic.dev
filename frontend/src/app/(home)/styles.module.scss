@@ -1,0 +1,13 @@
+@import '@/styles/vars';
+
+.subHeading {
+  align-self: flex-start;
+  font-size: clamp(1.3rem, 1.5vw, 4rem);
+  font-weight: 600;
+  text-transform: lowercase;
+  letter-spacing: .2rem;
+}
+
+.sectionContainer {
+  margin-top: 3rem;
+}
