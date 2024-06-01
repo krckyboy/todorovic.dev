@@ -1,0 +1,10 @@
+@import '@/styles/vars';
+
+.text {
+  margin-top: 2rem;
+
+  a {
+    color: $color-accent;
+    font-weight: 500;
+  }
+}
