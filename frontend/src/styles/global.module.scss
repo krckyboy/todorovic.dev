@@ -1,15 +1,10 @@
 @import '@/styles/vars';
 
-.paddingInline {
-  padding-inline: 5%;
-
-  @media (min-width: 768px) {
-    padding-inline: 16%;
-  }
-
-  @media (min-width: 1024px) {
-    padding-inline: 26%;
-  }
+.mainContainer {
+  max-width: 720px;
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: 24px;
 }
 
 .section {

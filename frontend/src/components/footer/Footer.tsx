@@ -5,9 +5,11 @@ import gStyles from '@/styles/global.module.scss';
 
 const Footer: FunctionComponent = () => {
   return (
-    <footer className={`${styles.container} ${gStyles.paddingInline}`}>
+    <footer className={`${styles.container}`}>
       <div className={styles.horizontalLine}></div>
-      <SocialIcons />
+      <div className={gStyles.mainContainer}>
+        <SocialIcons />
+      </div>
     </footer>
   );
 };

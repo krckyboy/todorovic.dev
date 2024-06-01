@@ -21,8 +21,8 @@ const Page: NextPage<Props> = async ({ searchParams: { category, page } }) => {
   const categories = await db.getCategories();
 
   return (
-    <main>
-      <section className={`${gStyles.section} ${gStyles.paddingInline}`}>
+    <main className={gStyles.mainContainer}>
+      <section className={`${gStyles.section}`}>
         <h1 className={gStyles.pageHeading}>Blog</h1>
         {!posts || !categories ? (
           <>

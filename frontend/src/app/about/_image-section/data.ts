@@ -9,8 +9,8 @@ const data: Item[] = [
     alt: 'Dušan next to an elephant.'
   },
   {
-    src: '/images/about/B4BEC0E4-B88A-4217-9E88-E225D6F2CA2B_1_201_a.jpeg',
-    alt: 'Me sitting at a restaurant outdoors.'
+    src: '/images/about/A2B9C2D6-D03A-4504-831F-F7FE951617AB_1_105_c.jpeg',
+    alt: 'Dušan in a web conference lobby.'
   }, {
     src: '/images/about/E7FF333A-32F1-4E1A-B624-8FD917A8F194_1_105_c.jpeg',
     alt: 'Me by the river, looking into the distance.'
