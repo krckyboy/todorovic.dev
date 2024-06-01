@@ -7,7 +7,7 @@ import Skills from '@/app/skills/_skills/Skills';
 
 const Page: NextPage = () => {
   return (
-    <main className={`${styles.main} ${gStyles.section} ${gStyles.paddingInline} ${gStyles.text}`}>
+    <main className={`${styles.main} ${gStyles.section} ${gStyles.text} ${gStyles.mainContainer}`}>
       <h1 className={gStyles.pageHeading}>Skills</h1>
       <Skills />
       <Experience />

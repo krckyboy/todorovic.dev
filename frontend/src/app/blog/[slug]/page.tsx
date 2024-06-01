@@ -19,17 +19,19 @@ const Page: NextPage<Props> = async (props) => {
   const { slug } = props.params;
   const data = await db.getPostBySlug(slug);
 
-  if (!data) {
+  if (!data?.data.length) {
     return (
-      <BlogNotFound />
+      <main className={gStyles.mainContainer}>
+        <BlogNotFound />
+      </main>
     );
   }
 
   const { data: [post] } = data;
 
   return (
-    <main>
-      <article className={`${gStyles.section} ${gStyles.paddingInline}`}>
+    <main className={gStyles.mainContainer}>
+      <article className={`${gStyles.section} `}>
         <BlogHeader post={post} />
         <BlogContent markdown={post.attributes.content} />
         <AuthorCard />
@@ -63,6 +65,9 @@ export async function generateMetadata(
 
   const { data: [post] } = data;
 
+  if (!post) {
+    return {};
+  }
 
   return {
     title: post.attributes.title,

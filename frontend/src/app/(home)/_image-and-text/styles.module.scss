@@ -5,7 +5,7 @@
   width: 100%;
   flex-direction: row;
   align-items: center;
-  gap: 5%;
+  gap: 2rem;
   margin-bottom: 2rem;
 
   .imageAndIconsWrapper {
@@ -29,7 +29,7 @@
     font-weight: 300;
 
     .title {
-      font-size: clamp(2rem, 3vw, 4rem);
+      font-size: clamp(1.8rem, 3vw, 3rem);
 
       a {
         color: inherit;

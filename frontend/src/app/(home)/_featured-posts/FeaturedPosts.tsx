@@ -13,7 +13,7 @@ const FeaturedPosts: FunctionComponent = async () => {
   }
 
   return (
-    <section className={`${gStyles.section} ${gStyles.paddingInline}`}>
+    <section className={`${gStyles.section}`}>
       <h2 className={`${styles.featuredPostsHeading}`}>Featured posts</h2>
       <div className={`${gStyles.blogs} ${styles.blogs}`}>
         {posts.data.map((post) => <BlogPostItem post={post} key={post.id} featured />)}

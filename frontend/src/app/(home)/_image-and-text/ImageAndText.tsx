@@ -8,7 +8,7 @@ import SocialIcons from '@/components/footer/social-icons/SocialIcons';
 
 const ImageAndText: FunctionComponent = () => {
   return (
-    <section className={`${gStyles.section} ${gStyles.paddingInline}`}>
+    <section className={`${gStyles.section}`}>
       <div className={styles.container}>
         <Image src={'/images/dusan.png'}
                priority

@@ -9,7 +9,7 @@ const Header: FunctionComponent = async () => {
   const hasAnyPosts = posts?.data.length;
 
   return (
-    <header className={`${styles.container} ${gStyles.paddingInline} ${gStyles.text}`}>
+    <header className={`${styles.container} ${gStyles.text} ${gStyles.mainContainer}`}>
       <nav className={styles.nav}>
         <ul>
           <NavLink href={'/'}>Home</NavLink>

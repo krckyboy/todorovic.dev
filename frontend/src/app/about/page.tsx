@@ -8,8 +8,8 @@ import Content from './_content/Content';
 
 const Page: NextPage = () => {
   return (
-    <main className={styles.main}>
-      <article className={`${gStyles.section} ${gStyles.paddingInline}`}>
+    <main className={`${styles.main} ${gStyles.mainContainer}`}>
+      <article className={`${gStyles.section}`}>
         <h1 className={gStyles.pageHeading}>About Me</h1>
         <ImageSection />
         <Content />
