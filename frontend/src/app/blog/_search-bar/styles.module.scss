@@ -30,6 +30,14 @@
         color: darken($color-text, 60%);
       }
     }
+
+    .cross {
+      display: none;
+
+      &.active {
+        display: initial;
+      }
+    }
   }
 
   .results {
@@ -46,15 +54,15 @@
     left: 0;
     padding-block: .5rem;
 
+    a, p {
+      display: flex;
+      width: 100%;
+      padding-inline: 1rem;
+      padding-block: .8rem;
+    }
+
     li {
       width: 100%;
-
-      a {
-        display: flex;
-        width: 100%;
-        padding-inline: 1rem;
-        padding-block: .8rem;
-      }
 
       &.focused, &:hover {
         background-color: lighten($color-background, 10%);

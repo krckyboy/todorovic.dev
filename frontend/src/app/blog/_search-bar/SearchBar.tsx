@@ -15,14 +15,16 @@ const SearchBar: FunctionComponent = () => {
   const [searchQuery, setSearchQuery] = useState('');
   const [searchResults, setSearchResults] = useState<PostsFetchResponse['data'] | null>(null);
   const [focusedIndex, setFocusedIndex] = useState(-1);
+  const [hasSearched, setHasSearched] = useState(false);
 
   const searchInputRef = useRef<HTMLInputElement>(null);
   const debouncedSearchQuery = useDebounce(searchQuery, 500);
 
   const fetchPosts = async () => {
     const posts = await db.getPostsBySearchTerm(debouncedSearchQuery);
+    setHasSearched(true);
 
-    if (!posts) {
+    if (!posts?.data) {
       return;
     }
 
@@ -37,6 +39,7 @@ const SearchBar: FunctionComponent = () => {
     }
 
     setFormActive(false);
+    setHasSearched(false);
   };
 
   const handleEscKey = (e: KeyboardEvent) => {
@@ -49,6 +52,12 @@ const SearchBar: FunctionComponent = () => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchQuery(e.target.value);
     setFormActive(true);
+    setHasSearched(false);
+  };
+
+  const handleCrossClick = () => {
+    setSearchQuery('');
+    setSearchResults([]);
   };
 
   // Keyboard navigation
@@ -93,6 +102,9 @@ const SearchBar: FunctionComponent = () => {
     fetchPosts();
   }, [debouncedSearchQuery]);
 
+  const showResultsNoGames = hasSearched && isActive && !searchResults?.length;
+  const showResultsWithGames = Boolean(searchResults?.length && isActive);
+
   return (
     <section className={styles.container} onBlur={handleBlur} onKeyDown={handleKeyDown}>
       <label className={styles.label}>
@@ -112,8 +124,21 @@ const SearchBar: FunctionComponent = () => {
                value={searchQuery}
                onChange={handleChange}
         />
+        <Image src={'/images/category/x.svg'}
+               alt={'Reset search'}
+               priority
+               width={12}
+               height={12}
+               onClick={handleCrossClick}
+               className={`${styles.cross} ${searchQuery.length > 1 ? styles.active : ''}`}
+        />
       </label>
-      {Boolean(searchResults?.length && isActive) && (
+      {showResultsNoGames && (
+        <div className={styles.results}>
+          <p className={styles.noResults}>No posts found!</p>
+        </div>
+      )}
+      {showResultsWithGames && (
         <ul className={styles.results}>
           {searchResults?.map((post, index) => (
             <li key={post.id} className={index === focusedIndex ? styles.focused : ''}>
