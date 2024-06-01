@@ -9,10 +9,8 @@ const Skills: FunctionComponent = () => {
     <section className={`${hStyles.sectionContainer}`}>
       <h2 className={`${hStyles.subHeading}`}>Experience</h2>
       <div className={`${styles.text} ${gStyles.text}`}>
-        <p>With over half a decade of experience under my belt, I've been diving deep into the tech world, experimenting
-          with various technologies and leading teams through successful projects.</p>
-        <p>A true enthusiast of React, I've found it to be a powerful tool for crafting innovative solutions. However, I remain open to any technology that proves effective and efficient for the task at hand.</p>
-        <p>For a comprehensive view of my skills and experiences, please check out my <Link href={'/skills'}>skills page</Link>.</p>
+        <p>Half a decade in tech, mastering React and leading teams to success. Always ready to embrace new technologies that deliver.</p>
+        <p>Discover more on <Link href={'/skills'}>skills page</Link>.</p>
       </div>
     </section>
   );
