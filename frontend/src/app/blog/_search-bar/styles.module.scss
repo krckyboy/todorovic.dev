@@ -33,6 +33,7 @@
 
     .cross {
       display: none;
+      cursor: pointer;
 
       &.active {
         display: initial;
