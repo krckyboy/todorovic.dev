@@ -19,7 +19,7 @@ const AuthorCard: FunctionComponent = () => {
           <span className={styles.name}>Dušan Todorović</span>
         </Link>
         <p className={`${gStyles.tagsMini}`}>
-          Developer <span>|</span> Team Leader <span>|</span> React Specialist
+          Software Engineer <span>|</span> Team Leader
         </p>
         <ul className={`${gStyles.tagsMini} ${styles.links}`}>
           <li>
