@@ -5,8 +5,8 @@ interface Item {
 
 const data: Item[] = [
   {
-    src: '/images/about/2F6ACD0F-D23F-4006-97D8-5D062B0EB330_1_105_c.jpeg',
-    alt: 'Dušan next to an elephant.'
+    src: '/images/about/580C7462-652A-484D-B3CE-41A5464AE856_1_105_c.jpeg',
+    alt: 'Dušan driving a car, wearing a black jacket.'
   },
   {
     src: '/images/about/A2B9C2D6-D03A-4504-831F-F7FE951617AB_1_105_c.jpeg',
