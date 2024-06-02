@@ -1,11 +1,10 @@
 import React, { FunctionComponent } from 'react';
 import gStyles from '@/styles/global.module.scss';
-import styles from './styles.module.scss';
 import sharedStyles from '@/styles/about-and-blog-content.module.scss';
 
 const Content: FunctionComponent = () => {
   return (
-    <section className={`${gStyles.text} ${styles.container} ${sharedStyles.shared}`}>
+    <section className={`${gStyles.text} ${sharedStyles.shared}`}>
       <h2>Introduction</h2>
       <p>Hello! I'm Dušan Todorović, a resident of Belgrade, Serbia. You might think I've been coding since
         I was in diapers, but nope!</p>

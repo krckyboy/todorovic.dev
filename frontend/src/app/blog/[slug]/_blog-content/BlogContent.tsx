@@ -18,7 +18,8 @@ const BlogContent: FunctionComponent<Props> = async ({ markdown }) => {
       <ReactMarkdown
         rehypePlugins={[rehypeCodeTitles, rehypeHighlight]}
         components={{
-          img: ({ node, ...props }) => <MarkdownImage src={props.src} alt={props.alt} />
+          img: ({ node, ...props }) => <MarkdownImage src={props.src} alt={props.alt} />,
+          a: ({ node, ...props }) => <a href={props.href} target="_blank" rel="noopener">{props.children}</a>
         }}
       >
         {markdown}
