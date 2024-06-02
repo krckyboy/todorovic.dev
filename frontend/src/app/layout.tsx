@@ -12,10 +12,10 @@ const leagueSpartan = League_Spartan({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Dušan Todorović | Senior Software Engineer & Team Leader',
-  description: 'Discover Dušan Todorović, a seasoned Software Engineer and Team Leader specializing in React. Explore his expertise, leadership, and contributions to the tech industry.',
+  description: 'Discover Dušan Todorović, a seasoned Software Engineer and Team Leader. Explore his expertise, leadership, and contributions to the tech industry.',
   twitter: {
     title: 'Dušan Todorović | Senior Software Engineer & Team Leader',
-    description: 'Join Dušan Todorović on his journey as a Software Engineer and Team Leader, specializing in React. Learn about his insights and impact on the tech world.',
+    description: 'Join Dušan Todorović on his journey as a Software Engineer and Team Leader. Learn about his insights and impact on the tech world.',
     images: {
       url: 'https://www.todorovic.dev/images/og-2.png',
       secureUrl: 'https://www.todorovic.dev/images/og-2.png',
