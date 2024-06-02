@@ -24,3 +24,12 @@ a {
     outline: 1px solid $color-accent;
   }
 }
+
+hr {
+  all: unset;
+  width: 20%;
+  display: flex;
+  background: $color-background-lighten;
+  height: 6px;
+  margin-block: 3rem;
+}
