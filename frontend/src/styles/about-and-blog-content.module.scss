@@ -1,6 +1,6 @@
 @import '@/styles/vars';
 
-$margin-top-value: 1.5rem;
+$margin-top-value: 1rem;
 
 /**
 Typography, spacings and other styles for /about and /blog/[slug]
@@ -20,7 +20,7 @@ Typography, spacings and other styles for /about and /blog/[slug]
     }
 
     + img {
-      + p {
+      + p, blockquote {
         margin-top: $margin-top-value;
       }
     }
@@ -34,7 +34,7 @@ Typography, spacings and other styles for /about and /blog/[slug]
     font-size: clamp(1.1rem, 1.2vw, 2rem);
   }
 
-  p {
+  p, blockquote {
     margin-top: $margin-top-value;
 
     &:first-child {
