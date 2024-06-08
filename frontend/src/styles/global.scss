@@ -38,3 +38,8 @@ em {
   font-style: italic;
   color: $color-accent;
 }
+
+blockquote {
+  padding-left: 2rem;
+  border-left: 6px solid $color-background-lighten;
+}
