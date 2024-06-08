@@ -34,7 +34,7 @@ Typography, spacings and other styles for /about and /blog/[slug]
     font-size: clamp(1.1rem, 1.2vw, 2rem);
   }
 
-  p, blockquote {
+  p {
     margin-top: $margin-top-value;
 
     &:first-child {
@@ -44,6 +44,11 @@ Typography, spacings and other styles for /about and /blog/[slug]
 
   blockquote {
     padding-left: 1.5rem;
+    margin-top: 2rem;
+
+    &:first-child {
+      margin-top: 0;
+    }
   }
 
   a {
