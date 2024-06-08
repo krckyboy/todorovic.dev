@@ -80,7 +80,9 @@ export const db = {
       filters: {
         slug: slug
       },
-      populate: ['categories']
+      populate: ['categories'],
+      // Allows us to fetch unpublished posts for testing purpose, but they will not show up in /blog.
+      publicationState: 'preview'
     };
 
     const queryString = qs.stringify(queryParams);
