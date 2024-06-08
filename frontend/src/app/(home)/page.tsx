@@ -9,8 +9,8 @@ const Page: NextPage = async () => {
   return (
     <main className={gStyles.mainContainer}>
       <ImageAndText />
-      <FeaturedPosts />
       <Skills />
+      <FeaturedPosts />
     </main>
   );
 };
