@@ -34,11 +34,11 @@ const Content: FunctionComponent = () => {
         say, the key to pushing me forward was that I was always working on challenging projects. It started off
         from ideas, designing them myself in Figma, and then handling the front-end and/or back-end if it required
         it, and then deployment.</p>
-      <h2>Current Role</h2>
-      <p>After building my portfolio and honing my skills, I landed a job that changed my life. I'm currently a
-        front-end team lead at a reputable company. I love how I've grown not just in my tech skills, but also in
-        my management and soft skills.</p>
-      <p>I enjoy both the operational side of work, and also managing people.</p>
+      <h2>Leading</h2>
+      <p>After building my portfolio and honing my skills, I landed a job that had a big impact on my career. I was
+        a front-end team lead at a reputable company. I love how I've grown not just in my tech skills, but also in my
+        management and soft skills.</p>
+      <p>I realized I enjoy both the operational side of work, and also managing people.</p>
       <h2>Interests</h2>
       <p>I have a few quirky habits that might surprise you. For instance, I used to watch streams of League of
         Legends, even though I don't play the game anymore. I also enjoy playing PlayStation 5 from time to time,

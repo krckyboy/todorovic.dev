@@ -17,8 +17,10 @@ const data: Experience[] = [
         title: 'Lead Front-End Developer',
         location: 'Belgrade, Serbia',
         startDate: new Date(2021, 6),
-        achievements: ['Successfully led the team in migrating to React and Vue, resulting in improved performance and maintainability.',
-          'Developed and maintained internal front-end framework used across multiple projects.'
+        endDate: new Date(2024, 9),
+        achievements: ['Successfully led the team in migrating to Next.JS (React) and Vue, resulting in improved performance and maintainability.',
+          'Developed and maintained internal front-end framework used across multiple projects.',
+          'Created multiple internal NPM packages, one being a library of components and logic consumed by Next.JS apps.'
         ]
       },
       {
