@@ -4,8 +4,7 @@ Welcome to my personal website and development blog!
 
 ### Purpose
 
-My website serves as a platform for sharing insights, experiences, and tutorials on web development. It's a space where
-I document my journey and share knowledge with others interested in similar areas.
+My personal website is an online presence showcasing my professional profile and expertise in web development. It serves as a digital portfolio, highlighting my skills, experience, and projects in the field of web development.
 
 ### Technologies
 
