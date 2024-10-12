@@ -36,8 +36,7 @@ const ImageAndText: FunctionComponent = () => {
       <SocialIcons />
       <section className={`${styles.paragraphBelow} ${gStyles.text}`}>
         <ul className={styles.ul}>
-          <li>Former Frontend Lead @ <a href={'https://citrussys.com/'} target="_blank">Citrus Systems</a>.
-          </li>
+          <li>Skilled React developer with a background in leading teams.</li>
           <li>
             Check what I'm <Link href={'/skills'}>good at</Link>, download my
             <Link href={'/CV-light.pdf'} target="_blank" rel="noopener noreferrer"> CV</Link>,

@@ -9,7 +9,7 @@ const Skills: FunctionComponent = () => {
     <section className={`${hStyles.sectionContainer}`}>
       <h2 className={`${hStyles.subHeading}`}>Experience</h2>
       <div className={`${styles.text} ${gStyles.text}`}>
-        <p>Half a decade in tech, combining my role as a developer with leading teams to success. Always ready to embrace new technologies that deliver.</p>
+        <p>Over half a decade in tech, combining my role as a developer with leading teams to success. Always ready to embrace new technologies that deliver.</p>
         <p>Discover more on <Link href={'/skills'}>skills page</Link>.</p>
       </div>
     </section>
