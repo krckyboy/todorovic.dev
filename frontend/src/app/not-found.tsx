@@ -10,7 +10,7 @@ const styles: React.CSSProperties = {
 const NotFound: FunctionComponent = () => {
   return (
     <main>
-      <section className={`${gStyles.section}`}>
+      <section className={`${gStyles.section} ${gStyles.mainContainer}`}>
         <h1 className={gStyles.pageHeading}>Not found</h1>
         <h2>Sorry, there's nothing here!</h2>
         <Link href={'/'} className={gStyles.button} style={styles}>Home</Link>
