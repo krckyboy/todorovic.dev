@@ -14,7 +14,7 @@ const CategoryLink: FunctionComponent<Props> = ({ activeCategory, name }) => {
 
   const setActiveClassName = isActiveCategory ? styles.active : '';
   const setHref = isActiveCategory ? '/blog' : `/blog?category=${name}`;
-  console.log('a');
+
   return (
     <Link className={`${styles.link} ${setActiveClassName}`} href={setHref}>
       <span className={styles.text}>#{name}</span>
