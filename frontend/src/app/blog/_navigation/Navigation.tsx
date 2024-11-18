@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useMemo } from 'react';
+import React, { FunctionComponent, useCallback, useMemo } from 'react';
 import styles from './styles.module.scss';
 import Link from 'next/link';
 import qs from 'qs';
@@ -14,13 +14,13 @@ const Navigation: FunctionComponent<Props> = ({ currentPageCount, pageNumber, ca
   const rangeEnd = currentPageCount;
   const maxPagesToShow = 3;
 
-  const generateQueryString = (page: number) => {
+  const generateQueryString = useCallback((page: number) => {
     const queryParams = {
       category,
       page
     };
     return qs.stringify(queryParams);
-  };
+  }, [category]);
 
   const generatePageLinks = () => {
     const links = [];
@@ -66,7 +66,7 @@ const Navigation: FunctionComponent<Props> = ({ currentPageCount, pageNumber, ca
     return links;
   };
 
-  const memoizedGeneratePageLinks = useMemo(() => generatePageLinks(), [rangeStart, pageNumber, rangeEnd, maxPagesToShow]);
+  const memoizedGeneratePageLinks = useMemo(generatePageLinks, [pageNumber, rangeEnd, generateQueryString]);
 
   return (
     <div className={styles.container}>
