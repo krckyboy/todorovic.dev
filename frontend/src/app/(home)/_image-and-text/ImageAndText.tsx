@@ -39,7 +39,7 @@ const ImageAndText: FunctionComponent = () => {
           <li>Skilled React developer with a background in leading teams.</li>
           <li>
             Check what I'm <Link href={'/skills'}>good at</Link>, download my
-            <Link href={'/CV-light.pdf'} target="_blank" rel="noopener noreferrer"> CV</Link>,
+            <Link href={'/cv/CV-dark.pdf'} target="_blank" rel="noopener noreferrer"> CV</Link>,
             and let's <Link href="https://www.linkedin.com/in/dusan-todorovic-krcky/" target="_blank">chat</Link>!
           </li>
           <li>Also, feel free to read more <Link href={'/about'}>about me</Link>.</li>
