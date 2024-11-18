@@ -11,11 +11,11 @@ import { GoogleAnalytics } from '@next/third-parties/google';
 const leagueSpartan = League_Spartan({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'Dušan Todorović | Senior Software Engineer & Team Leader',
-  description: 'Discover Dušan Todorović, a seasoned Software Engineer and Team Leader. Explore his expertise, leadership, and contributions to the tech industry.',
+  title: 'Dušan Todorović | Senior JavaScript Developer & Team Leader',
+  description: 'Discover Dušan Todorović, a seasoned JavaScript Developer and Team Leader. Explore his expertise, leadership, and contributions to the tech industry.',
   twitter: {
-    title: 'Dušan Todorović | Senior Software Engineer & Team Leader',
-    description: 'Join Dušan Todorović on his journey as a Software Engineer and Team Leader. Learn about his insights and impact on the tech world.',
+    title: 'Dušan Todorović | Senior JavaScript Developer & Team Leader',
+    description: 'Join Dušan Todorović on his journey as a JavaScript Developer and Team Leader. Learn about his insights and impact on the tech world.',
     images: {
       url: 'https://www.todorovic.dev/images/og-2.png',
       secureUrl: 'https://www.todorovic.dev/images/og-2.png',
@@ -26,8 +26,8 @@ export const metadata: Metadata = {
     card: 'summary_large_image'
   },
   openGraph: {
-    title: 'Dušan Todorović | Senior Software Engineer & Team Leader',
-    description: 'Dive into the professional journey of Dušan Todorović, a Software Engineer and Team Leader with a focus on React. Discover his expertise and leadership in the tech industry.',
+    title: 'Dušan Todorović | Senior JavaScript Developer & Team Leader',
+    description: 'Dive into the professional journey of Dušan Todorović, a JavaScript Developer and Team Leader with a focus on React. Discover his expertise and leadership in the tech industry.',
     images: {
       url: 'https://www.todorovic.dev/images/og-2.png',
       secureUrl: 'https://www.todorovic.dev/images/og-2.png',

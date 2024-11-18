@@ -23,7 +23,7 @@ const ImageAndText: FunctionComponent = () => {
             <Link href={'/about'} className={styles.accented}>Dušan Todorović</Link>
           </h1>
           <p className={gStyles.tags}>
-            Software Engineer <span>|</span> Team Leader
+            JavaScript Developer <span>|</span> Team Leader
           </p>
           <a
             className={styles.locationLink}
