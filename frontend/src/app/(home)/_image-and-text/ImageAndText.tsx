@@ -25,18 +25,13 @@ const ImageAndText: FunctionComponent = () => {
           <p className={gStyles.tags}>
             JavaScript Developer <span>|</span> Team Leader
           </p>
-          <a
-            className={styles.locationLink}
-            href={'https://maps.app.goo.gl/DHTdsDU24RjWYhhV8'}
-            target={'_blank'}>
-            Belgrade, Serbia
-          </a>
+          <a className={styles.locationLink} href={'https://maps.app.goo.gl/DHTdsDU24RjWYhhV8'} target={'_blank'}> Belgrade, Serbia </a>
         </section>
       </div>
       <SocialIcons />
       <section className={`${styles.paragraphBelow} ${gStyles.text}`}>
         <ul className={styles.ul}>
-          <li>Skilled React developer with a background in leading teams.</li>
+          <li>Skilled JavaScript developer with a background in leading teams.</li>
           <li>
             Check what I'm <Link href={'/skills'}>good at</Link>, download my
             <Link href={'/cv/CV-dark.pdf'} target="_blank" rel="noopener noreferrer"> CV</Link>,
